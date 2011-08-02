@@ -14,19 +14,21 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Text;
 using System.Windows.Forms;
 
-using org.mars3142.controls;
-
-namespace org.mars3142.wherugo.Windows
+namespace org.mars3142.controls
 {
-   public partial class Start : Form
+   public partial class CListBox : UserControl
    {
-      public Start()
+      public CListBox()
       {
          InitializeComponent();
-         CListBox listBox = new CListBox();
-         this.Controls.Add(listBox);
       }
    }
 }

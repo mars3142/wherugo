@@ -22,11 +22,11 @@ using System.Resources;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("wherugo")]
+[assembly: AssemblyTitle("controls")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("mars3142.org")]
-[assembly: AssemblyProduct("WherUGo")]
+[assembly: AssemblyProduct("WherUGo Controls")]
 [assembly: AssemblyCopyright("Copyright © mars3142.org 2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -37,7 +37,7 @@ using System.Resources;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("71dc1e0f-3534-4d84-8104-81bf82cd1853")]
+[assembly: Guid("ee86a6ca-00b5-4ac9-ab4e-4e0c1c8a25a5")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -46,6 +46,8 @@ using System.Resources;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("1.0.0.0")]
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+[assembly: AssemblyVersion("1.0.*")]
 
 [assembly: NeutralResourcesLanguageAttribute("en")]

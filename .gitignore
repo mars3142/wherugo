@@ -2,3 +2,6 @@
 /wherugo/obj
 /wherugo/bin
 /_binary
+/controls/bin
+/controls/obj
+*.suo
