@@ -15,45 +15,35 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
 
 namespace org.mars3142.wherugo.Controls
 {
-   public partial class CListBox : UserControl
+   public class CListBoxItem
    {
-      VScrollBar _vbar;
-      int _vby = 0;
-
-      #region Ctr
-      public CListBox() : this(null)
+      private String itemKey;
+      public String ItemKey
       {
-         //
-      }
-
-      public CListBox(Dictionary<String, CListBoxItem> Items)
-      {
-         InitializeComponent();
-         InitialControl();
-         if (Items != null)
+         get
          {
-
+            return itemKey;
+         }
+         set
+         {
+            itemKey = value;
          }
       }
 
-      private void InitialControl()
+      private String itemValue;
+      public String ItemValue
       {
-         _vbar = new VScrollBar();
-         _vbar.Dock = DockStyle.Right;
-         _vbar.Minimum = 0;
-         _vbar.Maximum = 150;
-         _vbar.Value = 0;
-         _vbar.SmallChange = 5;
-         _vbar.LargeChange = 50;
-         _vbar.Visible = true;
-         //_vbar.Scroll += new ScrollEventHandler(scrollvertikal);
-         this.Controls.Add(_vbar);
+         get
+         {
+            return itemValue;
+         }
+         set
+         {
+            itemValue = value;
+         }
       }
-      #endregion
    }
 }

@@ -18,42 +18,19 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace org.mars3142.wherugo.Controls
+namespace org.mars3142.wherugo.decoder
 {
-   public partial class CListBox : UserControl
+   static class Program
    {
-      VScrollBar _vbar;
-      int _vby = 0;
-
-      #region Ctr
-      public CListBox() : this(null)
+      /// <summary>
+      /// The main entry point for the application.
+      /// </summary>
+      [STAThread]
+      static void Main()
       {
-         //
+         Application.EnableVisualStyles();
+         Application.SetCompatibleTextRenderingDefault(false);
+         Application.Run(new Form1());
       }
-
-      public CListBox(Dictionary<String, CListBoxItem> Items)
-      {
-         InitializeComponent();
-         InitialControl();
-         if (Items != null)
-         {
-
-         }
-      }
-
-      private void InitialControl()
-      {
-         _vbar = new VScrollBar();
-         _vbar.Dock = DockStyle.Right;
-         _vbar.Minimum = 0;
-         _vbar.Maximum = 150;
-         _vbar.Value = 0;
-         _vbar.SmallChange = 5;
-         _vbar.LargeChange = 50;
-         _vbar.Visible = true;
-         //_vbar.Scroll += new ScrollEventHandler(scrollvertikal);
-         this.Controls.Add(_vbar);
-      }
-      #endregion
    }
 }

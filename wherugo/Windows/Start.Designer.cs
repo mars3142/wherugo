@@ -52,8 +52,12 @@ namespace org.mars3142.wherugo.Windows
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
          this.AutoScroll = true;
          this.ClientSize = new System.Drawing.Size(638, 455);
+         this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+         this.MaximizeBox = false;
+         this.MinimizeBox = false;
          this.Name = "Start";
-         this.Text = "Form1";
+         this.Text = "Start";
+         this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
          this.ResumeLayout(false);
 
       }

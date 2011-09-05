@@ -4,20 +4,19 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F8769155-F131-417C-97EE-0E6B0290116D}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <ProjectGuid>{F5A824E4-012D-4EB0-BD0B-9066B68A38F9}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>org.mars3142.wherugo</RootNamespace>
-    <AssemblyName>wherugo</AssemblyName>
+    <RootNamespace>org.mars3142.wherugo.Lua</RootNamespace>
+    <AssemblyName>lua</AssemblyName>
     <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <PlatformFamilyName>WindowsCE</PlatformFamilyName>
     <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
     <OSVersion>5.0</OSVersion>
-    <DeployDirSuffix>wherugo</DeployDirSuffix>
+    <DeployDirSuffix>lua</DeployDirSuffix>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FormFactorID>
     </FormFactorID>
-    <StartupObject>org.mars3142.wherugo.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,59 +47,11 @@
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\Cartridge.cs" />
-    <Compile Include="DeviceConfig.cs" />
-    <Compile Include="Windows\Compass.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Windows\Compass.Designer.cs">
-      <DependentUpon>Compass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\Start.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Windows\Start.Designer.cs">
-      <DependentUpon>Start.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Lua.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Windows\Compass.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Compass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Windows\Start.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Start.cs</DependentUpon>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\communication\communication.csproj">
-      <Project>{8F97E4F5-1494-4BC0-8CAD-9994BD13F231}</Project>
-      <Name>communication</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\controls\controls.csproj">
-      <Project>{1F9D170F-9957-43E6-9FCD-C6712EB488B9}</Project>
-      <Name>controls</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\lua\lua.csproj">
-      <Project>{F5A824E4-012D-4EB0-BD0B-9066B68A38F9}</Project>
-      <Name>lua</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.v1.targets" />
   <Import Condition="'$(TargetFrameworkVersion)' == 'v2.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />

@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wherugo", "wherugo\wherugo.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "controls", "controls\controls.csproj", "{1F9D170F-9957-43E6-9FCD-C6712EB488B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lua", "lua\lua.csproj", "{F5A824E4-012D-4EB0-BD0B-9066B68A38F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "communication", "communication\communication.csproj", "{8F97E4F5-1494-4BC0-8CAD-9994BD13F231}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{1F9D170F-9957-43E6-9FCD-C6712EB488B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F9D170F-9957-43E6-9FCD-C6712EB488B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F9D170F-9957-43E6-9FCD-C6712EB488B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5A824E4-012D-4EB0-BD0B-9066B68A38F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5A824E4-012D-4EB0-BD0B-9066B68A38F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5A824E4-012D-4EB0-BD0B-9066B68A38F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5A824E4-012D-4EB0-BD0B-9066B68A38F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F97E4F5-1494-4BC0-8CAD-9994BD13F231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F97E4F5-1494-4BC0-8CAD-9994BD13F231}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F97E4F5-1494-4BC0-8CAD-9994BD13F231}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F97E4F5-1494-4BC0-8CAD-9994BD13F231}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

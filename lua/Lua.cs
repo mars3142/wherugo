@@ -14,19 +14,13 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-using System.Windows.Forms;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
-using org.mars3142.wherugo.Controls;
-
-namespace org.mars3142.wherugo.Windows
+namespace org.mars3142.wherugo.Lua
 {
-   public partial class Start : Form
+   public class Lua
    {
-      public Start()
-      {
-         InitializeComponent();
-         CListBox listBox = new CListBox();
-         this.Controls.Add(listBox);
-      }
    }
 }

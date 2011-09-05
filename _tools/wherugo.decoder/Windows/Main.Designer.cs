@@ -14,9 +14,9 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-namespace org.mars3142.wherugo.Controls
+namespace org.mars3142.wherugo.decoder
 {
-   partial class CListBox
+   partial class Form1
    {
       /// <summary>
       /// Required designer variable.
@@ -36,18 +36,20 @@ namespace org.mars3142.wherugo.Controls
          base.Dispose(disposing);
       }
 
-      #region Component Designer generated code
+      #region Windows Form Designer generated code
 
       /// <summary>
-      /// Required method for Designer support - do not modify 
+      /// Required method for Designer support - do not modify
       /// the contents of this method with the code editor.
       /// </summary>
       private void InitializeComponent()
       {
-         components = new System.ComponentModel.Container();
-         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+         this.components = new System.ComponentModel.Container();
+         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+         this.Text = "Form1";
       }
 
       #endregion
    }
 }
+

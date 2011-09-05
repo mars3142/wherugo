@@ -5,3 +5,5 @@
 /controls/bin
 /controls/obj
 *.suo
+/lua/bin
+/lua/obj

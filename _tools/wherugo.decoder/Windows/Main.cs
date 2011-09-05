@@ -16,44 +16,19 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
 using System.Windows.Forms;
 
-namespace org.mars3142.wherugo.Controls
+namespace org.mars3142.wherugo.decoder
 {
-   public partial class CListBox : UserControl
+   public partial class Form1 : Form
    {
-      VScrollBar _vbar;
-      int _vby = 0;
-
-      #region Ctr
-      public CListBox() : this(null)
-      {
-         //
-      }
-
-      public CListBox(Dictionary<String, CListBoxItem> Items)
+      public Form1()
       {
          InitializeComponent();
-         InitialControl();
-         if (Items != null)
-         {
-
-         }
       }
-
-      private void InitialControl()
-      {
-         _vbar = new VScrollBar();
-         _vbar.Dock = DockStyle.Right;
-         _vbar.Minimum = 0;
-         _vbar.Maximum = 150;
-         _vbar.Value = 0;
-         _vbar.SmallChange = 5;
-         _vbar.LargeChange = 50;
-         _vbar.Visible = true;
-         //_vbar.Scroll += new ScrollEventHandler(scrollvertikal);
-         this.Controls.Add(_vbar);
-      }
-      #endregion
    }
 }

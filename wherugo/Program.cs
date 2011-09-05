@@ -21,13 +21,25 @@ namespace org.mars3142.wherugo
 {
    static class Program
    {
-      /// <summary>
-      /// The main entry point for the application.
-      /// </summary>
       [MTAThread]
       static void Main()
       {
-         Application.Run(new Windows.Start());
+         AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
+         Windows.Start form = new Windows.Start();
+         Application.Run(form);
+      }
+
+      static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+      {
+         try
+         {
+            Exception ex = (Exception)e.ExceptionObject;
+            // TODO: What do while unhandled exception?
+         }
+         finally
+         {
+            Application.Exit();
+         }
       }
    }
 }
