@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lua", "lua\lua.csproj", "{F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "communication", "communication\communication.csproj", "{8F97E4F5-1494-4BC0-8CAD-9994BD13F231}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cartridges", "cartridges\cartridges.csproj", "{84D21330-7A8B-44AE-A67B-3621CABB7AB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{8F97E4F5-1494-4BC0-8CAD-9994BD13F231}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F97E4F5-1494-4BC0-8CAD-9994BD13F231}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F97E4F5-1494-4BC0-8CAD-9994BD13F231}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84D21330-7A8B-44AE-A67B-3621CABB7AB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84D21330-7A8B-44AE-A67B-3621CABB7AB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84D21330-7A8B-44AE-A67B-3621CABB7AB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84D21330-7A8B-44AE-A67B-3621CABB7AB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

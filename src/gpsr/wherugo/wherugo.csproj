@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>org.mars3142.wherugo</RootNamespace>
-    <AssemblyName>wherugo</AssemblyName>
+    <AssemblyName>org.mars3142.wherugo</AssemblyName>
     <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <PlatformFamilyName>WindowsCE</PlatformFamilyName>
     <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
@@ -89,6 +89,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\cartridges\cartridges.csproj">
+      <Project>{84D21330-7A8B-44AE-A67B-3621CABB7AB3}</Project>
+      <Name>cartridges</Name>
+    </ProjectReference>
     <ProjectReference Include="..\communication\communication.csproj">
       <Project>{8F97E4F5-1494-4BC0-8CAD-9994BD13F231}</Project>
       <Name>communication</Name>
@@ -119,6 +123,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>copy $(TargetPath) $(SolutionDir)_binary\$(ConfigurationName)</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>

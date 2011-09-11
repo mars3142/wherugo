@@ -16,21 +16,33 @@
 
 using System;
 using System.Collections.Generic;
-using System.Windows.Forms;
+using System.Text;
 
-namespace org.mars3142.wherugo.decoder
+namespace org.mars3142.wherugo
 {
-   static class Program
+   class DeviceConfig
    {
-      /// <summary>
-      /// The main entry point for the application.
-      /// </summary>
-      [STAThread]
-      static void Main()
+      const String FILE_NAME = @"Atlas.ini";
+
+      #region Private
+      private Boolean Clear()
       {
-         Application.EnableVisualStyles();
-         Application.SetCompatibleTextRenderingDefault(false);
-         Application.Run(new Form1());
+         Boolean retValue = false;
+
+         return retValue;
+      }
+      #endregion
+
+      public DeviceConfig()
+      {
+         Load();
+      }
+
+      public void Load()
+      {
+         if (Clear())
+         {
+         }
       }
    }
 }

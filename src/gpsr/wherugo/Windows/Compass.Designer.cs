@@ -14,9 +14,9 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-namespace org.mars3142.wherugo.decoder
+namespace org.mars3142.wherugo.Windows
 {
-   partial class Form1
+   partial class Compass
    {
       /// <summary>
       /// Required designer variable.
@@ -44,12 +44,23 @@ namespace org.mars3142.wherugo.decoder
       /// </summary>
       private void InitializeComponent()
       {
-         this.components = new System.ComponentModel.Container();
-         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         this.Text = "Form1";
+         this.SuspendLayout();
+         // 
+         // Compass
+         // 
+         this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+         this.AutoScroll = true;
+         this.ClientSize = new System.Drawing.Size(238, 375);
+         this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+         this.MaximizeBox = false;
+         this.MinimizeBox = false;
+         this.Name = "Compass";
+         this.Text = "Compass";
+         this.ResumeLayout(false);
+
       }
 
       #endregion
    }
 }
-

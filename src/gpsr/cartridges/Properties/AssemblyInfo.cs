@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("wherugo.decoder")]
+[assembly: AssemblyTitle("cartridges")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("wherugo.decoder")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2011")]
+[assembly: AssemblyCompany("mars3142.org")]
+[assembly: AssemblyProduct("WherUGo Cartridges")]
+[assembly: AssemblyCopyright("Copyright © mars3142.org 2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a16be9c0-1b48-444b-bdc7-0b05ff14a58a")]
+[assembly: Guid("d3bf9a13-89dc-4863-a9b7-bbe001f6d767")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -29,5 +29,7 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+[assembly: AssemblyVersion("1.0.*")]
+

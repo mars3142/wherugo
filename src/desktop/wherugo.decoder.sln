@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wherugo.decoder", "wherugo.decoder\wherugo.decoder.csproj", "{2E6418B5-479A-4499-8F08-ABA181D40B89}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cartridges", "cartridges\cartridges.csproj", "{264D3B8D-D034-4B05-A80B-4664B7DF14C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{2E6418B5-479A-4499-8F08-ABA181D40B89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E6418B5-479A-4499-8F08-ABA181D40B89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E6418B5-479A-4499-8F08-ABA181D40B89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{264D3B8D-D034-4B05-A80B-4664B7DF14C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{264D3B8D-D034-4B05-A80B-4664B7DF14C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{264D3B8D-D034-4B05-A80B-4664B7DF14C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{264D3B8D-D034-4B05-A80B-4664B7DF14C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
