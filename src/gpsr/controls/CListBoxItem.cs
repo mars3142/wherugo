@@ -20,29 +20,29 @@ namespace org.mars3142.wherugo.Controls
 {
    public class CListBoxItem
    {
-      private String itemKey;
+      private String _itemKey;
       public String ItemKey
       {
          get
          {
-            return itemKey;
+            return _itemKey;
          }
          set
          {
-            itemKey = value;
+            _itemKey = value;
          }
       }
 
-      private String itemValue;
+      private String _itemValue;
       public String ItemValue
       {
          get
          {
-            return itemValue;
+            return _itemValue;
          }
          set
          {
-            itemValue = value;
+            _itemValue = value;
          }
       }
    }

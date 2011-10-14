@@ -15,36 +15,34 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace org.mars3142.wherugo.Shared
 {
    public static class Strings
    {
-      private static String retValue;
-      private static int posStart;
+      private static String _retValue;
+      private static int _posStart;
 
-      public static char getByte(String text, ref int position)
+      public static char GetByte(String text, ref int position)
       {
-         retValue = String.Empty;
-         posStart = position;
+         _retValue = String.Empty;
+         _posStart = position;
 
-         for (int i = posStart; i < posStart + 1; i++)
+         for (int i = _posStart; i < _posStart + 1; i++)
          {
-            retValue += text[i];
+            _retValue += text[i];
             position++;
          }
          
-         return Convert.ToChar(retValue);
+         return Convert.ToChar(_retValue);
       }
 
-      public static short getShort(String text, ref int position)
+      public static short GetShort(String text, ref int position)
       {
-         retValue = String.Empty;
-         posStart = position;
+         _retValue = String.Empty;
+         _posStart = position;
 
-         for (int i = posStart; i < posStart + 2; i++)
+         for (int i = _posStart; i < _posStart + 2; i++)
          {
             //retValue = Convert.ToInt16(text[i]).ToString() + retValue;
             position++;
@@ -53,63 +51,63 @@ namespace org.mars3142.wherugo.Shared
          return Convert.ToInt16("0");
       }
 
-      public static ushort getUShort(String text, ref int position)
+      public static ushort GetUShort(String text, ref int position)
       {
-         retValue = String.Empty;
-         posStart = position;
+         _retValue = String.Empty;
+         _posStart = position;
 
-         for (int i = posStart; i < posStart + 2; i++)
+         for (int i = _posStart; i < _posStart + 2; i++)
          {
-            retValue = Convert.ToUInt16(text[i]).ToString() + retValue;
+            _retValue = Convert.ToUInt16(text[i]).ToString() + _retValue;
             position++;
          }
 
-         return Convert.ToUInt16(retValue);
+         return Convert.ToUInt16(_retValue);
       }
 
-      public static long getLong(String text, ref int position)
+      public static long GetLong(String text, ref int position)
       {
-         retValue = "0";
-         posStart = position;
+         _retValue = "0";
+         _posStart = position;
 
          position += 4;
 
-         return Convert.ToInt64(retValue);
+         return Convert.ToInt64(_retValue);
       }
 
-      public static ulong getULong(String text, ref int position)
+      public static ulong GetULong(String text, ref int position)
       {
-         retValue = "0";
-         posStart = position;
+         _retValue = "0";
+         _posStart = position;
 
          position += 4;
 
-         return Convert.ToUInt64(retValue);
+         return Convert.ToUInt64(_retValue);
       }
 
-      public static double getDouble(String text, ref int position)
+      public static double GetDouble(String text, ref int position)
       {
-         retValue = "0";
-         posStart = position;
+         _retValue = "0";
+         _posStart = position;
 
          position += 8;
 
-         return Convert.ToDouble(retValue);
+         return Convert.ToDouble(_retValue);
       }
 
-      public static string getASCIIZ(String text, ref int position)
+      public static string GetASCIIZ(String text, ref int position)
       {
-         retValue = String.Empty;
-         posStart = position;
+         _retValue = String.Empty;
+         _posStart = position;
 
-         for (int i = posStart; text[i] != '\0'; i++)
+         for (int i = _posStart; text[i] != '\0'; i++)
          {
-            retValue += text[i];
+            _retValue += text[i];
             position++;
          }
          position++;
 
-         return retValue;
+         return _retValue;
       }
    }
 }

@@ -105,6 +105,10 @@
       <Project>{F5A824E4-012D-4EB0-BD0B-9066B68A38F9}</Project>
       <Name>lua</Name>
     </ProjectReference>
+    <ProjectReference Include="..\shared\shared.csproj">
+      <Project>{FD08F8C1-064A-49C9-8374-96BA816326C4}</Project>
+      <Name>shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.v1.targets" />
   <Import Condition="'$(TargetFrameworkVersion)' == 'v2.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />

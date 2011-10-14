@@ -15,20 +15,29 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
+using org.mars3142.wherugo.Cartridges;
 
 namespace org.mars3142.wherugo.decoder.Windows
 {
    public partial class Main : Form
    {
+      File _gwc = new File();
+
       public Main()
       {
          InitializeComponent();
+      }
+
+      ~Main()
+      {
+         _gwc = null;
+      }
+
+      private void pbOpen_Click(object sender, EventArgs e)
+      {
+         if (fdGWC.ShowDialog() == DialogResult.OK)
+            _gwc.Read(fdGWC.FileName);
       }
    }
 }

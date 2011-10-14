@@ -24,12 +24,12 @@ namespace org.mars3142.wherugo
       [MTAThread]
       static void Main()
       {
-         AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
+         AppDomain.CurrentDomain.UnhandledException += CurrentDomainUnhandledException;
          Windows.Start form = new Windows.Start();
          Application.Run(form);
       }
 
-      static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+      static void CurrentDomainUnhandledException(object sender, UnhandledExceptionEventArgs e)
       {
          try
          {

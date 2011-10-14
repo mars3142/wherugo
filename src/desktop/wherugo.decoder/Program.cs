@@ -28,13 +28,13 @@ namespace org.mars3142.wherugo.decoder
       [STAThread]
       static void Main()
       {
-         AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
+         AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomainUnhandledException);
          Application.EnableVisualStyles();
          Application.SetCompatibleTextRenderingDefault(false);
          Application.Run(new Main());
       }
 
-      static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+      static void CurrentDomainUnhandledException(object sender, UnhandledExceptionEventArgs e)
       {
          try
          {

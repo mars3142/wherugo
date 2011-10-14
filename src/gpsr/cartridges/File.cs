@@ -15,10 +15,63 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using System;
+using System.IO;
+using System.Text;
+using org.mars3142.wherugo.Shared;
 
 namespace org.mars3142.wherugo.Cartridges
 {
-    public class File
-    {
-    }
+   public class File
+   {
+      private byte[] CART_ID = { 0x02, 0x0a, 0x43, 0x41, 0x52, 0x54, 0x00 };	// 02 0a CART 00 
+
+      private String _content = null;
+      private int _position = 0;
+
+      private Boolean FileOk()
+      {
+         for (_position = 0; _position < CART_ID.Length; _position++)
+            if (_content[_position] != CART_ID[_position])
+               return false;
+
+         return true;
+      }
+
+      public Boolean Read(String fileName)
+      {
+         StreamReader sr = null;
+
+         try
+         {
+            _content = null;
+
+            sr = new StreamReader(fileName);
+            _content += sr.ReadToEnd();
+            sr.Close();
+
+            if (FileOk()) 
+            {
+               ushort i = Strings.GetUShort(_content, ref _position);
+               for (int i2 = 0; i2 < i; i2++)
+               {
+                  short objectId = Strings.GetShort(_content, ref _position);
+                  long address = Strings.GetLong(_content, ref _position);
+               }
+            }
+
+            long headerLenght = Strings.GetLong(_content, ref _position);
+            Header header = new Header(_content, ref _position);
+         }
+
+         catch (Exception ex)
+         {
+            throw new FileException("Error in org.mars3142.wherugo.Cartridges.File.Open()", ex);
+         }
+         finally
+         {
+            sr.Close();
+         }
+         return true;
+      }
+   }
 }

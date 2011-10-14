@@ -44,12 +44,56 @@ namespace org.mars3142.wherugo.decoder.Windows
       /// </summary>
       private void InitializeComponent()
       {
-         this.components = new System.ComponentModel.Container();
-         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         this.Text = "Form1";
+          this.fdGWC = new System.Windows.Forms.OpenFileDialog();
+          this.pbOpen = new System.Windows.Forms.Button();
+          this.txContent = new System.Windows.Forms.TextBox();
+          this.SuspendLayout();
+          // 
+          // fdGWC
+          // 
+          this.fdGWC.Filter = "Cartridges|*.gwc|All files|*.*";
+          this.fdGWC.Title = "Open Cartridge";
+          // 
+          // pbOpen
+          // 
+          this.pbOpen.Location = new System.Drawing.Point(12, 12);
+          this.pbOpen.Name = "pbOpen";
+          this.pbOpen.Size = new System.Drawing.Size(75, 23);
+          this.pbOpen.TabIndex = 0;
+          this.pbOpen.Text = "Open GWC";
+          this.pbOpen.UseVisualStyleBackColor = true;
+          this.pbOpen.Click += new System.EventHandler(this.pbOpen_Click);
+          // 
+          // txContent
+          // 
+          this.txContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                      | System.Windows.Forms.AnchorStyles.Left)
+                      | System.Windows.Forms.AnchorStyles.Right)));
+          this.txContent.Location = new System.Drawing.Point(12, 41);
+          this.txContent.Multiline = true;
+          this.txContent.Name = "txContent";
+          this.txContent.Size = new System.Drawing.Size(559, 387);
+          this.txContent.TabIndex = 1;
+          // 
+          // Main
+          // 
+          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+          this.ClientSize = new System.Drawing.Size(583, 440);
+          this.Controls.Add(this.txContent);
+          this.Controls.Add(this.pbOpen);
+          this.Name = "Main";
+          this.Text = "Open GWC";
+          this.ResumeLayout(false);
+          this.PerformLayout();
+
       }
 
       #endregion
+
+       private System.Windows.Forms.OpenFileDialog fdGWC;
+       private System.Windows.Forms.Button pbOpen;
+       private System.Windows.Forms.TextBox txContent;
    }
 }
 

@@ -42,6 +42,7 @@ namespace org.mars3142.wherugo
       {
          if (Clear())
          {
+
          }
       }
    }

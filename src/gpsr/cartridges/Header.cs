@@ -59,13 +59,13 @@ namespace org.mars3142.wherugo.Cartridges
       }
 
       private short _splashScreenYn;        // -1 = without
-      public short SplashScreenYN
+      public short SplashScreenYn
       {
          get { return _splashScreenYn; }
       }
 
       private short _smallIconYn;          // -1 = without
-      public short SmallIconYN
+      public short SmallIconYn
       {
          get { return _smallIconYn; }
       }
@@ -143,12 +143,13 @@ namespace org.mars3142.wherugo.Cartridges
       }
 
       private long _unknown6;
-      public string Unknown6
+      public long Unknown6
       {
          get { return _unknown6; }
       }
 
-      private string _completionCode
+      private string _completionCode;
+      public string CompletionCode
       {
          get { return _completionCode; }
       }
@@ -159,35 +160,35 @@ namespace org.mars3142.wherugo.Cartridges
       {
          Init();
 
-         _latitude = Strings.getDouble(text, ref position);
-         _longitude = Strings.getDouble(text, ref position);
+         _latitude = Strings.GetDouble(text, ref position);
+         _longitude = Strings.GetDouble(text, ref position);
 
-         _unknown0 = Strings.getLong(text, ref position);
-         _unknown1 = Strings.getLong(text, ref position);
-         _unknown2 = Strings.getLong(text, ref position);
-         _unknown3 = Strings.getLong(text, ref position);
+         _unknown0 = Strings.GetLong(text, ref position);
+         _unknown1 = Strings.GetLong(text, ref position);
+         _unknown2 = Strings.GetLong(text, ref position);
+         _unknown3 = Strings.GetLong(text, ref position);
 
-         _splashScreenYn = Strings.getShort(text, ref position);
-         _smallIconYn = Strings.getShort(text, ref position);
+         _splashScreenYn = Strings.GetShort(text, ref position);
+         _smallIconYn = Strings.GetShort(text, ref position);
 
-         _typeOfCartridge = Strings.getASCIIZ(text, ref position);
-         _playerName = Strings.getASCIIZ(text, ref position);
+         _typeOfCartridge = Strings.GetASCIIZ(text, ref position);
+         _playerName = Strings.GetASCIIZ(text, ref position);
 
-         _unknown4 = Strings.getLong(text, ref position);
-         _unknown5 = Strings.getLong(text, ref position);
+         _unknown4 = Strings.GetLong(text, ref position);
+         _unknown5 = Strings.GetLong(text, ref position);
 
-         _catridgeName = Strings.getASCIIZ(text, ref position);
-         _catridgeGuid = Strings.getASCIIZ(text, ref position);
-         _catridgeDesc = Strings.getASCIIZ(text, ref position);
-         _startLocationDesc = Strings.getASCIIZ(text, ref position);
-         _version = Strings.getASCIIZ(text, ref position);
-         _author = Strings.getASCIIZ(text, ref position);
-         _company = Strings.getASCIIZ(text, ref position);
-         _recommendedDevice = Strings.getASCIIZ(text, ref position);
+         _catridgeName = Strings.GetASCIIZ(text, ref position);
+         _catridgeGuid = Strings.GetASCIIZ(text, ref position);
+         _catridgeDesc = Strings.GetASCIIZ(text, ref position);
+         _startLocationDesc = Strings.GetASCIIZ(text, ref position);
+         _version = Strings.GetASCIIZ(text, ref position);
+         _author = Strings.GetASCIIZ(text, ref position);
+         _company = Strings.GetASCIIZ(text, ref position);
+         _recommendedDevice = Strings.GetASCIIZ(text, ref position);
 
-         _unknown6 = Strings.getLong(text, ref position);
+         _unknown6 = Strings.GetLong(text, ref position);
 
-         _completionCode = Strings.getASCIIZ(text, ref position);
+         _completionCode = Strings.GetASCIIZ(text, ref position);
       }
 
       ~Header()
