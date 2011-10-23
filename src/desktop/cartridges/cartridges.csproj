@@ -36,11 +36,11 @@
     <Compile Include="..\..\gpsr\cartridges\File.cs">
       <Link>File.cs</Link>
     </Compile>
-    <Compile Include="..\..\gpsr\cartridges\FileException.cs">
-      <Link>FileException.cs</Link>
-    </Compile>
     <Compile Include="..\..\gpsr\cartridges\Header.cs">
       <Link>Header.cs</Link>
+    </Compile>
+    <Compile Include="..\..\gpsr\cartridges\Objects.cs">
+      <Link>Objects.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

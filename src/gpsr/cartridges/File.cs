@@ -16,60 +16,62 @@
 
 using System;
 using System.IO;
-using System.Text;
 using org.mars3142.wherugo.Shared;
 
 namespace org.mars3142.wherugo.Cartridges
 {
    public class File
    {
-      private byte[] CART_ID = { 0x02, 0x0a, 0x43, 0x41, 0x52, 0x54, 0x00 };	// 02 0a CART 00 
+      private readonly byte[] _cartId = { 0x02, 0x0a, 0x43, 0x41, 0x52, 0x54, 0x00 };  // 02 0a CART 00 
 
-      private String _content = null;
-      private int _position = 0;
+      private BinaryReader _binaryReader;
+      private FileStream _fileStream;
 
       private Boolean FileOk()
       {
-         for (_position = 0; _position < CART_ID.Length; _position++)
-            if (_content[_position] != CART_ID[_position])
-               return false;
+         bool retValue = true;
 
-         return true;
+         try
+         {
+            _fileStream.Seek(0, SeekOrigin.Begin);
+            for (int i = 0; i < _cartId.Length; i++)
+            {
+               if (Convert.ToChar(_binaryReader.Read()) != _cartId[i])
+               {
+                  retValue = false;
+               }
+            }
+         }
+         catch(Exception ex)
+         {
+            throw new WherugoException("Cartridges.File.FileOk()", ex);
+         }
+
+         return retValue;
       }
 
       public Boolean Read(String fileName)
       {
-         StreamReader sr = null;
-
+         _fileStream = new FileStream(fileName, FileMode.Open);
          try
-         {
-            _content = null;
+         {  
+            _binaryReader = new BinaryReader(_fileStream);
 
-            sr = new StreamReader(fileName);
-            _content += sr.ReadToEnd();
-            sr.Close();
-
-            if (FileOk()) 
+            if (FileOk())
             {
-               ushort i = Strings.GetUShort(_content, ref _position);
-               for (int i2 = 0; i2 < i; i2++)
-               {
-                  short objectId = Strings.GetShort(_content, ref _position);
-                  long address = Strings.GetLong(_content, ref _position);
-               }
+               Header header = new Header(_binaryReader);
+               foreach(Objects obj in header.Objects.Values)
+               obj.LoadObject(_binaryReader);
             }
-
-            long headerLenght = Strings.GetLong(_content, ref _position);
-            Header header = new Header(_content, ref _position);
          }
 
          catch (Exception ex)
          {
-            throw new FileException("Error in org.mars3142.wherugo.Cartridges.File.Open()", ex);
+            throw new WherugoException("Cartridges.File.Open()", ex);
          }
          finally
          {
-            sr.Close();
+            _fileStream.Close();
          }
          return true;
       }

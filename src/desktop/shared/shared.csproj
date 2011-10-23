@@ -33,11 +33,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\gpsr\shared\Format.cs">
-      <Link>Format.cs</Link>
+    <Compile Include="..\..\gpsr\shared\SeekFile.cs">
+      <Link>SeekFile.cs</Link>
     </Compile>
-    <Compile Include="..\..\gpsr\shared\Strings.cs">
-      <Link>Strings.cs</Link>
+    <Compile Include="..\..\gpsr\shared\WherugoException.cs">
+      <Link>WherugoException.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

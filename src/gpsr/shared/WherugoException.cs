@@ -14,15 +14,18 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+using System;
+
 namespace org.mars3142.wherugo.Shared
 {
-   public static class Format
+   public class WherugoException : ApplicationException
    {
-      public static short Flip(short s)
-      {
-         int a = s & 0xff;
-         int b = (s >> 8) & 0xff;
-         return (short)((a << 8) | b);
-      }
+      public WherugoException(string message):
+         base(message)
+      { }
+
+      public WherugoException(string message, Exception innerException) :
+         base(String.Format("Error in org.mars3142.wherugo.{0}", message), innerException)
+      { }
    }
 }
