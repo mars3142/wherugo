@@ -36,7 +36,7 @@
     <Compile Include="..\..\gpsr\cartridges\File.cs">
       <Link>File.cs</Link>
     </Compile>
-    <Compile Include="..\..\gpsr\cartridges\Header.cs">
+    <Compile Include="..\..\gpsr\cartridges\Cartridge.cs">
       <Link>Header.cs</Link>
     </Compile>
     <Compile Include="..\..\gpsr\cartridges\Objects.cs">

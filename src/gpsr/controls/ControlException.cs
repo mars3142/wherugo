@@ -16,16 +16,18 @@
 
 using System;
 
-namespace org.mars3142.wherugo.Cartridges
+namespace org.mars3142.wherugo.Controls
 {
-   class FileException : ApplicationException
+   public class ControlException : ApplicationException
    {
-      public FileException(string message):
+      public ControlException(string message)
+         :
          base(message)
       { }
 
-      public FileException(string message, Exception innerException) :
-         base(message, innerException)
+      public ControlException(string message, Exception innerException)
+         :
+         base(String.Format("Error in org.mars3142.wherugo.Controls.", message), innerException)
       { }
    }
 }

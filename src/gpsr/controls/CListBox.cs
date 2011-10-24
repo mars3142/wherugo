@@ -22,24 +22,30 @@ namespace org.mars3142.wherugo.Controls
 {
    public partial class CListBox : UserControl
    {
+      Dictionary<String, CListBoxItem> _items;
+
       VScrollBar _vbar;
       int _vby = 0;
 
       #region Ctr
-      public CListBox() : this(null)
-      {
-         //
-      }
+      /// <summary>
+      /// 
+      /// </summary>
+      public CListBox()
+         : this(null)
+      { }
 
-      public CListBox(Dictionary<String, CListBoxItem> Items)
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="items"></param>
+      public CListBox(Dictionary<String, CListBoxItem> items)
       {
          InitializeComponent();
          InitialControl();
-         if (Items != null)
-         {
-
-         }
+         _items = items;
       }
+      #endregion
 
       private void InitialControl()
       {
@@ -54,6 +60,90 @@ namespace org.mars3142.wherugo.Controls
          //_vbar.Scroll += new ScrollEventHandler(scrollvertikal);
          this.Controls.Add(_vbar);
       }
-      #endregion
+
+      /// <summary>
+      /// Added a new item to the list (not overwriting).
+      /// </summary>
+      /// <param name="item">An item</param>
+      /// <returns>True if added.</returns>
+      public bool Add(CListBoxItem item)
+      {
+         bool retValue = false;
+
+         try
+         {
+            if (!_items.ContainsKey(item.ItemKey))
+            {
+               _items.Add(item.ItemKey, item);
+               retValue = true;
+            }
+         }
+         catch (Exception ex)
+         {
+            throw new ControlException("CListBox.Add()", ex);
+         }
+         
+         return retValue;
+      }
+      
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <returns></returns>
+      public bool Clear()
+      {
+         _items.Clear();
+         return (_items.Count == 0);
+      }
+
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="item"></param>
+      /// <returns></returns>
+      public bool Replace(CListBoxItem item)
+      {
+         bool retValue = false;
+
+         try
+         {
+            if (_items.ContainsKey(item.ItemKey))
+            {
+               _items[item.ItemKey] = item;
+               retValue = true;
+            }
+         }
+         catch (Exception ex)
+         {
+            throw new ControlException("CListBox.Replace()", ex);
+         }
+
+         return retValue;
+      }
+
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="key"></param>
+      /// <returns></returns>
+      public bool Remove(String key)
+      {
+         bool retValue = false;
+
+         try
+         {
+            if (_items.ContainsKey(key))
+            {
+               _items.Remove(key);
+               retValue = true;
+            }
+         }
+         catch (Exception ex)
+         {
+            throw new ControlException("CListBox.Remove()", ex);
+         }
+
+         return retValue;
+      }
    }
 }

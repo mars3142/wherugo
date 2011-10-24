@@ -15,10 +15,20 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using System;
+using System.IO.Ports;
 
 namespace org.mars3142.wherugo.Communication
 {
    public class GPS
    {
+      #region "Ctr"
+      /// <summary>
+      /// 
+      /// </summary>
+      public GPS()
+      {
+
+      }
+      #endregion
    }
 }

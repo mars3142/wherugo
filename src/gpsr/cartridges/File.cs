@@ -50,6 +50,11 @@ namespace org.mars3142.wherugo.Cartridges
          return retValue;
       }
 
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="fileName"></param>
+      /// <returns></returns>
       public Boolean Read(String fileName)
       {
          _fileStream = new FileStream(fileName, FileMode.Open);
@@ -59,7 +64,7 @@ namespace org.mars3142.wherugo.Cartridges
 
             if (FileOk())
             {
-               Header header = new Header(_binaryReader);
+               Cartridge header = new Cartridge(_binaryReader);
                foreach(Objects obj in header.Objects.Values)
                obj.LoadObject(_binaryReader);
             }

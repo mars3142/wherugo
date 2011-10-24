@@ -21,7 +21,7 @@ using org.mars3142.wherugo.Shared;
 
 namespace org.mars3142.wherugo.Cartridges
 {
-   class Header
+   class Cartridge
    {
       #region Members
       private readonly Dictionary<short, Objects> _objects;
@@ -170,7 +170,11 @@ namespace org.mars3142.wherugo.Cartridges
       #endregion
 
       #region Ctr
-      public Header(BinaryReader binaryReader)
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="binaryReader"></param>
+      public Cartridge(BinaryReader binaryReader)
       {
          try
          {

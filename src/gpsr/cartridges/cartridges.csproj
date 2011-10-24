@@ -51,8 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="File.cs" />
-    <Compile Include="FileException.cs" />
-    <Compile Include="Header.cs" />
+    <Compile Include="Cartridge.cs" />
     <Compile Include="Objects.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

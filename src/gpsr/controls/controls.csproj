@@ -59,8 +59,15 @@
       <DependentUpon>CListBox.cs</DependentUpon>
     </Compile>
     <Compile Include="CListBoxItem.cs" />
+    <Compile Include="ControlException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CListBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CListBox.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.v1.targets" />
   <Import Condition="'$(TargetFrameworkVersion)' == 'v2.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />

@@ -44,10 +44,18 @@ namespace org.mars3142.wherugo.Controls
       /// </summary>
       private void InitializeComponent()
       {
-         components = new System.ComponentModel.Container();
+         this.SuspendLayout();
+         // 
+         // CListBox
+         // 
+         this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+         this.Name = "CListBox";
+         this.ResumeLayout(false);
+
       }
 
       #endregion
+
    }
 }

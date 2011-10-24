@@ -15,12 +15,20 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using System;
+using System.Drawing;
 
 namespace org.mars3142.wherugo.Controls
 {
    public class CListBoxItem
    {
+      #region Members
       private String _itemKey;
+      private String _itemValue;
+      private Image _itemImage;
+
+      /// <summary>
+      /// 
+      /// </summary>
       public String ItemKey
       {
          get
@@ -33,7 +41,9 @@ namespace org.mars3142.wherugo.Controls
          }
       }
 
-      private String _itemValue;
+      /// <summary>
+      /// 
+      /// </summary>
       public String ItemValue
       {
          get
@@ -45,5 +55,56 @@ namespace org.mars3142.wherugo.Controls
             _itemValue = value;
          }
       }
+
+      /// <summary>
+      /// 
+      /// </summary>
+      public Image ItemImage
+      {
+         get
+         {
+            return _itemImage;
+         }
+         set
+         {
+            _itemImage = value;
+         }
+      }
+      #endregion
+
+      #region Ctr
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="key"></param>
+      public CListBoxItem(String key)
+         : this(key, null, null)
+      { }
+
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="key"></param>
+      /// <param name="value"></param>
+      public CListBoxItem(String key, String value)
+         : this(key, value, null)
+      { }
+
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="key"></param>
+      /// <param name="value"></param>
+      /// <param name="image"></param>
+      public CListBoxItem(String key, String value, Image image)
+      {
+         if (String.IsNullOrEmpty(key))
+            throw new ArgumentNullException("key");
+
+         _itemKey = key;
+         _itemValue = value;
+         _itemImage = image;
+      }
+      #endregion
    }
 }
