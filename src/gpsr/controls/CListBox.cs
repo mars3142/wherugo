@@ -22,10 +22,21 @@ namespace org.mars3142.wherugo.Controls
 {
    public partial class CListBox : UserControl
    {
-      Dictionary<String, CListBoxItem> _items;
+      private Dictionary<String, CListBoxItem> _items;
+      private VScrollBar _vbar;
+      private int _vby = 0;
+      private Button _buttonOk;
+      private Button _buttonCancel;
 
-      VScrollBar _vbar;
-      int _vby = 0;
+      /// <summary>
+      /// 
+      /// </summary>
+      public event EventHandler OkClick;
+
+      /// <summary>
+      /// 
+      /// </summary>
+      public event EventHandler CancelClick;
 
       #region Ctr
       /// <summary>
@@ -43,10 +54,40 @@ namespace org.mars3142.wherugo.Controls
       {
          InitializeComponent();
          InitialControl();
-         _items = items;
+         if (items != null)
+         {
+            _items = items;
+         }
+         else
+         {
+            _items = new Dictionary<string, CListBoxItem>();
+         }
       }
       #endregion
 
+      #region Event
+      protected virtual void OnOkClick(EventArgs e)
+      {
+         EventHandler okClick = OkClick;
+         if (okClick != null)
+         {
+            OkClick(this, e);
+         }
+      }
+
+      protected virtual void OnCancelClick(EventArgs e)
+      {
+         EventHandler cancelClick = CancelClick;
+         if (cancelClick != null)
+         {
+            CancelClick(this, e);
+         }
+      }
+      #endregion
+
+      /// <summary>
+      /// 
+      /// </summary>
       private void InitialControl()
       {
          _vbar = new VScrollBar();
@@ -58,7 +99,16 @@ namespace org.mars3142.wherugo.Controls
          _vbar.LargeChange = 50;
          _vbar.Visible = true;
          //_vbar.Scroll += new ScrollEventHandler(scrollvertikal);
-         this.Controls.Add(_vbar);
+         Controls.Add(_vbar);
+      }
+
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="pe"></param>
+      protected override void OnPaint(PaintEventArgs pe)
+      {
+         base.OnPaint(pe);
       }
 
       /// <summary>
@@ -82,10 +132,10 @@ namespace org.mars3142.wherugo.Controls
          {
             throw new ControlException("CListBox.Add()", ex);
          }
-         
+
          return retValue;
       }
-      
+
       /// <summary>
       /// 
       /// </summary>

@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CCompass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CCompass.Designer.cs">
+      <DependentUpon>CCompass.cs</DependentUpon>
+    </Compile>
     <Compile Include="CListBox.cs">
       <SubType>UserControl</SubType>
     </Compile>

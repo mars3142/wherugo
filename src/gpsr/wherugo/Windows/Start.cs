@@ -25,12 +25,23 @@ namespace org.mars3142.wherugo.Windows
       public Start()
       {
          InitializeComponent();
+         
          CListBox listBox = new CListBox();
          CListBoxItem item1 = new CListBoxItem("1", "Item 1");
          CListBoxItem item2 = new CListBoxItem("2", "Item 2");
          listBox.Add(item1);
          listBox.Add(item2);
-         this.Controls.Add(listBox);
+         //this.Controls.Add(listBox);
+
+         Button btn = new Button();
+         btn.Click += btn_Click;
+         Controls.Add(btn);
+      }
+
+      void btn_Click(object sender, System.EventArgs e)
+      {
+         Compass cc = new Compass();
+         cc.ShowDialog();
       }
    }
 }

@@ -51,12 +51,13 @@ namespace org.mars3142.wherugo.Windows
          this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
          this.AutoScroll = true;
-         this.ClientSize = new System.Drawing.Size(238, 375);
+         this.ClientSize = new System.Drawing.Size(638, 455);
          this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
          this.MaximizeBox = false;
          this.MinimizeBox = false;
          this.Name = "Compass";
          this.Text = "Compass";
+         this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
          this.ResumeLayout(false);
 
       }
