@@ -35,8 +35,8 @@ namespace org.mars3142.wherugo.Cartridges
          get { return _address; }
       }
 
-      private string _data;
-      public string Data
+      private byte[] _data;
+      public byte[] Data
       {
          get { return _data; }
       }
@@ -91,7 +91,6 @@ namespace org.mars3142.wherugo.Cartridges
 
       public bool LoadObject(BinaryReader binaryReader)
       {
-         byte value;
          bool retValue = false;
 
          binaryReader.BaseStream.Seek(_address, SeekOrigin.Begin);
@@ -101,9 +100,10 @@ namespace org.mars3142.wherugo.Cartridges
             if (_objectId == 0)
             {
                length = SeekFile.GetLong(binaryReader);
+               _data = new byte[length];
                for (int i = 0; i < length; i++)
                {
-                  _data += binaryReader.ReadByte();
+                  _data[i] = binaryReader.ReadByte();
                }
             }
             else
@@ -113,9 +113,10 @@ namespace org.mars3142.wherugo.Cartridges
                {
                   _objectType = SeekFile.GetLong(binaryReader);
                   length = SeekFile.GetLong(binaryReader);
-                  for (int i = 1; i < length; i++)
+                  _data = new byte[length];
+                  for (int i = 0; i < length; i++)
                   {
-                     _data += binaryReader.ReadByte();
+                     _data[i] = binaryReader.ReadByte();
                   }
                }
             }
@@ -123,7 +124,7 @@ namespace org.mars3142.wherugo.Cartridges
          }
          catch (Exception ex)
          {
-            throw new WherugoException("Cartridges.Objects.LoadObject()", ex);
+            Trace.DoTrace(Trace.TraceCategories.Cartridge, Trace.TraceEventType.Error, ex);
          }
 
          return retValue;

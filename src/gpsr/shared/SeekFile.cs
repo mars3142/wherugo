@@ -17,6 +17,8 @@
 using System;
 using System.IO;
 
+using org.mars3142.wherugo.Shared;
+
 namespace org.mars3142.wherugo.Shared
 {
    public static class SeekFile
@@ -34,7 +36,7 @@ namespace org.mars3142.wherugo.Shared
          }
          catch (Exception ex)
          {
-            throw new WherugoException("Shared.SeekFile.GetByte()", ex);
+            Trace.DoTrace(Trace.TraceCategories.Cartridge, Trace.TraceEventType.Error, ex);
          }
 
          return retValue;
@@ -50,7 +52,7 @@ namespace org.mars3142.wherugo.Shared
          }
          catch (Exception ex)
          {
-            throw new WherugoException("Shared.SeekFile.GetShort()", ex);
+            Trace.DoTrace(Trace.TraceCategories.Cartridge, Trace.TraceEventType.Error, ex);
          }
 
          return retValue;
@@ -66,7 +68,7 @@ namespace org.mars3142.wherugo.Shared
          }
          catch (Exception ex)
          {
-            throw new WherugoException("Shared.SeekFile.GetUShort()", ex);
+            Trace.DoTrace(Trace.TraceCategories.Cartridge, Trace.TraceEventType.Error, ex);
          }
 
          return retValue;
@@ -82,7 +84,7 @@ namespace org.mars3142.wherugo.Shared
          }
          catch (Exception ex)
          {
-            throw new WherugoException("Shared.SeekFile.GetLong()", ex);
+            Trace.DoTrace(Trace.TraceCategories.Cartridge, Trace.TraceEventType.Error, ex);
          }
 
          return retValue;
@@ -98,7 +100,7 @@ namespace org.mars3142.wherugo.Shared
          }
          catch (Exception ex)
          {
-            throw new WherugoException("Shared.SeekFile.GetULong()", ex);
+            Trace.DoTrace(Trace.TraceCategories.Cartridge, Trace.TraceEventType.Error, ex);
          }
 
          return retValue;
@@ -114,7 +116,7 @@ namespace org.mars3142.wherugo.Shared
          }
          catch (Exception ex)
          {
-            throw new WherugoException("Shared.SeekFile.GetDouble()", ex);
+            Trace.DoTrace(Trace.TraceCategories.Cartridge, Trace.TraceEventType.Error, ex);
          }
 
          return retValue;
@@ -138,7 +140,7 @@ namespace org.mars3142.wherugo.Shared
          }
          catch (Exception ex)
          {
-            throw new WherugoException("Shared.SeekFile.GetASCIIZ()", ex);
+            Trace.DoTrace(Trace.TraceCategories.Cartridge, Trace.TraceEventType.Error, ex);
          }
 
          return retValue;

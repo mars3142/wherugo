@@ -15,16 +15,16 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using System.Windows.Forms;
-
 using org.mars3142.wherugo.Controls;
 
 namespace org.mars3142.wherugo.Windows
 {
    public partial class Compass : Form
    {
-      CCompass compass = new CCompass();
+      private CCompass compass = new CCompass();
 
       #region Ctr
+
       public Compass()
       {
          InitializeComponent();
@@ -32,6 +32,7 @@ namespace org.mars3142.wherugo.Windows
          compass.Dock = DockStyle.Fill;
          Controls.Add(compass);
       }
+
       #endregion
    }
 }

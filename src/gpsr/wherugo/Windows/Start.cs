@@ -14,9 +14,11 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+using System.Drawing;
 using System.Windows.Forms;
 
 using org.mars3142.wherugo.Controls;
+using org.mars3142.wherugo.Shared;
 
 namespace org.mars3142.wherugo.Windows
 {
@@ -40,6 +42,7 @@ namespace org.mars3142.wherugo.Windows
 
       void btn_Click(object sender, System.EventArgs e)
       {
+         Shared.Utils.SaveScreenshot();
          Compass cc = new Compass();
          cc.ShowDialog();
       }

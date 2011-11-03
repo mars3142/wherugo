@@ -21,7 +21,7 @@ using org.mars3142.wherugo.Shared;
 
 namespace org.mars3142.wherugo.Cartridges
 {
-   class Cartridge
+   public class Cartridge
    {
       #region Members
       private readonly Dictionary<short, Objects> _objects;
@@ -226,7 +226,7 @@ namespace org.mars3142.wherugo.Cartridges
          }
          catch (Exception ex)
          {
-            throw new WherugoException("Cartridges.Header.Header()", ex);
+            Trace.DoTrace(Trace.TraceCategories.Cartridge, Trace.TraceEventType.Error, ex);
          }
       }
       #endregion

@@ -15,31 +15,42 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using System;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.Windows.Forms;
-using org.mars3142.wherugo.Shared;
 
-namespace org.mars3142.wherugo
+namespace org.mars3142.wherugo.Shared
 {
-   internal static class Program
+   public class Utils
    {
-      [MTAThread]
-      private static void Main()
+      public static Bitmap CaptureScreen()
       {
-         AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomainUnhandledException);
-         Windows.Start form = new Windows.Start();
-         Application.Run(form);
+         Bitmap bitmap = null;
+         Graphics graphics;
+
+         try
+         {
+            bitmap = new Bitmap(SystemInformation.VirtualScreen.Width, SystemInformation.VirtualScreen.Height);
+            graphics = Graphics.FromImage(bitmap);
+            graphics.CopyFromScreen(0, 0, 0, 0, bitmap.Size);
+            graphics.Dispose();
+         }
+         catch (Exception ex)
+         {
+            Trace.DoTrace(Trace.TraceCategories.Shared, Trace.TraceEventType.Error, ex);
+         }
+         return bitmap;
       }
 
-      private static void CurrentDomainUnhandledException(object sender, UnhandledExceptionEventArgs e)
+      public static void SaveScreenshot()
       {
          try
          {
-            Exception ex = (Exception) e.ExceptionObject;
-            Trace.DoTrace(Trace.TraceCategories.Exception, Trace.TraceEventType.Error, ex);
+            CaptureScreen().Save(@"\Test.png", ImageFormat.Png);
          }
-         finally
+         catch (Exception ex)
          {
-            Application.Exit();
+            Trace.DoTrace(Trace.TraceCategories.Shared, Trace.TraceEventType.Error, ex);
          }
       }
    }

@@ -27,6 +27,8 @@ namespace org.mars3142.wherugo.Cartridges
       private BinaryReader _binaryReader;
       private FileStream _fileStream;
 
+      public Cartridge cartridge = null;
+
       private Boolean FileOk()
       {
          bool retValue = true;
@@ -44,7 +46,7 @@ namespace org.mars3142.wherugo.Cartridges
          }
          catch(Exception ex)
          {
-            throw new WherugoException("Cartridges.File.FileOk()", ex);
+            Trace.DoTrace(Trace.TraceCategories.Cartridge, Trace.TraceEventType.Error, ex);
          }
 
          return retValue;
@@ -64,15 +66,17 @@ namespace org.mars3142.wherugo.Cartridges
 
             if (FileOk())
             {
-               Cartridge header = new Cartridge(_binaryReader);
-               foreach(Objects obj in header.Objects.Values)
-               obj.LoadObject(_binaryReader);
+               cartridge = new Cartridge(_binaryReader);
+               foreach (Objects obj in cartridge.Objects.Values)
+               {
+                  obj.LoadObject(_binaryReader);
+               }
             }
          }
 
          catch (Exception ex)
          {
-            throw new WherugoException("Cartridges.File.Open()", ex);
+            Trace.DoTrace(Trace.TraceCategories.Cartridge, Trace.TraceEventType.Error, ex);
          }
          finally
          {
