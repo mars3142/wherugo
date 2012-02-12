@@ -1,0 +1,18 @@
+{
+   "forms": [
+      {
+      "form": "Start"
+      },
+      {
+      "form": "Compass"
+      "labels":[
+         {
+             "north": "N",
+             "east": "O",
+             "south": "S",
+             "west": "W"
+         }
+      ]
+      }
+   ]
+}
