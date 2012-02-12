@@ -17,6 +17,8 @@
 using System;
 using System.IO.Ports;
 
+using org.mars3142.wherugo.Shared;
+
 namespace org.mars3142.wherugo.Communication
 {
    public class GPS
@@ -42,6 +44,9 @@ namespace org.mars3142.wherugo.Communication
       }
       #endregion
 
+      /// <summary>
+      /// 
+      /// </summary>
       public void Start()
       {
          try
@@ -51,10 +56,13 @@ namespace org.mars3142.wherugo.Communication
          }
          catch (Exception ex)
          {
-            //
+            Trace.DoTrace(Trace.TraceCategories.Communication, ex);
          }
       }
 
+      /// <summary>
+      /// 
+      /// </summary>
       public void Stop()
       {
          try
@@ -66,13 +74,18 @@ namespace org.mars3142.wherugo.Communication
          }
          catch (Exception ex)
          {
-            //
+            Trace.DoTrace(Trace.TraceCategories.Communication, ex);
          }
       }
 
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="sender"></param>
+      /// <param name="e"></param>
       void serialPort_ErrorReceived(object sender, SerialErrorReceivedEventArgs e)
       {
-         throw new Exception("The method or operation is not implemented.");
+         Trace.DoTrace(Trace.TraceCategories.Communication, "The method serialPort_ErrorReceived is not implemented.");
       }
 
       void serialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)

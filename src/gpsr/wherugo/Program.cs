@@ -16,6 +16,7 @@
 
 using System;
 using System.Windows.Forms;
+
 using org.mars3142.wherugo.Shared;
 
 namespace org.mars3142.wherugo
@@ -35,7 +36,7 @@ namespace org.mars3142.wherugo
          try
          {
             Exception ex = (Exception) e.ExceptionObject;
-            Trace.DoTrace(Trace.TraceCategories.Exception, Trace.TraceEventType.Error, ex);
+            Trace.DoTrace(Trace.TraceCategories.Exception, ex);
          }
          finally
          {

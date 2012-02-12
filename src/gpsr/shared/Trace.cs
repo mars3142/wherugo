@@ -15,25 +15,32 @@
 //  along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 using System;
+using System.IO;
 
 namespace org.mars3142.wherugo.Shared
 {
    public static class Trace
    {
+      /// <summary>
+      /// 
+      /// </summary>
       public enum TraceEventType
       {
-         Critical,      //Fatal error or application crash.  
-         Error,         //Recoverable error.  
-         Information,   //Informational message.  
-         Resume,        //Resumption of a logical operation.  
-         Start,         //Starting of a logical operation.  
-         Stop,          //Stopping of a logical operation.  
-         Suspend,       //Suspension of a logical operation.  
-         Transfer,      //Changing of correlation identity.  
-         Verbose,       //Debugging trace.  
-         Warning        //Noncritical problem.  
+         Critical,      //Fatal error or application crash
+         Error,         //Recoverable error
+         Information,   //Informational message
+         Resume,        //Resumption of a logical operation
+         Start,         //Starting of a logical operation
+         Stop,          //Stopping of a logical operation
+         Suspend,       //Suspension of a logical operation
+         Transfer,      //Changing of correlation identity
+         Verbose,       //Debugging trace
+         Warning        //Noncritical problem
       }
 
+      /// <summary>
+      /// 
+      /// </summary>
       public enum TraceCategories
       {
          Exception,
@@ -45,29 +52,71 @@ namespace org.mars3142.wherugo.Shared
          Shared
       }
 
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="categories"></param>
+      /// <param name="exception"></param>
       public static void DoTrace(TraceCategories categories, Exception exception)
       {
-
+         DoTrace(categories, TraceEventType.Error, null, exception);
       }
 
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="categories"></param>
+      /// <param name="message"></param>
       public static void DoTrace(TraceCategories categories, String message)
       {
-
+         DoTrace(categories, TraceEventType.Information, message, null);
       }
       
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="categories"></param>
+      /// <param name="eventType"></param>
+      /// <param name="exception"></param>
       public static void DoTrace(TraceCategories categories, TraceEventType eventType, Exception exception)
       {
-         
+         DoTrace(categories, eventType, null, exception);
       }
 
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="categories"></param>
+      /// <param name="eventType"></param>
+      /// <param name="message"></param>
       public static void DoTrace(TraceCategories categories, TraceEventType eventType, String message)
       {
-         
+         DoTrace(categories, eventType, message, null);
       }
 
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="categories"></param>
+      /// <param name="eventType"></param>
+      /// <param name="message"></param>
+      /// <param name="exception"></param>
       public static void DoTrace(TraceCategories categories, TraceEventType eventType, String message, Exception exception)
       {
-         
+         StreamWriter stream = new StreamWriter(@"\SDMMC\Wherugo\Log\trace.txt", true);
+
+         try
+         {
+            stream.WriteLine(String.Format("{0:dd/MM/YYYY mm:ss} {1}:", DateTime.Now, categories.ToString()));
+            stream.WriteLine(eventType.ToString());
+            if (message != null) stream.WriteLine(message);
+            if (exception != null) stream.WriteLine(exception.Message);
+            stream.WriteLine();
+         }
+         finally
+         {
+            stream.Close();
+         }
       }
    }
 }
