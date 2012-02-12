@@ -54,6 +54,10 @@
       <SubType>Designer</SubType>
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Windows\ObjectWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ObjectWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
@@ -67,6 +71,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Windows\ObjectWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\ObjectWindow.Designer.cs">
+      <DependentUpon>ObjectWindow.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

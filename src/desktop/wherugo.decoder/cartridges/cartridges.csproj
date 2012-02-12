@@ -33,13 +33,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\gpsr\cartridges\File.cs">
+    <Compile Include="..\..\..\gpsr\cartridges\File.cs">
       <Link>File.cs</Link>
     </Compile>
-    <Compile Include="..\..\gpsr\cartridges\Cartridge.cs">
+    <Compile Include="..\..\..\gpsr\cartridges\Cartridge.cs">
       <Link>Header.cs</Link>
     </Compile>
-    <Compile Include="..\..\gpsr\cartridges\Objects.cs">
+    <Compile Include="..\..\..\gpsr\cartridges\Objects.cs">
       <Link>Objects.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,5 +1,5 @@
 //  wherugo - WherUGo for Magellan eXplorist x10
-//  Copyright (C) 2011 Peter Siegmund <developer@mars3142.org>
+//  Copyright (C) 2011-2012 Peter Siegmund <developer@mars3142.org>
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -8,11 +8,11 @@
 //
 //  This program is distributed in the hope that it will be useful,
 //  but WITHOUT ANY WARRANTY; without even the implied warranty of
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 //  GNU General Public License for more details.
 //
 //  You should have received a copy of the GNU General Public License
-//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//  along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 using System;
 using System.IO;
@@ -22,12 +22,24 @@ namespace org.mars3142.wherugo.Cartridges
 {
    public class File
    {
+      #region Members
+
+      #region Private
+      
       private readonly byte[] _cartId = { 0x02, 0x0a, 0x43, 0x41, 0x52, 0x54, 0x00 };  // 02 0a CART 00 
 
       private BinaryReader _binaryReader;
       private FileStream _fileStream;
 
+      #endregion
+
       public Cartridge cartridge = null;
+
+      #endregion
+
+      #region Methods
+
+      #region Private
 
       private Boolean FileOk()
       {
@@ -52,10 +64,12 @@ namespace org.mars3142.wherugo.Cartridges
          return retValue;
       }
 
+      #endregion
+
       /// <summary>
       /// 
       /// </summary>
-      /// <param name="fileName"></param>
+      /// <param name="fileName">filename of cartridge</param>
       /// <returns></returns>
       public Boolean Read(String fileName)
       {
@@ -67,10 +81,6 @@ namespace org.mars3142.wherugo.Cartridges
             if (FileOk())
             {
                cartridge = new Cartridge(_binaryReader);
-               foreach (Objects obj in cartridge.Objects.Values)
-               {
-                  obj.LoadObject(_binaryReader);
-               }
             }
          }
 
@@ -84,5 +94,7 @@ namespace org.mars3142.wherugo.Cartridges
          }
          return true;
       }
+
+      #endregion
    }
 }

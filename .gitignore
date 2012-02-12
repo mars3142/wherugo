@@ -1,8 +1,4 @@
 
-/src/desktop/cartridges/bin
-/src/desktop/cartridges/obj
-/src/desktop/wherugo.decoder/bin
-/src/desktop/wherugo.decoder/obj
 /src/gpsr/cartridges/bin
 /src/gpsr/cartridges/obj
 /src/gpsr/communication/bin
@@ -13,9 +9,11 @@
 /src/gpsr/lua/obj
 /src/gpsr/wherugo/bin
 /src/gpsr/wherugo/obj
-/src/desktop/shared/obj
-/src/desktop/shared/bin
 /src/gpsr/shared/bin
 /src/gpsr/shared/obj
-/src/desktop/_ReSharper.wherugo.decoder
-/src/gpsr/_ReSharper.wherugo
+/src/desktop/wherugo.decoder/cartridges/bin
+/src/desktop/wherugo.decoder/cartridges/obj
+/src/desktop/wherugo.decoder/shared/bin
+/src/desktop/wherugo.decoder/shared/obj
+/src/desktop/wherugo.decoder/wherugo.decoder/bin
+/src/desktop/wherugo.decoder/wherugo.decoder/obj

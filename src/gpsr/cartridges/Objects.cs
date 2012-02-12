@@ -1,5 +1,5 @@
 //  wherugo - WherUGo for Magellan eXplorist x10
-//  Copyright (C) 2011 Peter Siegmund <developer@mars3142.org>
+//  Copyright (C) 2011-2012 Peter Siegmund <developer@mars3142.org>
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -8,11 +8,11 @@
 //
 //  This program is distributed in the hope that it will be useful,
 //  but WITHOUT ANY WARRANTY; without even the implied warranty of
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 //  GNU General Public License for more details.
 //
 //  You should have received a copy of the GNU General Public License
-//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//  along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 using System;
 using System.IO;
@@ -24,33 +24,53 @@ namespace org.mars3142.wherugo.Cartridges
    {
       #region Members
       private readonly short _objectId;
+
+      /// <summary>
+      /// the unique key of the object
+      /// </summary>
       public short ObjectId
       {
          get { return _objectId; }
       }
 
       private readonly long _address;
+
+      /// <summary>
+      /// the adress in the cartridge-file
+      /// </summary>
       public long Address
       {
          get { return _address; }
       }
 
       private byte[] _data;
+
+      /// <summary>
+      /// bytecode of the object
+      /// </summary>
       public byte[] Data
       {
          get { return _data; }
       }
 
       private long _objectType;
+
+      /// <summary>
+      /// objecttype of the bytecode
+      /// </summary>
       public long ObjectType
       {
          get { return _objectType; }
       }
+
+      /// <summary>
+      /// human readable objecttype
+      /// </summary>
       public string ObjectTypeString
       {
          get
          {
-            string type = String.Format("unknown ({0})", _objectType);
+            string type = String.Format("invalid ({0})", _objectType);
             
             switch (_objectType)
             {
@@ -72,6 +92,9 @@ namespace org.mars3142.wherugo.Cartridges
                case 17:
                   type = "WAV";
                   break;
+               case 18:
+                  type = "MP3";
+                  break;
                case 19:
                   type = "FDL";
                   break;
@@ -89,6 +112,12 @@ namespace org.mars3142.wherugo.Cartridges
       }
       #endregion
 
+      #region Methods
+      /// <summary>
+      /// Read the object directly from the file
+      /// </summary>
+      /// <param name="binaryReader">filehandle</param>
+      /// <returns>True, if no errors occured</returns>
       public bool LoadObject(BinaryReader binaryReader)
       {
          bool retValue = false;
@@ -120,6 +149,7 @@ namespace org.mars3142.wherugo.Cartridges
                   }
                }
             }
+
             retValue = true;
          }
          catch (Exception ex)
@@ -129,5 +159,6 @@ namespace org.mars3142.wherugo.Cartridges
 
          return retValue;
       }
+      #endregion
    }
 }

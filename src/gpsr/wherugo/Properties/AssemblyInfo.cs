@@ -1,5 +1,5 @@
 ﻿//  wherugo - WherUGo for Magellan eXplorist x10
-//  Copyright (C) 2011 Peter Siegmund <developer@mars3142.org>
+//  Copyright (C) 2011-2012 Peter Siegmund <developer@mars3142.org>
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by

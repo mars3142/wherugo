@@ -35,13 +35,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\gpsr\shared\SeekFile.cs">
+    <Compile Include="..\..\..\gpsr\shared\SeekFile.cs">
       <Link>SeekFile.cs</Link>
     </Compile>
-    <Compile Include="..\..\gpsr\shared\Trace.cs">
+    <Compile Include="..\..\..\gpsr\shared\Trace.cs">
       <Link>Trace.cs</Link>
     </Compile>
-    <Compile Include="..\..\gpsr\shared\Utils.cs">
+    <Compile Include="..\..\..\gpsr\shared\Utils.cs">
       <Link>Utils.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
