@@ -27,8 +27,10 @@ namespace org.mars3142.wherugo
       private static void Main()
       {
          AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomainUnhandledException);
+         Trace.DoTrace(Trace.TraceCategories.WherugoApp, "Start App...");
          Windows.Start startForm = new Windows.Start();
          Application.Run(startForm);
+         Trace.DoTrace(Trace.TraceCategories.WherugoApp, "Exiting App...");
       }
 
       private static void CurrentDomainUnhandledException(object sender, UnhandledExceptionEventArgs e)

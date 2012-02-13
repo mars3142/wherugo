@@ -33,14 +33,27 @@ namespace org.mars3142.wherugo.Communication
       /// </summary>
       public GPS()
       {
-         _serialPort.PortName = "COM2";
-         _serialPort.BaudRate = 57600;
-         _serialPort.DataBits = 8;
-         _serialPort.Parity = Parity.None;
-         _serialPort.StopBits = 0;
+         try
+         {
+            Trace.DoTrace(Trace.TraceCategories.Communication, "GPS Constructor");
+            _serialPort.PortName = "COM2";
+            _serialPort.BaudRate = 57600;
+            //_serialPort.DataBits = 8;
+            //_serialPort.Parity = Parity.None;
+            //_serialPort.StopBits = 0;
 
-         _serialPort.DataReceived += new SerialDataReceivedEventHandler(serialPort_DataReceived);
-         _serialPort.ErrorReceived += new SerialErrorReceivedEventHandler(serialPort_ErrorReceived);
+            _serialPort.DataReceived += new SerialDataReceivedEventHandler(serialPort_DataReceived);
+            _serialPort.ErrorReceived += new SerialErrorReceivedEventHandler(serialPort_ErrorReceived);
+         }
+         catch (Exception ex)
+         {
+            Trace.DoTrace(Trace.TraceCategories.Communication, Trace.TraceEventType.Error, ex);
+         }
+      }
+
+      ~GPS()
+      {
+         Stop();
       }
       #endregion
 
@@ -51,12 +64,13 @@ namespace org.mars3142.wherugo.Communication
       {
          try
          {
+            Trace.DoTrace(Trace.TraceCategories.Communication, "Start GPS");
             _serialPort.Close();
             _serialPort.Open();
          }
          catch (Exception ex)
          {
-            Trace.DoTrace(Trace.TraceCategories.Communication, ex);
+            Trace.DoTrace(Trace.TraceCategories.Communication, Trace.TraceEventType.Error, ex);
          }
       }
 
@@ -67,6 +81,7 @@ namespace org.mars3142.wherugo.Communication
       {
          try
          {
+            Trace.DoTrace(Trace.TraceCategories.Communication, "Stop GPS");
             if (_serialPort.IsOpen == true)
             {
                _serialPort.Close();
@@ -74,7 +89,7 @@ namespace org.mars3142.wherugo.Communication
          }
          catch (Exception ex)
          {
-            Trace.DoTrace(Trace.TraceCategories.Communication, ex);
+            Trace.DoTrace(Trace.TraceCategories.Communication, Trace.TraceEventType.Error, ex);
          }
       }
 
@@ -90,10 +105,18 @@ namespace org.mars3142.wherugo.Communication
 
       void serialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
       {
-         SerialPort port = (SerialPort)sender;
-         if (port != null)
+         try
          {
-            _data = port.ReadExisting();
+            SerialPort port = (SerialPort)sender;
+            if (port != null)
+            {
+               _data = port.ReadExisting();
+            }
+            Trace.DoTrace(Trace.TraceCategories.Communication, _data);
+         }
+         catch (Exception ex)
+         {
+            Trace.DoTrace(Trace.TraceCategories.Communication, Trace.TraceEventType.Error, ex);
          }
       }
    }

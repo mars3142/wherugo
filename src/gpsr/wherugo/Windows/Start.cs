@@ -14,6 +14,7 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program. If not, see <http://www.gnu.org/licenses/>.
 
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -24,27 +25,38 @@ namespace org.mars3142.wherugo.Windows
 {
    public partial class Start : Form
    {
+      Communication.GPS gps = new Communication.GPS();
       public Start()
       {
-         InitializeComponent();
-         
-         CListBox listBox = new CListBox();
-         CListBoxItem item1 = new CListBoxItem("1", "Item 1");
-         CListBoxItem item2 = new CListBoxItem("2", "Item 2");
-         listBox.Add(item1);
-         listBox.Add(item2);
-         //this.Controls.Add(listBox);
+         try
+         {
+            InitializeComponent();
 
-         Button btn = new Button();
-         btn.Click += btn_Click;
-         Controls.Add(btn);
+            Button btn = new Button();
+            btn.Click += btn_Click;
+            Controls.Add(btn);
+
+            Button btn2 = new Button();
+            btn2.Top = 20;
+            btn2.Click += btn2_Click;
+            Controls.Add(btn2);
+         }
+         catch (Exception ex)
+         {
+            Trace.DoTrace(Trace.TraceCategories.Exception, ex);
+         }
       }
 
       void btn_Click(object sender, System.EventArgs e)
       {
-         //Shared.Utils.SaveScreenshot();
-         Compass cc = new Compass();
-         cc.ShowDialog();
+         Trace.DoTrace(Trace.TraceCategories.WherugoApp, "btn_Click");
+         Application.Exit();
+      }
+
+      void btn2_Click(object sender, System.EventArgs e)
+      {
+         Trace.DoTrace(Trace.TraceCategories.WherugoApp, "btn2_Click");
+         gps.Start();
       }
    }
 }

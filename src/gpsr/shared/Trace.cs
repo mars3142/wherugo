@@ -107,8 +107,7 @@ namespace org.mars3142.wherugo.Shared
 
          try
          {
-            stream.WriteLine(String.Format("{0:dd/MM/YYYY mm:ss} {1}:", DateTime.Now, categories.ToString()));
-            stream.WriteLine(eventType.ToString());
+            stream.WriteLine(String.Format("{0:yyyy-MM-dd HH:mm:ss} {1}: {2}", DateTime.Now, categories.ToString(), eventType.ToString()));
             if (message != null) stream.WriteLine(message);
             if (exception != null) stream.WriteLine(exception.Message);
             stream.WriteLine();

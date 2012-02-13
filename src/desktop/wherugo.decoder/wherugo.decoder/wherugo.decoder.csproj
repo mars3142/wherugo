@@ -8,8 +8,9 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>org.mars3142.wherugo.Decoder</RootNamespace>
-    <AssemblyName>org.mars3142.wherugo.decoder</AssemblyName>
+    <AssemblyName>wherugo.decoder</AssemblyName>
     <StartupObject>org.mars3142.wherugo.decoder.Program</StartupObject>
+    <ApplicationIcon>wherugo.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -84,6 +85,9 @@
       <Project>{264D3B8D-D034-4B05-A80B-4664B7DF14C4}</Project>
       <Name>cartridges</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="wherugo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>org.mars3142.wherugo.Cartridges</RootNamespace>
-    <AssemblyName>org.mars3142.wherugo.cartridges</AssemblyName>
+    <AssemblyName>cartridges</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
