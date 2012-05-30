@@ -21,7 +21,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace org.mars3142.wherugo.Lua
+namespace org.mars3142.wherugo.lua
 {
    public static class Lua
    {

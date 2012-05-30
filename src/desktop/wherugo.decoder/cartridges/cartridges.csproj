@@ -7,7 +7,7 @@
     <ProjectGuid>{264D3B8D-D034-4B05-A80B-4664B7DF14C4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>org.mars3142.wherugo.Cartridges</RootNamespace>
+    <RootNamespace>org.mars3142.wherugo.cartridges</RootNamespace>
     <AssemblyName>cartridges</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

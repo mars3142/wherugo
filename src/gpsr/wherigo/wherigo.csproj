@@ -4,16 +4,16 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{84D21330-7A8B-44AE-A67B-3621CABB7AB3}</ProjectGuid>
+    <ProjectGuid>{9BB22882-0B24-496B-8C2A-5FF8BEFB4E74}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>org.mars3142.wherugo.cartridges</RootNamespace>
-    <AssemblyName>cartridges</AssemblyName>
+    <RootNamespace>org.mars3142.wherugo.wherigo</RootNamespace>
+    <AssemblyName>wherigo</AssemblyName>
     <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <PlatformFamilyName>WindowsCE</PlatformFamilyName>
     <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
     <OSVersion>5.0</OSVersion>
-    <DeployDirSuffix>cartridges</DeployDirSuffix>
+    <DeployDirSuffix>wherigo</DeployDirSuffix>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FormFactorID>
     </FormFactorID>
@@ -50,16 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="File.cs" />
-    <Compile Include="Cartridge.cs" />
-    <Compile Include="Objects.cs" />
+    <Compile Include="wherigo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\shared\shared.csproj">
-      <Project>{FD08F8C1-064A-49C9-8374-96BA816326C4}</Project>
-      <Name>shared</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.v1.targets" />
   <Import Condition="'$(TargetFrameworkVersion)' == 'v2.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
@@ -77,8 +69,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
-  </PropertyGroup>
 </Project>

@@ -18,14 +18,16 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-using org.mars3142.wherugo.Controls;
-using org.mars3142.wherugo.Shared;
+using org.mars3142.wherugo.communication;
+using org.mars3142.wherugo.controls;
+using org.mars3142.wherugo.shared;
 
 namespace org.mars3142.wherugo.Windows
 {
    public partial class Start : Form
    {
-      Communication.GPS gps = new Communication.GPS();
+      GPS gps = new GPS();
+
       public Start()
       {
          try
@@ -56,7 +58,7 @@ namespace org.mars3142.wherugo.Windows
       void btn2_Click(object sender, System.EventArgs e)
       {
          Trace.DoTrace(Trace.TraceCategories.WherugoApp, "btn2_Click");
-         gps.Start();
+         gps.StartGPS();
       }
    }
 }

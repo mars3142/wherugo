@@ -1,4 +1,4 @@
-namespace org.mars3142.wherugo.Controls
+namespace org.mars3142.wherugo.controls
 {
    partial class CCompass
    {

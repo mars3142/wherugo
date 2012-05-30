@@ -7,7 +7,7 @@
     <ProjectGuid>{FD08F8C1-064A-49C9-8374-96BA816326C4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>org.mars3142.wherugo.Shared</RootNamespace>
+    <RootNamespace>org.mars3142.wherugo.shared</RootNamespace>
     <AssemblyName>shared</AssemblyName>
     <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <PlatformFamilyName>WindowsCE</PlatformFamilyName>
@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeviceConfig.cs" />
     <Compile Include="Trace.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

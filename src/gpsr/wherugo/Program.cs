@@ -17,7 +17,7 @@
 using System;
 using System.Windows.Forms;
 
-using org.mars3142.wherugo.Shared;
+using org.mars3142.wherugo.shared;
 
 namespace org.mars3142.wherugo
 {
@@ -27,10 +27,10 @@ namespace org.mars3142.wherugo
       private static void Main()
       {
          AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomainUnhandledException);
-         Trace.DoTrace(Trace.TraceCategories.WherugoApp, "Start App...");
+         Trace.DoTrace(Trace.TraceCategories.WherugoApp, Trace.TraceEventType.Start);
          Windows.Start startForm = new Windows.Start();
          Application.Run(startForm);
-         Trace.DoTrace(Trace.TraceCategories.WherugoApp, "Exiting App...");
+         Trace.DoTrace(Trace.TraceCategories.WherugoApp, Trace.TraceEventType.Stop);
       }
 
       private static void CurrentDomainUnhandledException(object sender, UnhandledExceptionEventArgs e)

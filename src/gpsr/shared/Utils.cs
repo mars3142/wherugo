@@ -19,7 +19,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
 
-namespace org.mars3142.wherugo.Shared
+namespace org.mars3142.wherugo.shared
 {
    public class Utils
    {

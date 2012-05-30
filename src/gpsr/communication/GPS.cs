@@ -16,34 +16,36 @@
 
 using System;
 using System.IO.Ports;
+using System.Threading;
 
-using org.mars3142.wherugo.Shared;
+using org.mars3142.wherugo.shared;
 
-namespace org.mars3142.wherugo.Communication
+namespace org.mars3142.wherugo.communication
 {
    public class GPS
    {
-      const String _resetCommand = "$PSRF101,0,0,0,000,0,0,12,8*1C";
-      SerialPort _serialPort = new SerialPort();
-      String _data = null;
+      private const String resetCommand = "$PSRF101,0,0,0,000,0,0,12,8*1C";
+      private SerialPort serialPort = new SerialPort();
+      private String data = null;
+
+      public delegate void NewDataEventHandler(Object sender, GPSEventArgs e);
+      public event NewDataEventHandler NewData;
 
       #region Ctr
       /// <summary>
-      /// 
+      /// Instanciate the serialPort and add the event-handler
       /// </summary>
       public GPS()
       {
          try
          {
             Trace.DoTrace(Trace.TraceCategories.Communication, "GPS Constructor");
-            _serialPort.PortName = "COM2";
-            _serialPort.BaudRate = 57600;
-            //_serialPort.DataBits = 8;
-            //_serialPort.Parity = Parity.None;
-            //_serialPort.StopBits = 0;
+            serialPort.PortName = DeviceConfig.PortName;
+            serialPort.BaudRate = Convert.ToInt32(DeviceConfig.BaudRate);
 
-            _serialPort.DataReceived += new SerialDataReceivedEventHandler(serialPort_DataReceived);
-            _serialPort.ErrorReceived += new SerialErrorReceivedEventHandler(serialPort_ErrorReceived);
+            serialPort.DataReceived += new SerialDataReceivedEventHandler(serialPort_DataReceived);
+            serialPort.ErrorReceived += new SerialErrorReceivedEventHandler(serialPort_ErrorReceived);
+            serialPort.PinChanged += new SerialPinChangedEventHandler(serialPort_PinChanged);
          }
          catch (Exception ex)
          {
@@ -53,20 +55,42 @@ namespace org.mars3142.wherugo.Communication
 
       ~GPS()
       {
-         Stop();
+         StopGPS();
       }
       #endregion
 
       /// <summary>
-      /// 
+      /// Open the GPS-port to receive data
       /// </summary>
-      public void Start()
+      public void StartGPS()
       {
          try
          {
             Trace.DoTrace(Trace.TraceCategories.Communication, "Start GPS");
-            _serialPort.Close();
-            _serialPort.Open();
+            if (serialPort.IsOpen == true)
+            {
+               serialPort.Close();
+            }
+            serialPort.Open();
+         }
+         catch (Exception ex)
+         {
+            Trace.DoTrace(Trace.TraceCategories.Communication, Trace.TraceEventType.Error, ex);
+         }
+      }
+
+      /// <summary>
+      /// If GPS-port is open, it will be closed
+      /// </summary>
+      public void StopGPS()
+      {
+         try
+         {
+            Trace.DoTrace(Trace.TraceCategories.Communication, "Stop GPS");
+            if (serialPort.IsOpen == true)
+            {
+               serialPort.Close();
+            }
          }
          catch (Exception ex)
          {
@@ -77,15 +101,20 @@ namespace org.mars3142.wherugo.Communication
       /// <summary>
       /// 
       /// </summary>
-      public void Stop()
+      /// <param name="sender"></param>
+      /// <param name="e"></param>
+      void serialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
       {
          try
          {
-            Trace.DoTrace(Trace.TraceCategories.Communication, "Stop GPS");
-            if (_serialPort.IsOpen == true)
+            SerialPort portSender = (SerialPort)sender;
+            if (portSender != null)
             {
-               _serialPort.Close();
+               data = portSender.ReadExisting();
             }
+            Trace.DoTrace(Trace.TraceCategories.Communication, data);
+
+            OnNewData(new GPSEventArgs(DateTime.Now, data));
          }
          catch (Exception ex)
          {
@@ -103,20 +132,25 @@ namespace org.mars3142.wherugo.Communication
          Trace.DoTrace(Trace.TraceCategories.Communication, "The method serialPort_ErrorReceived is not implemented.");
       }
 
-      void serialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="sender"></param>
+      /// <param name="e"></param>
+      void serialPort_PinChanged(object sender, SerialPinChangedEventArgs e)
       {
-         try
+         Trace.DoTrace(Trace.TraceCategories.Communication, "The method serialPort_PinChanged is not implemented.");
+      }
+
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="e"></param>
+      protected virtual void OnNewData(GPSEventArgs e)
+      {
+         if (NewData != null)
          {
-            SerialPort port = (SerialPort)sender;
-            if (port != null)
-            {
-               _data = port.ReadExisting();
-            }
-            Trace.DoTrace(Trace.TraceCategories.Communication, _data);
-         }
-         catch (Exception ex)
-         {
-            Trace.DoTrace(Trace.TraceCategories.Communication, Trace.TraceEventType.Error, ex);
+            NewData(this, e);
          }
       }
    }

@@ -7,7 +7,7 @@
     <ProjectGuid>{D6DF7046-DD06-4778-AD7F-9117AA477129}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>org.mars3142.wherugo.Shared</RootNamespace>
+    <RootNamespace>org.mars3142.wherugo.shared</RootNamespace>
     <AssemblyName>shared</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -35,6 +35,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\gpsr\shared\DeviceConfig.cs">
+      <Link>DeviceConfig.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\gpsr\shared\SeekFile.cs">
       <Link>SeekFile.cs</Link>
     </Compile>

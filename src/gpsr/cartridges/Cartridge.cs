@@ -17,9 +17,9 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using org.mars3142.wherugo.Shared;
+using org.mars3142.wherugo.shared;
 
-namespace org.mars3142.wherugo.Cartridges
+namespace org.mars3142.wherugo.cartridges
 {
    public class Cartridge
    {

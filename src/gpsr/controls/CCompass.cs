@@ -22,7 +22,7 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 
-namespace org.mars3142.wherugo.Controls
+namespace org.mars3142.wherugo.controls
 {
    public partial class CCompass : UserControl
    {

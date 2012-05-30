@@ -28,6 +28,7 @@ namespace org.mars3142.wherugo.decoder.Windows
       /// </summary>
       private void InitializeComponent()
       {
+         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ObjectWindow));
          this.lbObject = new System.Windows.Forms.ListBox();
          this.pbImage = new System.Windows.Forms.PictureBox();
          ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
@@ -62,6 +63,7 @@ namespace org.mars3142.wherugo.decoder.Windows
          this.ClientSize = new System.Drawing.Size(534, 378);
          this.Controls.Add(this.pbImage);
          this.Controls.Add(this.lbObject);
+         this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
          this.Name = "ObjectWindow";
          this.Text = "ObjectWindow";
          ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();

@@ -17,9 +17,9 @@
 using System;
 using System.IO;
 
-using org.mars3142.wherugo.Shared;
+using org.mars3142.wherugo.shared;
 
-namespace org.mars3142.wherugo.Shared
+namespace org.mars3142.wherugo.shared
 {
    public static class SeekFile
    {

@@ -14,25 +14,13 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-using System.Windows.Forms;
-using org.mars3142.wherugo.controls;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace org.mars3142.wherugo.Windows
+namespace org.mars3142.wherugo.wherigo
 {
-   public partial class Compass : Form
+   public class wherigo
    {
-      private CCompass compass = new CCompass();
-
-      #region Ctr
-
-      public Compass()
-      {
-         InitializeComponent();
-
-         compass.Dock = DockStyle.Fill;
-         Controls.Add(compass);
-      }
-
-      #endregion
    }
 }

@@ -17,7 +17,7 @@
 using System;
 using System.Drawing;
 
-namespace org.mars3142.wherugo.Controls
+namespace org.mars3142.wherugo.controls
 {
    public class CListBoxItem
    {

@@ -16,7 +16,7 @@
 
 using System;
 
-namespace org.mars3142.wherugo.Controls
+namespace org.mars3142.wherugo.controls
 {
    public class ControlException : ApplicationException
    {
@@ -27,7 +27,7 @@ namespace org.mars3142.wherugo.Controls
 
       public ControlException(string message, Exception innerException)
          :
-         base(String.Format("Error in org.mars3142.wherugo.Controls.", message), innerException)
+         base(String.Format("Error in org.mars3142.wherugo.controls.", message), innerException)
       { }
    }
 }

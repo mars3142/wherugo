@@ -55,7 +55,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Cartridge.cs" />
-    <Compile Include="DeviceConfig.cs" />
     <Compile Include="Windows\Compass.cs">
       <SubType>Form</SubType>
     </Compile>

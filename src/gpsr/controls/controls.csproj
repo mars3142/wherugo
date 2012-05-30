@@ -7,7 +7,7 @@
     <ProjectGuid>{1F9D170F-9957-43E6-9FCD-C6712EB488B9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>org.mars3142.wherugo.Controls</RootNamespace>
+    <RootNamespace>org.mars3142.wherugo.controls</RootNamespace>
     <AssemblyName>controls</AssemblyName>
     <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <PlatformFamilyName>WindowsCE</PlatformFamilyName>

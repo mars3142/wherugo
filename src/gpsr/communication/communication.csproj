@@ -7,7 +7,7 @@
     <ProjectGuid>{8F97E4F5-1494-4BC0-8CAD-9994BD13F231}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>org.mars3142.wherugo.Communication</RootNamespace>
+    <RootNamespace>org.mars3142.wherugo.communication</RootNamespace>
     <AssemblyName>communication</AssemblyName>
     <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <PlatformFamilyName>WindowsCE</PlatformFamilyName>
@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GPS.cs" />
+    <Compile Include="GPSEventArgs.cs" />
     <Compile Include="NMEA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

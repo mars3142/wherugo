@@ -18,11 +18,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace org.mars3142.wherugo.Communication
+namespace org.mars3142.wherugo.communication
 {
    public class NMEA
    {
-
       /// <summary>
       /// 
       /// </summary>

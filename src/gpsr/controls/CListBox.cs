@@ -18,7 +18,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace org.mars3142.wherugo.Controls
+namespace org.mars3142.wherugo.controls
 {
    public partial class CListBox : UserControl
    {

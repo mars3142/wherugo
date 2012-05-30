@@ -18,31 +18,40 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace org.mars3142.wherugo
+namespace org.mars3142.wherugo.communication
 {
-   class DeviceConfig
+   public class GPSEventArgs: EventArgs
    {
-      const String FILE_NAME = @"Atlas.ini";
+      private DateTime timeStamp;
+      private String data;
 
-      #region Private
-      private Boolean Clear()
+      public GPSEventArgs(DateTime timeStamp, String data)
       {
-         Boolean retValue = false;
-
-         return retValue;
-      }
-      #endregion
-
-      public DeviceConfig()
-      {
-         Load();
+         this.timeStamp = timeStamp;
+         this.data = data;
       }
 
-      public void Load()
+      public DateTime TimeStamp
       {
-         if (Clear())
+         set
          {
+            this.timeStamp = value;
+         }
+         get
+         {
+            return this.timeStamp;
+         }
+      }
 
+      public String Data
+      {
+         set
+         {
+            this.data = value;
+         }
+         get
+         {
+            return this.data;
          }
       }
    }

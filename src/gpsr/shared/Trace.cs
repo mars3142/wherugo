@@ -17,7 +17,7 @@
 using System;
 using System.IO;
 
-namespace org.mars3142.wherugo.Shared
+namespace org.mars3142.wherugo.shared
 {
    public static class Trace
    {
@@ -26,16 +26,16 @@ namespace org.mars3142.wherugo.Shared
       /// </summary>
       public enum TraceEventType
       {
-         Critical,      //Fatal error or application crash
-         Error,         //Recoverable error
-         Information,   //Informational message
-         Resume,        //Resumption of a logical operation
-         Start,         //Starting of a logical operation
-         Stop,          //Stopping of a logical operation
-         Suspend,       //Suspension of a logical operation
-         Transfer,      //Changing of correlation identity
-         Verbose,       //Debugging trace
-         Warning        //Noncritical problem
+         Critical,      // Fatal error or application crash
+         Error,         // Recoverable error
+         Information,   // Informational message
+         Resume,        // Resumption of a logical operation
+         Start,         // Starting of a logical operation
+         Stop,          // Stopping of a logical operation
+         Suspend,       // Suspension of a logical operation
+         Transfer,      // Changing of correlation identity
+         Verbose,       // Debugging trace
+         Warning        // Noncritical problem
       }
 
       /// <summary>
@@ -70,6 +70,16 @@ namespace org.mars3142.wherugo.Shared
       public static void DoTrace(TraceCategories categories, String message)
       {
          DoTrace(categories, TraceEventType.Information, message, null);
+      }
+
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="categories"></param>
+      /// <param name="eventType"></param>
+      public static void DoTrace(TraceCategories categories, TraceEventType eventType)
+      {
+         DoTrace(categories, eventType, null, null);
       }
       
       /// <summary>

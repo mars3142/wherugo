@@ -44,6 +44,7 @@ namespace org.mars3142.wherugo.decoder.Windows
       /// </summary>
       private void InitializeComponent()
       {
+         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
          this.fdGWC = new System.Windows.Forms.OpenFileDialog();
          this.pbOpen = new System.Windows.Forms.Button();
          this.txContent = new System.Windows.Forms.TextBox();
@@ -113,6 +114,7 @@ namespace org.mars3142.wherugo.decoder.Windows
          this.Controls.Add(this.imSplashScreen);
          this.Controls.Add(this.txContent);
          this.Controls.Add(this.pbOpen);
+         this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
          this.Name = "Main";
          this.Text = "GWC-Viewer";
          ((System.ComponentModel.ISupportInitialize)(this.imSplashScreen)).EndInit();
