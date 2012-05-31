@@ -26,7 +26,10 @@ namespace org.mars3142.wherugo.Windows
 {
    public partial class Start : Form
    {
-      GPS gps = new GPS();
+      private GPS m_gps = new GPS();
+      private Button m_btn = new Button();
+      private Button m_btn2 = new Button();
+      private TextBox m_txt = new TextBox();
 
       public Start()
       {
@@ -34,14 +37,22 @@ namespace org.mars3142.wherugo.Windows
          {
             InitializeComponent();
 
-            Button btn = new Button();
-            btn.Click += btn_Click;
-            Controls.Add(btn);
+            m_btn.Text = "Exit";
+            m_btn.Click += new EventHandler(btn_Click);
+            Controls.Add(m_btn);
 
-            Button btn2 = new Button();
-            btn2.Top = 20;
-            btn2.Click += btn2_Click;
-            Controls.Add(btn2);
+            m_btn2.Text = "StartGPS";
+            m_btn2.Top = 20;
+            m_btn2.Click += new EventHandler(btn2_Click);
+            Controls.Add(m_btn2);
+
+            m_txt.Top = 40;
+            m_txt.Multiline = true;
+            m_txt.Height = Screen.PrimaryScreen.Bounds.Height - 60;
+            m_txt.Width = Screen.PrimaryScreen.Bounds.Width;
+            Controls.Add(m_txt);
+
+            m_gps.NewData += new GPS.NewDataEventHandler(gps_NewData);
          }
          catch (Exception ex)
          {
@@ -49,16 +60,22 @@ namespace org.mars3142.wherugo.Windows
          }
       }
 
-      void btn_Click(object sender, System.EventArgs e)
+      private void gps_NewData(object sender, GPSEventArgs e)
+      {
+         ScreenHelper.SetValue(ref m_txt, ScreenHelper.Property.Text, e.Data);
+      }
+
+      private void btn_Click(object sender, System.EventArgs e)
       {
          Trace.DoTrace(Trace.TraceCategories.WherugoApp, "btn_Click");
+         m_gps.StopGPS();
          Application.Exit();
       }
 
-      void btn2_Click(object sender, System.EventArgs e)
+      private void btn2_Click(object sender, System.EventArgs e)
       {
          Trace.DoTrace(Trace.TraceCategories.WherugoApp, "btn2_Click");
-         gps.StartGPS();
+         m_gps.StartGPS();
       }
    }
 }

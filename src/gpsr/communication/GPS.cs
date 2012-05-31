@@ -25,6 +25,8 @@ namespace org.mars3142.wherugo.communication
    public class GPS
    {
       private const String resetCommand = "$PSRF101,0,0,0,000,0,0,12,8*1C";
+
+      private Object lockObject = new Object();
       private SerialPort serialPort = new SerialPort();
       private String data = null;
 
@@ -40,8 +42,8 @@ namespace org.mars3142.wherugo.communication
          try
          {
             Trace.DoTrace(Trace.TraceCategories.Communication, "GPS Constructor");
-            serialPort.PortName = DeviceConfig.PortName;
-            serialPort.BaudRate = Convert.ToInt32(DeviceConfig.BaudRate);
+            serialPort.PortName = "COM2"; // DeviceConfig.PortName;
+            serialPort.BaudRate = 57600; // Convert.ToInt32(DeviceConfig.BaudRate);
 
             serialPort.DataReceived += new SerialDataReceivedEventHandler(serialPort_DataReceived);
             serialPort.ErrorReceived += new SerialErrorReceivedEventHandler(serialPort_ErrorReceived);
@@ -107,14 +109,17 @@ namespace org.mars3142.wherugo.communication
       {
          try
          {
-            SerialPort portSender = (SerialPort)sender;
-            if (portSender != null)
+            lock (lockObject)
             {
-               data = portSender.ReadExisting();
-            }
-            Trace.DoTrace(Trace.TraceCategories.Communication, data);
+               SerialPort portSender = (SerialPort)sender;
+               if (portSender != null)
+               {
+                  data = portSender.ReadExisting();
+               }
+               Trace.DoTrace(Trace.TraceCategories.Communication, data);
 
-            OnNewData(new GPSEventArgs(DateTime.Now, data));
+               OnNewData(new GPSEventArgs(DateTime.Now, data));
+            }
          }
          catch (Exception ex)
          {

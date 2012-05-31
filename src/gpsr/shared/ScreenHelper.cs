@@ -16,41 +16,36 @@
 
 using System;
 using System.Drawing;
-using System.Drawing.Imaging;
 using System.Windows.Forms;
 
 namespace org.mars3142.wherugo.shared
 {
-   public class Utils
+   public class ScreenHelper
    {
-      public static Bitmap CaptureScreen()
-      {
-         Bitmap bitmap = null;
-         Graphics graphics;
+      private delegate void SetTextDelegate(ref TextBox textBox, Property property, String text);
 
-         try
-         {
-            bitmap = new Bitmap(Screen.PrimaryScreen.WorkingArea.Width, Screen.PrimaryScreen.WorkingArea.Height);
-            graphics = Graphics.FromImage(bitmap);
-            //graphics.CopyFromScreen(0, 0, 0, 0, bitmap.Size);
-            graphics.Dispose();
-         }
-         catch (Exception ex)
-         {
-            Trace.DoTrace(Trace.TraceCategories.Shared, Trace.TraceEventType.Error, ex);
-         }
-         return bitmap;
+      public enum Property
+      {
+         Text,
+         Height,
+         Width
       }
 
-      public static void SaveScreenshot()
+      public static void SetValue(ref TextBox textBox, Property property, String text)
       {
-         try
+         if (textBox.InvokeRequired)
          {
-            CaptureScreen().Save(@"\Test.png", ImageFormat.Png);
+            SetTextDelegate d = new SetTextDelegate(SetValue);
+            textBox.Invoke(d, new object[] { property, text });
          }
-         catch (Exception ex)
+         else
          {
-            Trace.DoTrace(Trace.TraceCategories.Shared, Trace.TraceEventType.Error, ex);
+            switch (property)
+            {
+               case Property.Text:
+                  textBox.Text = text;
+                  break;
+            }
          }
       }
    }

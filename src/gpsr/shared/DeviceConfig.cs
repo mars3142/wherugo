@@ -19,14 +19,14 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace org.mars3142.wherugo
+namespace org.mars3142.wherugo.shared
 {
    public class DeviceConfig
    {
       [DllImport("kernel32")]
       private static extern int GetPrivateProfileString(String section, String key, String def, StringBuilder retVal, int size, String filePath);
 
-      const String FILE_PATH = @"\";
+      const String FILE_PATH = @"\HDD\APP\";
       const String FILE_NAME = @"Atlas.ini";
 
       #region Members
@@ -103,8 +103,14 @@ namespace org.mars3142.wherugo
       private static String ReadKey(String section, String key)
       {
          StringBuilder sb = new StringBuilder(255);
-         GetPrivateProfileString(section, key, String.Empty, sb, sb.Length, IniFile);
-
+         try
+         {
+            GetPrivateProfileString(section, key, String.Empty, sb, sb.Length, IniFile);
+         }
+         catch (Exception ex)
+         {
+            Trace.DoTrace(Trace.TraceCategories.Shared, Trace.TraceEventType.Error, ex);
+         }
          return sb.ToString();
       }
       #endregion
