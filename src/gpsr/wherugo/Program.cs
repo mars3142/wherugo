@@ -33,12 +33,12 @@ namespace org.mars3142.wherugo
          Trace.DoTrace(Trace.TraceCategories.WherugoApp, Trace.TraceEventType.Stop);
       }
 
-      private static void CurrentDomainUnhandledException(object sender, UnhandledExceptionEventArgs e)
+      private static void CurrentDomainUnhandledException(Object sender, UnhandledExceptionEventArgs e)
       {
          try
          {
             Exception ex = (Exception) e.ExceptionObject;
-            Trace.DoTrace(Trace.TraceCategories.Exception, ex);
+            Trace.DoTrace(Trace.TraceCategories.Unhandled, Trace.TraceEventType.Error, ex);
          }
          finally
          {

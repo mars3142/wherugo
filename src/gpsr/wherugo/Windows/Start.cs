@@ -27,8 +27,9 @@ namespace org.mars3142.wherugo.Windows
    public partial class Start : Form
    {
       private GPS m_gps = new GPS();
-      private Button m_btn = new Button();
-      private Button m_btn2 = new Button();
+      private Button m_btnExit = new Button();
+      private Button m_btnStart = new Button();
+      private Button m_btnStop = new Button();
       private TextBox m_txt = new TextBox();
 
       public Start()
@@ -37,14 +38,20 @@ namespace org.mars3142.wherugo.Windows
          {
             InitializeComponent();
 
-            m_btn.Text = "Exit";
-            m_btn.Click += new EventHandler(btn_Click);
-            Controls.Add(m_btn);
+            m_btnExit.Text = "Exit";
+            m_btnExit.Click += new EventHandler(btnExit_Click);
+            Controls.Add(m_btnExit);
 
-            m_btn2.Text = "StartGPS";
-            m_btn2.Top = 20;
-            m_btn2.Click += new EventHandler(btn2_Click);
-            Controls.Add(m_btn2);
+            m_btnStart.Text = "StartGPS";
+            m_btnStart.Top = 20;
+            m_btnStart.Click += new EventHandler(btnStart_Click);
+            Controls.Add(m_btnStart);
+
+            m_btnStop.Text = "StopGPS";
+            m_btnStop.Top = m_btnStart.Top;
+            m_btnStop.Left = m_btnStart.Width + 5;
+            m_btnStop.Click += new EventHandler(btnStop_Click);
+            Controls.Add(m_btnStop);
 
             m_txt.Top = 40;
             m_txt.Multiline = true;
@@ -62,20 +69,26 @@ namespace org.mars3142.wherugo.Windows
 
       private void gps_NewData(object sender, GPSEventArgs e)
       {
-         ScreenHelper.SetValue(ref m_txt, ScreenHelper.Property.Text, e.Data);
+         Trace.DoTrace(Trace.TraceCategories.WherugoApp, "gps_NewData");
+         ScreenHelper.SetValue(m_txt, ScreenHelper.Property.Text, e.Data);
       }
 
-      private void btn_Click(object sender, System.EventArgs e)
+      private void btnExit_Click(object sender, System.EventArgs e)
       {
-         Trace.DoTrace(Trace.TraceCategories.WherugoApp, "btn_Click");
-         m_gps.StopGPS();
+         Trace.DoTrace(Trace.TraceCategories.WherugoApp, "btnExit_Click");
          Application.Exit();
       }
 
-      private void btn2_Click(object sender, System.EventArgs e)
+      private void btnStart_Click(object sender, System.EventArgs e)
       {
-         Trace.DoTrace(Trace.TraceCategories.WherugoApp, "btn2_Click");
+         Trace.DoTrace(Trace.TraceCategories.WherugoApp, "btnStart_Click");
          m_gps.StartGPS();
+      }
+
+      private void btnStop_Click(object sender, System.EventArgs e)
+      {
+         Trace.DoTrace(Trace.TraceCategories.WherugoApp, "btnStop_Click");
+         m_gps.StopGPS();
       }
    }
 }

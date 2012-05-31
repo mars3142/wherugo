@@ -43,6 +43,7 @@ namespace org.mars3142.wherugo.shared
       /// </summary>
       public enum TraceCategories
       {
+         Unhandled,
          Exception,
          WherugoApp,
          Cartridge,
@@ -81,7 +82,7 @@ namespace org.mars3142.wherugo.shared
       {
          DoTrace(categories, eventType, null, null);
       }
-      
+
       /// <summary>
       /// 
       /// </summary>
@@ -118,13 +119,31 @@ namespace org.mars3142.wherugo.shared
          try
          {
             stream.WriteLine(String.Format("{0:yyyy-MM-dd HH:mm:ss} {1}: {2}", DateTime.Now, categories.ToString(), eventType.ToString()));
-            if (message != null) stream.WriteLine(message);
-            if (exception != null) stream.WriteLine(exception.Message);
+            if (message != null)
+            {
+               stream.WriteLine(message);
+            }
+            if (exception != null)
+            {
+               WriteException(stream, exception, 1);
+               stream.WriteLine();
+               stream.WriteLine("StackTrace:");
+               stream.WriteLine(exception.StackTrace);
+            }
             stream.WriteLine();
          }
          finally
          {
             stream.Close();
+         }
+      }
+
+      private static void WriteException(StreamWriter stream, Exception exception, Int32 level)
+      {
+         stream.WriteLine(String.Format("{0:00}# {1}", level, exception.Message));
+         if (exception.InnerException != null)
+         {
+            WriteException(stream, exception.InnerException, ++level);
          }
       }
    }

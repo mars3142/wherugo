@@ -22,7 +22,7 @@ namespace org.mars3142.wherugo.shared
 {
    public class ScreenHelper
    {
-      private delegate void SetTextDelegate(ref TextBox textBox, Property property, String text);
+      delegate void SetValueDelegate(TextBox textBox, Property property, String value);
 
       public enum Property
       {
@@ -31,21 +31,28 @@ namespace org.mars3142.wherugo.shared
          Width
       }
 
-      public static void SetValue(ref TextBox textBox, Property property, String text)
+      public static void SetValue(TextBox textBox, Property property, String value)
       {
-         if (textBox.InvokeRequired)
+         try
          {
-            SetTextDelegate d = new SetTextDelegate(SetValue);
-            textBox.Invoke(d, new object[] { property, text });
-         }
-         else
-         {
-            switch (property)
+            if (textBox.InvokeRequired)
             {
-               case Property.Text:
-                  textBox.Text = text;
-                  break;
+               SetValueDelegate d = new SetValueDelegate(SetValue);
+               textBox.Invoke(d, new Object[] { textBox, property, value });
             }
+            else
+            {
+               switch (property)
+               {
+                  case Property.Text:
+                     textBox.Text = value;
+                     break;
+               }
+            }
+         }
+         catch (Exception ex)
+         {
+            Trace.DoTrace(Trace.TraceCategories.Shared, ex);
          }
       }
    }

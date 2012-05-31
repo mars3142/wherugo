@@ -27,7 +27,7 @@ using System.Resources;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("mars3142.org")]
 [assembly: AssemblyProduct("WherUGo")]
-[assembly: AssemblyCopyright("Copyright © mars3142.org 2011")]
+[assembly: AssemblyCopyright("Copyright © 2011-2012 mars3142.org")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
