@@ -16,10 +16,9 @@
 
 using System;
 using System.Windows.Forms;
+using wherugo.luatester.Windows;
 
-using org.mars3142.wherugo.decoder.Windows;
-
-namespace org.mars3142.wherugo.decoder
+namespace wherugo.luatester
 {
    static class Program
    {
@@ -29,23 +28,9 @@ namespace org.mars3142.wherugo.decoder
       [STAThread]
       static void Main()
       {
-         AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomainUnhandledException);
          Application.EnableVisualStyles();
          Application.SetCompatibleTextRenderingDefault(false);
          Application.Run(new Main());
-      }
-
-      static void CurrentDomainUnhandledException(object sender, UnhandledExceptionEventArgs e)
-      {
-         try
-         {
-            Exception ex = (Exception)e.ExceptionObject;
-            // TODO: What do while unhandled exception?
-         }
-         finally
-         {
-            Application.Exit();
-         }
       }
    }
 }

@@ -17,35 +17,13 @@
 using System;
 using System.Windows.Forms;
 
-using org.mars3142.wherugo.decoder.Windows;
-
-namespace org.mars3142.wherugo.decoder
+namespace wherugo.luatester.Windows
 {
-   static class Program
+   public partial class Main : Form
    {
-      /// <summary>
-      /// The main entry point for the application.
-      /// </summary>
-      [STAThread]
-      static void Main()
+      public Main()
       {
-         AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomainUnhandledException);
-         Application.EnableVisualStyles();
-         Application.SetCompatibleTextRenderingDefault(false);
-         Application.Run(new Main());
-      }
-
-      static void CurrentDomainUnhandledException(object sender, UnhandledExceptionEventArgs e)
-      {
-         try
-         {
-            Exception ex = (Exception)e.ExceptionObject;
-            // TODO: What do while unhandled exception?
-         }
-         finally
-         {
-            Application.Exit();
-         }
+         InitializeComponent();
       }
    }
 }

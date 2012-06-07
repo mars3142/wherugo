@@ -2,10 +2,22 @@
 Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wherugo.decoder", "wherugo.decoder\wherugo.decoder.csproj", "{2E6418B5-479A-4499-8F08-ABA181D40B89}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cartridges", "cartridges\cartridges.csproj", "{264D3B8D-D034-4B05-A80B-4664B7DF14C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cartridges", "..\cartridges\cartridges.csproj", "{264D3B8D-D034-4B05-A80B-4664B7DF14C4}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shared", "shared\shared.csproj", "{D6DF7046-DD06-4778-AD7F-9117AA477129}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shared", "..\shared\shared.csproj", "{D6DF7046-DD06-4778-AD7F-9117AA477129}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

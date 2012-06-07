@@ -21,11 +21,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("cartridges")]
+[assembly: AssemblyTitle("wherugo.luatester")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("mars3142.org")]
-[assembly: AssemblyProduct("WherUGo Cartridges")]
+[assembly: AssemblyProduct("WherUGo Lua-Tester")]
 [assembly: AssemblyCopyright("Copyright © 2011-2012 Peter Siegmund")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -36,7 +36,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("d3bf9a13-89dc-4863-a9b7-bbe001f6d767")]
+[assembly: Guid("696486a9-3469-4082-a520-0e933646df6a")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -45,7 +45,5 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
 [assembly: AssemblyVersion("1.0.0.0")]
-
+[assembly: AssemblyFileVersion("1.0.0.0")]

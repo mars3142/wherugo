@@ -4,11 +4,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D6DF7046-DD06-4778-AD7F-9117AA477129}</ProjectGuid>
+    <ProjectGuid>{264D3B8D-D034-4B05-A80B-4664B7DF14C4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>org.mars3142.wherugo.shared</RootNamespace>
-    <AssemblyName>shared</AssemblyName>
+    <RootNamespace>org.mars3142.wherugo.cartridges</RootNamespace>
+    <AssemblyName>cartridges</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -27,27 +27,44 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\gpsr\shared\DeviceConfig.cs">
-      <Link>DeviceConfig.cs</Link>
+    <Compile Include="..\..\gpsr\cartridges\Cartridge.cs">
+      <Link>Cartridge.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\gpsr\shared\SeekFile.cs">
-      <Link>SeekFile.cs</Link>
+    <Compile Include="..\..\gpsr\cartridges\File.cs">
+      <Link>File.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\gpsr\shared\Trace.cs">
-      <Link>Trace.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\gpsr\shared\Utils.cs">
-      <Link>Utils.cs</Link>
+    <Compile Include="..\..\gpsr\cartridges\Objects.cs">
+      <Link>Objects.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\shared\shared.csproj">
+      <Project>{D6DF7046-DD06-4778-AD7F-9117AA477129}</Project>
+      <Name>shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -58,6 +58,8 @@ namespace org.mars3142.wherugo.decoder.Windows
          // fdGWC
          // 
          this.fdGWC.Filter = "GWC-Files|*.gwc|All files|*.*";
+         this.fdGWC.ShowReadOnly = true;
+         this.fdGWC.SupportMultiDottedExtensions = true;
          this.fdGWC.Title = "Open GWC-File";
          // 
          // pbOpen

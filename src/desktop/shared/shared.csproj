@@ -4,13 +4,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2E6418B5-479A-4499-8F08-ABA181D40B89}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <ProjectGuid>{D6DF7046-DD06-4778-AD7F-9117AA477129}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>org.mars3142.wherugo.Decoder</RootNamespace>
-    <AssemblyName>wherugo.decoder</AssemblyName>
-    <StartupObject>org.mars3142.wherugo.decoder.Program</StartupObject>
-    <ApplicationIcon>wherugo.ico</ApplicationIcon>
+    <RootNamespace>org.mars3142.wherugo.shared</RootNamespace>
+    <AssemblyName>shared</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,43 +46,27 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Windows\Main.cs">
-      <SubType>Form</SubType>
+    <Compile Include="..\..\gpsr\shared\DeviceConfig.cs">
+      <Link>DeviceConfig.cs</Link>
     </Compile>
-    <Compile Include="Windows\Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="..\..\gpsr\shared\ScreenHelper.cs">
+      <Link>ScreenHelper.cs</Link>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="..\..\gpsr\shared\SeekFile.cs">
+      <Link>SeekFile.cs</Link>
+    </Compile>
+    <Compile Include="..\..\gpsr\shared\Trace.cs">
+      <Link>Trace.cs</Link>
+    </Compile>
+    <Compile Include="..\..\gpsr\shared\Utils.cs">
+      <Link>Utils.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Windows\Main.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Main.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Windows\ObjectWindow.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>ObjectWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <Compile Include="Windows\ObjectWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Windows\ObjectWindow.Designer.cs">
-      <DependentUpon>ObjectWindow.cs</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\cartridges\cartridges.csproj">
-      <Project>{264D3B8D-D034-4B05-A80B-4664B7DF14C4}</Project>
-      <Name>cartridges</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="wherugo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

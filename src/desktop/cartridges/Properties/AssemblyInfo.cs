@@ -1,16 +1,32 @@
-﻿using System.Reflection;
+﻿//  wherugo - WherUGo for Magellan eXplorist x10
+//  Copyright (C) 2011-2012 Peter Siegmund <developer@mars3142.org>
+//
+//  This program is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+//
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//
+//  You should have received a copy of the GNU General Public License
+//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("shared")]
+[assembly: AssemblyTitle("cartridges")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("mars3142.org")]
-[assembly: AssemblyProduct("WherUGo Shared")]
-[assembly: AssemblyCopyright("Copyright © mars3142.org 2011")]
+[assembly: AssemblyProduct("WherUGo Cartridges")]
+[assembly: AssemblyCopyright("Copyright © 2011-2012 Peter Siegmund")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +36,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("b39e014d-34bb-47f6-a08d-855d01731ad2")]
+[assembly: Guid("f1d9ed18-bcd1-43c6-8c47-5ab964f24744")]
 
 // Version information for an assembly consists of the following four values:
 //

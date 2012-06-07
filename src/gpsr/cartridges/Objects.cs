@@ -60,7 +60,17 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public long ObjectType
       {
-         get { return _objectType; }
+         get 
+         {
+            if (_objectId != 0 && _objectType == 0) // because of unknown data
+            {
+               return -1;
+            }
+            else
+            {
+               return _objectType;
+            }
+         }
       }
 
       /// <summary>
@@ -70,31 +80,42 @@ namespace org.mars3142.wherugo.cartridges
       {
          get
          {
-            string type = String.Format("invalid ({0})", _objectType);
+            string type = String.Format("invalid ({0})", ObjectType);
             
-            switch (_objectType)
+            switch (ObjectType)
             {
+               case -1: // unknown for some devices
+                  type = "DELETED";
+                  break;
+
                case 0:
                   type = "Lua bytecode";
                   break;
+
                case 1:
                   type = "BMP";
                   break;
+
                case 2:
                   type = "PNG";
                   break;
+
                case 3:
                   type = "JPG";
                   break;
+
                case 4:
                   type = "GIF";
                   break;
+
                case 17:
                   type = "WAV";
                   break;
+
                case 18:
                   type = "MP3";
                   break;
+
                case 19:
                   type = "FDL";
                   break;

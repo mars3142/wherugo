@@ -266,7 +266,7 @@ namespace org.mars3142.wherugo.lua
       public static extern void lua_call(IntPtr lua_State, int nargs, int nresults);
       //LUA_API int   (lua_pcall) (lua_State *L, int nargs, int nresults, int errfunc);
       [DllImport(_dllFile)]
-      public static extern int lua_pcall(IntPtr lua_State, int nargs, int nresults, int errfunc);
+      public static extern int lua_pcallk(IntPtr lua_State, int nargs, int nresults, int errfunc);
       //LUA_API int   (lua_cpcall) (lua_State *L, lua_CFunction func, void *ud);
       //LUA_API int   (lua_load) (lua_State *L, lua_Reader reader, void *dt,
       //                                        const char *chunkname);
@@ -441,7 +441,7 @@ namespace org.mars3142.wherugo.lua
       {
          if (luaL_loadstring(lua_State, s) != 0)
             return 1;
-         return lua_pcall(lua_State, 0, LUA_MULTRET, 0);
+         return lua_pcallk(lua_State, 0, LUA_MULTRET, 0);
       }
 
       //LUALIB_API int (luaL_loadfile) (lua_State *L, const char *filename);
@@ -454,7 +454,7 @@ namespace org.mars3142.wherugo.lua
       {
          if (luaL_loadfile(lua_State, s) != 0)
             return 1;
-         return lua_pcall(lua_State, 0, LUA_MULTRET, 0);
+         return lua_pcallk(lua_State, 0, LUA_MULTRET, 0);
       }
    }
 }
