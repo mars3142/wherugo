@@ -16,14 +16,40 @@
 
 using System;
 using System.Windows.Forms;
+using org.mars3142.wherugo.lua;
 
-namespace wherugo.luatester.Windows
+namespace org.mars3142.wherugo.luatester.Windows
 {
    public partial class Main : Form
    {
       public Main()
       {
          InitializeComponent();
+
+         txtLua.Text = "TwoPlusTwo = 2+2; print('Hello World'); print('TwoPlusTwo:', TwoPlusTwo);";
+      }
+
+      private void btnExecute_Click(object sender, EventArgs e)
+      {
+         IntPtr lua_State = Lua.luaL_newstate();
+         if (lua_State == IntPtr.Zero)
+         {
+            MessageBox.Show("Error");
+         }
+
+         //open the Lua libraries for table, string, math etc.
+         Lua.luaL_openlibs(lua_State);
+
+         //string luaScriptString = "TwoPlusTwo = 2+2; print('Hello World'); print('TwoPlusTwo:', TwoPlusTwo)";
+         string luaScriptString = txtLua.Text;
+         int error = Lua.luaL_dostring(lua_State, luaScriptString);
+         if (error != 0)
+         {
+            MessageBox.Show(error.ToString());
+         }
+
+         //clean up nicely
+         Lua.lua_close(lua_State);
       }
    }
 }

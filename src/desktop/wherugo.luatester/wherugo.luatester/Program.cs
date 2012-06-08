@@ -16,9 +16,10 @@
 
 using System;
 using System.Windows.Forms;
-using wherugo.luatester.Windows;
+using org.mars3142.wherugo.lua;
+using org.mars3142.wherugo.luatester.Windows;
 
-namespace wherugo.luatester
+namespace org.mars3142.wherugo.luatester
 {
    static class Program
    {
