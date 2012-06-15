@@ -75,6 +75,10 @@
       <Project>{05A8831E-F33B-4326-9BBB-961A2CC262B7}</Project>
       <Name>lua</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\shared\shared.csproj">
+      <Project>{D6DF7046-DD06-4778-AD7F-9117AA477129}</Project>
+      <Name>shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

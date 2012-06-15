@@ -42,8 +42,8 @@ namespace org.mars3142.wherugo.communication
          try
          {
             Trace.DoTrace(Trace.TraceCategories.Communication, "GPS Constructor");
-            serialPort.PortName = "COM2"; // DeviceConfig.PortName;
-            serialPort.BaudRate = 57600; // Convert.ToInt32(DeviceConfig.BaudRate);
+            serialPort.PortName = DeviceConfig.PortName;
+            serialPort.BaudRate = Convert.ToInt32(DeviceConfig.BaudRate);
 
             serialPort.DataReceived += new SerialDataReceivedEventHandler(serialPort_DataReceived);
             serialPort.ErrorReceived += new SerialErrorReceivedEventHandler(serialPort_ErrorReceived);

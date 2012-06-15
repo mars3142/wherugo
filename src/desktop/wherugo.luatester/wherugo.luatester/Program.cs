@@ -15,9 +15,12 @@
 //  along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 using System;
+using System.Threading;
 using System.Windows.Forms;
+
 using org.mars3142.wherugo.lua;
 using org.mars3142.wherugo.luatester.Windows;
+using org.mars3142.wherugo.shared;
 
 namespace org.mars3142.wherugo.luatester
 {
@@ -29,9 +32,40 @@ namespace org.mars3142.wherugo.luatester
       [STAThread]
       static void Main()
       {
+         AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomainUnhandledException);
+         Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
+
          Application.EnableVisualStyles();
          Application.SetCompatibleTextRenderingDefault(false);
          Application.Run(new Main());
+      }
+
+      static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
+      {
+         try
+         {
+            Exception ex = (Exception)e.Exception;
+            Trace.DoTrace(Trace.TraceCategories.Unhandled, Trace.TraceEventType.Error, ex);
+         }
+         finally
+         {
+            MessageBox.Show("Unhandled Exception. See trace.log", "Application_ThreadException");
+            Environment.Exit(-1);
+         }
+      }
+
+      static void CurrentDomainUnhandledException(object sender, UnhandledExceptionEventArgs e)
+      {
+         try
+         {
+            Exception ex = (Exception)e.ExceptionObject;
+            Trace.DoTrace(Trace.TraceCategories.Unhandled, Trace.TraceEventType.Error, ex);
+         }
+         finally
+         {
+            MessageBox.Show("Unhandled Exception. See trace.log", "CurrentDomainUnhandledException");
+            Environment.Exit(-1);
+         }
       }
    }
 }

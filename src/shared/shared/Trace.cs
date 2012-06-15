@@ -21,6 +21,8 @@ namespace org.mars3142.wherugo.shared
 {
    public static class Trace
    {
+      #region Declares
+
       /// <summary>
       /// 
       /// </summary>
@@ -52,6 +54,21 @@ namespace org.mars3142.wherugo.shared
          Lua,
          Shared
       }
+
+      #endregion // Declares
+
+      #region Private
+
+      private static void WriteException(StreamWriter stream, Exception exception, Int32 level)
+      {
+         stream.WriteLine(String.Format("{0:00}# {1}", level, exception.Message));
+         if (exception.InnerException != null)
+         {
+            WriteException(stream, exception.InnerException, ++level);
+         }
+      }
+      
+      #endregion // Private
 
       /// <summary>
       /// 
@@ -114,7 +131,11 @@ namespace org.mars3142.wherugo.shared
       /// <param name="exception"></param>
       public static void DoTrace(TraceCategories categories, TraceEventType eventType, String message, Exception exception)
       {
+#if WindowsCE
          StreamWriter stream = new StreamWriter(@"\SDMMC\Wherugo\Log\trace.txt", true);
+#else
+         StreamWriter stream = new StreamWriter(@".\trace.txt", true);
+#endif
 
          try
          {
@@ -138,13 +159,5 @@ namespace org.mars3142.wherugo.shared
          }
       }
 
-      private static void WriteException(StreamWriter stream, Exception exception, Int32 level)
-      {
-         stream.WriteLine(String.Format("{0:00}# {1}", level, exception.Message));
-         if (exception.InnerException != null)
-         {
-            WriteException(stream, exception.InnerException, ++level);
-         }
-      }
    }
 }

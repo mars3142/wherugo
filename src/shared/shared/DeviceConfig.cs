@@ -16,6 +16,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 
@@ -23,11 +24,16 @@ namespace org.mars3142.wherugo.shared
 {
    public class DeviceConfig
    {
-      [DllImport("kernel32")]
-      private static extern int GetPrivateProfileString(String section, String key, String def, StringBuilder retVal, int size, String filePath);
+      #region Declares
 
+#if WindowsCE
       const String FILE_PATH = @"\HDD\APP\";
-      const String FILE_NAME = @"Atlas.ini";
+#else
+      const String FILE_PATH = @".\";
+#endif
+      const String FILE_NAME = @"atlas.ini";
+
+      #endregion // Declares
 
       #region Members
       /// <summary>
@@ -73,9 +79,64 @@ namespace org.mars3142.wherugo.shared
             return Param(1);
          }
       }
-      #endregion
+      #endregion // Members
 
       #region Private
+      private static void GetPrivateProfileString(String section, String key, String defaultValue, StringBuilder sb)
+      {
+         String line = String.Empty;
+         String sec = String.Empty;
+         String[] value;
+
+         StreamReader stream = new StreamReader(IniFile);
+
+         try
+         {
+            while (!stream.EndOfStream)
+            {
+               line = stream.ReadLine().Trim();
+               if (line.Length != 0)
+               {
+                  switch (line[0])
+                  {
+                     case ';':
+                        // ignore comments
+                        break;
+                     case '[':
+                        sec = line.Substring(1, line.Length - 2);
+                        break;
+                     default:
+                        if (sec == section)
+                        {
+                           value = line.Split('=');
+                           if (value[0].Trim() == key)
+                           {
+                              sb.Append(value[1].Trim());
+                           }
+                        }
+                        break;
+                  }
+               }
+               if (sb.Length != 0)
+               {
+                  break;
+               }
+            }
+            if (sb.Length != 0)
+            {
+               sb.Append(defaultValue);
+            }
+         }
+         catch (Exception ex)
+         {
+            Trace.DoTrace(Trace.TraceCategories.Shared, Trace.TraceEventType.Error, ex);
+         }
+         finally
+         {
+            stream.Close();
+         }
+      }
+
       private static String Param(int index)
       {
          if (index <= 0)
@@ -91,9 +152,13 @@ namespace org.mars3142.wherugo.shared
          if (!String.IsNullOrEmpty(param))
          {
             String[] entries = param.Split(',');
-            if (entries.Length <= index)
+            if (entries.Length >= index)
             {
                retValue = entries[index - 1];
+            }
+            else
+            {
+               throw new ArgumentOutOfRangeException("index", String.Format("Value have to be between 1 to {0}", entries.Length));
             }
          }
 
@@ -102,10 +167,10 @@ namespace org.mars3142.wherugo.shared
 
       private static String ReadKey(String section, String key)
       {
-         StringBuilder sb = new StringBuilder(255);
+         StringBuilder sb = new StringBuilder();
          try
          {
-            GetPrivateProfileString(section, key, String.Empty, sb, sb.Length, IniFile);
+            GetPrivateProfileString(section, key, String.Empty, sb);
          }
          catch (Exception ex)
          {
@@ -113,6 +178,6 @@ namespace org.mars3142.wherugo.shared
          }
          return sb.ToString();
       }
-      #endregion
+      #endregion // Private
    }
 }
