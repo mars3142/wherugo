@@ -49,13 +49,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\gpsr\cartridges\Cartridge.cs">
+    <Compile Include="..\..\shared\cartridges\Cartridge.cs">
       <Link>Cartridge.cs</Link>
     </Compile>
-    <Compile Include="..\..\gpsr\cartridges\File.cs">
+    <Compile Include="..\..\shared\cartridges\File.cs">
       <Link>File.cs</Link>
     </Compile>
-    <Compile Include="..\..\gpsr\cartridges\Objects.cs">
+    <Compile Include="..\..\shared\cartridges\Objects.cs">
       <Link>Objects.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

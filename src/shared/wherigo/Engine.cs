@@ -17,10 +17,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using org.mars3142.wherugo.lua;
 
 namespace org.mars3142.wherugo.wherigo
 {
-   public class wherigo
+   public class Engine
    {
    }
 }

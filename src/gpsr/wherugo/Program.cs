@@ -28,8 +28,14 @@ namespace org.mars3142.wherugo
       {
          AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomainUnhandledException);
          Trace.DoTrace(Trace.TraceCategories.WherugoApp, Trace.TraceEventType.Start);
+
+         IntPtr m_lua_state = IntPtr.Zero;
+         m_lua_state = lua.Lua.luaL_newstate();
+         lua.Lua.luaL_openlibs(m_lua_state);
+
          Windows.Start startForm = new Windows.Start();
          Application.Run(startForm);
+         
          Trace.DoTrace(Trace.TraceCategories.WherugoApp, Trace.TraceEventType.Stop);
       }
 

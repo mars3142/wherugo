@@ -51,19 +51,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\gpsr\shared\DeviceConfig.cs">
+    <Compile Include="..\..\shared\shared\DeviceConfig.cs">
       <Link>DeviceConfig.cs</Link>
     </Compile>
-    <Compile Include="..\..\gpsr\shared\ScreenHelper.cs">
+    <Compile Include="..\..\shared\shared\ScreenHelper.cs">
       <Link>ScreenHelper.cs</Link>
     </Compile>
-    <Compile Include="..\..\gpsr\shared\SeekFile.cs">
+    <Compile Include="..\..\shared\shared\SeekFile.cs">
       <Link>SeekFile.cs</Link>
     </Compile>
-    <Compile Include="..\..\gpsr\shared\Trace.cs">
+    <Compile Include="..\..\shared\shared\Trace.cs">
       <Link>Trace.cs</Link>
     </Compile>
-    <Compile Include="..\..\gpsr\shared\Utils.cs">
+    <Compile Include="..\..\shared\shared\Utils.cs">
       <Link>Utils.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

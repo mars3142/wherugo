@@ -1,439 +1,7 @@
 ==================================================
-Function Name     : luaL_addlstring
-Address           : 0x0000000180026c50
-Relative Address  : 0x00026c50
-Ordinal           : 1 (0x1)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_addstring
-Address           : 0x0000000180026d60
-Relative Address  : 0x00026d60
-Ordinal           : 2 (0x2)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_addvalue
-Address           : 0x0000000180026ef0
-Relative Address  : 0x00026ef0
-Ordinal           : 3 (0x3)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_argerror
-Address           : 0x0000000180025810
-Relative Address  : 0x00025810
-Ordinal           : 4 (0x4)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_buffinit
-Address           : 0x0000000180027030
-Relative Address  : 0x00027030
-Ordinal           : 5 (0x5)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_buffinitsize
-Address           : 0x0000000180027050
-Relative Address  : 0x00027050
-Ordinal           : 6 (0x6)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_callmeta
-Address           : 0x0000000180027b70
-Relative Address  : 0x00027b70
-Ordinal           : 7 (0x7)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_checkany
-Address           : 0x0000000180026690
-Relative Address  : 0x00026690
-Ordinal           : 8 (0x8)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_checkinteger
-Address           : 0x0000000180026970
-Relative Address  : 0x00026970
-Ordinal           : 9 (0x9)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_checklstring
-Address           : 0x0000000180026730
-Relative Address  : 0x00026730
-Ordinal           : 10 (0xa)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_checknumber
-Address           : 0x0000000180026870
-Relative Address  : 0x00026870
-Ordinal           : 11 (0xb)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_checkoption
-Address           : 0x00000001800263a0
-Relative Address  : 0x000263a0
-Ordinal           : 12 (0xc)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_checkstack
-Address           : 0x0000000180026530
-Relative Address  : 0x00026530
-Ordinal           : 13 (0xd)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_checktype
-Address           : 0x00000001800265f0
-Relative Address  : 0x000265f0
-Ordinal           : 14 (0xe)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_checkudata
-Address           : 0x0000000180026360
-Relative Address  : 0x00026360
-Ordinal           : 15 (0xf)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_checkunsigned
-Address           : 0x00000001800269b0
-Relative Address  : 0x000269b0
-Ordinal           : 16 (0x10)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_checkversion_
-Address           : 0x0000000180029df0
-Relative Address  : 0x00029df0
-Ordinal           : 17 (0x11)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_error
-Address           : 0x0000000180025c90
-Relative Address  : 0x00025c90
-Ordinal           : 18 (0x12)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_execresult
-Address           : 0x0000000180025dd0
-Relative Address  : 0x00025dd0
-Ordinal           : 19 (0x13)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_fileresult
-Address           : 0x0000000180025d10
-Relative Address  : 0x00025d10
-Ordinal           : 20 (0x14)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_getmetafield
-Address           : 0x00000001800279b0
-Relative Address  : 0x000279b0
-Ordinal           : 21 (0x15)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_getsubtable
-Address           : 0x0000000180029130
-Relative Address  : 0x00029130
-Ordinal           : 22 (0x16)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_gsub
-Address           : 0x0000000180029790
-Relative Address  : 0x00029790
-Ordinal           : 23 (0x17)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_len
-Address           : 0x0000000180027cd0
-Relative Address  : 0x00027cd0
-Ordinal           : 24 (0x18)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_loadbufferx
-Address           : 0x0000000180027930
-Relative Address  : 0x00027930
-Ordinal           : 25 (0x19)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_loadfilex
-Address           : 0x0000000180027510
-Relative Address  : 0x00027510
-Ordinal           : 26 (0x1a)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_loadstring
-Address           : 0x0000000180027960
-Relative Address  : 0x00027960
-Ordinal           : 27 (0x1b)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_newmetatable
-Address           : 0x0000000180025ed0
-Relative Address  : 0x00025ed0
-Ordinal           : 28 (0x1c)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_newstate
-Address           : 0x0000000180029dc0
-Relative Address  : 0x00029dc0
-Ordinal           : 29 (0x1d)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_openlib
-Address           : 0x0000000180028990
-Relative Address  : 0x00028990
-Ordinal           : 30 (0x1e)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_openlibs
-Address           : 0x0000000180046cf0
-Relative Address  : 0x00046cf0
-Ordinal           : 31 (0x1f)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_optinteger
-Address           : 0x00000001800269f0
-Relative Address  : 0x000269f0
-Ordinal           : 32 (0x20)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_optlstring
-Address           : 0x0000000180026770
-Relative Address  : 0x00026770
-Ordinal           : 33 (0x21)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_optnumber
-Address           : 0x00000001800268b0
-Relative Address  : 0x000268b0
-Ordinal           : 34 (0x22)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_optunsigned
-Address           : 0x0000000180026ab0
-Relative Address  : 0x00026ab0
-Ordinal           : 35 (0x23)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_prepbuffsize
-Address           : 0x0000000180026b70
-Relative Address  : 0x00026b70
-Ordinal           : 36 (0x24)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_pushmodule
-Address           : 0x0000000180028770
-Relative Address  : 0x00028770
-Ordinal           : 37 (0x25)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_pushresult
-Address           : 0x0000000180026d90
-Relative Address  : 0x00026d90
-Ordinal           : 38 (0x26)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_pushresultsize
-Address           : 0x0000000180026e40
-Relative Address  : 0x00026e40
-Ordinal           : 39 (0x27)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_ref
-Address           : 0x0000000180027130
-Relative Address  : 0x00027130
-Ordinal           : 40 (0x28)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_requiref
-Address           : 0x0000000180029360
-Relative Address  : 0x00029360
-Ordinal           : 41 (0x29)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_setfuncs
-Address           : 0x0000000180028b30
-Relative Address  : 0x00028b30
-Ordinal           : 42 (0x2a)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_setmetatable
-Address           : 0x00000001800260b0
-Relative Address  : 0x000260b0
-Ordinal           : 43 (0x2b)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_testudata
-Address           : 0x0000000180026130
-Relative Address  : 0x00026130
-Ordinal           : 44 (0x2c)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_tolstring
-Address           : 0x0000000180027e80
-Relative Address  : 0x00027e80
-Ordinal           : 45 (0x2d)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_traceback
-Address           : 0x0000000180024fa0
-Relative Address  : 0x00024fa0
-Ordinal           : 46 (0x2e)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_unref
-Address           : 0x00000001800272e0
-Relative Address  : 0x000272e0
-Ordinal           : 47 (0x2f)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
-Function Name     : luaL_where
-Address           : 0x0000000180025ab0
-Relative Address  : 0x00025ab0
-Ordinal           : 48 (0x30)
-Filename          : lua52.dll
-Type              : Exported Function
-==================================================
-
-==================================================
 Function Name     : lua_absindex
-Address           : 0x00000001800011c0
-Relative Address  : 0x000011c0
+Address           : 0x10001170
+Relative Address  : 0x00001170
 Ordinal           : 49 (0x31)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -441,8 +9,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_arith
-Address           : 0x0000000180001ba0
-Relative Address  : 0x00001ba0
+Address           : 0x100018e0
+Relative Address  : 0x000018e0
 Ordinal           : 50 (0x32)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -450,8 +18,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_atpanic
-Address           : 0x0000000180001180
-Relative Address  : 0x00001180
+Address           : 0x10001130
+Relative Address  : 0x00001130
 Ordinal           : 51 (0x33)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -459,8 +27,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_callk
-Address           : 0x0000000180003eb0
-Relative Address  : 0x00003eb0
+Address           : 0x10003140
+Relative Address  : 0x00003140
 Ordinal           : 52 (0x34)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -468,8 +36,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_checkstack
-Address           : 0x0000000180001080
-Relative Address  : 0x00001080
+Address           : 0x10001070
+Relative Address  : 0x00001070
 Ordinal           : 53 (0x35)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -477,8 +45,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_close
-Address           : 0x000000018001bd10
-Relative Address  : 0x0001bd10
+Address           : 0x10010570
+Relative Address  : 0x00010570
 Ordinal           : 54 (0x36)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -486,8 +54,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_compare
-Address           : 0x0000000180001c30
-Relative Address  : 0x00001c30
+Address           : 0x10001980
+Relative Address  : 0x00001980
 Ordinal           : 55 (0x37)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -495,8 +63,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_concat
-Address           : 0x0000000180004870
-Relative Address  : 0x00004870
+Address           : 0x100037b0
+Relative Address  : 0x000037b0
 Ordinal           : 56 (0x38)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -504,8 +72,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_copy
-Address           : 0x00000001800014d0
-Relative Address  : 0x000014d0
+Address           : 0x10001400
+Relative Address  : 0x00001400
 Ordinal           : 57 (0x39)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -513,8 +81,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_createtable
-Address           : 0x0000000180003200
-Relative Address  : 0x00003200
+Address           : 0x10002860
+Relative Address  : 0x00002860
 Ordinal           : 58 (0x3a)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -522,8 +90,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_dump
-Address           : 0x00000001800044c0
-Relative Address  : 0x000044c0
+Address           : 0x100034e0
+Relative Address  : 0x000034e0
 Ordinal           : 59 (0x3b)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -531,8 +99,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_error
-Address           : 0x00000001800047b0
-Relative Address  : 0x000047b0
+Address           : 0x10003720
+Relative Address  : 0x00003720
 Ordinal           : 60 (0x3c)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -540,8 +108,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_gc
-Address           : 0x00000001800045c0
-Relative Address  : 0x000045c0
+Address           : 0x10003560
+Relative Address  : 0x00003560
 Ordinal           : 61 (0x3d)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -549,8 +117,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_getallocf
-Address           : 0x0000000180004980
-Relative Address  : 0x00004980
+Address           : 0x100038d0
+Relative Address  : 0x000038d0
 Ordinal           : 62 (0x3e)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -558,8 +126,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_getctx
-Address           : 0x0000000180003e90
-Relative Address  : 0x00003e90
+Address           : 0x10003110
+Relative Address  : 0x00003110
 Ordinal           : 63 (0x3f)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -567,8 +135,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_getfield
-Address           : 0x0000000180002e70
-Relative Address  : 0x00002e70
+Address           : 0x10002610
+Relative Address  : 0x00002610
 Ordinal           : 64 (0x40)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -576,8 +144,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_getglobal
-Address           : 0x0000000180002cd0
-Relative Address  : 0x00002cd0
+Address           : 0x100024f0
+Relative Address  : 0x000024f0
 Ordinal           : 65 (0x41)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -585,8 +153,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_gethook
-Address           : 0x0000000180007f70
-Relative Address  : 0x00007f70
+Address           : 0x10005740
+Relative Address  : 0x00005740
 Ordinal           : 66 (0x42)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -594,8 +162,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_gethookcount
-Address           : 0x0000000180007f90
-Relative Address  : 0x00007f90
+Address           : 0x10005760
+Relative Address  : 0x00005760
 Ordinal           : 67 (0x43)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -603,8 +171,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_gethookmask
-Address           : 0x0000000180007f80
-Relative Address  : 0x00007f80
+Address           : 0x10005750
+Relative Address  : 0x00005750
 Ordinal           : 68 (0x44)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -612,8 +180,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_getinfo
-Address           : 0x00000001800088b0
-Relative Address  : 0x000088b0
+Address           : 0x10005c10
+Relative Address  : 0x00005c10
 Ordinal           : 69 (0x45)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -621,8 +189,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_getlocal
-Address           : 0x0000000180008120
-Relative Address  : 0x00008120
+Address           : 0x10005860
+Relative Address  : 0x00005860
 Ordinal           : 70 (0x46)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -630,8 +198,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_getmetatable
-Address           : 0x0000000180003300
-Relative Address  : 0x00003300
+Address           : 0x100028c0
+Relative Address  : 0x000028c0
 Ordinal           : 71 (0x47)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -639,8 +207,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_getstack
-Address           : 0x0000000180007fa0
-Relative Address  : 0x00007fa0
+Address           : 0x10005770
+Relative Address  : 0x00005770
 Ordinal           : 72 (0x48)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -648,8 +216,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_gettable
-Address           : 0x0000000180002de0
-Relative Address  : 0x00002de0
+Address           : 0x10002560
+Relative Address  : 0x00002560
 Ordinal           : 73 (0x49)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -657,8 +225,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_gettop
-Address           : 0x00000001800011f0
-Relative Address  : 0x000011f0
+Address           : 0x100011a0
+Relative Address  : 0x000011a0
 Ordinal           : 74 (0x4a)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -666,8 +234,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_getupvalue
-Address           : 0x0000000180004ab0
-Relative Address  : 0x00004ab0
+Address           : 0x10003a20
+Relative Address  : 0x00003a20
 Ordinal           : 75 (0x4b)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -675,8 +243,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_getuservalue
-Address           : 0x00000001800033d0
-Relative Address  : 0x000033d0
+Address           : 0x100029b0
+Relative Address  : 0x000029b0
 Ordinal           : 76 (0x4c)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -684,8 +252,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_insert
-Address           : 0x0000000180001310
-Relative Address  : 0x00001310
+Address           : 0x100012a0
+Relative Address  : 0x000012a0
 Ordinal           : 77 (0x4d)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -693,8 +261,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_iscfunction
-Address           : 0x0000000180001750
-Relative Address  : 0x00001750
+Address           : 0x100015e0
+Relative Address  : 0x000015e0
 Ordinal           : 78 (0x4e)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -702,8 +270,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_isnumber
-Address           : 0x00000001800017e0
-Relative Address  : 0x000017e0
+Address           : 0x10001660
+Relative Address  : 0x00001660
 Ordinal           : 79 (0x4f)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -711,8 +279,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_isstring
-Address           : 0x0000000180001950
-Relative Address  : 0x00001950
+Address           : 0x10001710
+Relative Address  : 0x00001710
 Ordinal           : 80 (0x50)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -720,8 +288,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_isuserdata
-Address           : 0x00000001800019e0
-Relative Address  : 0x000019e0
+Address           : 0x10001740
+Relative Address  : 0x00001740
 Ordinal           : 81 (0x51)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -729,8 +297,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_len
-Address           : 0x00000001800048e0
-Relative Address  : 0x000048e0
+Address           : 0x10003820
+Relative Address  : 0x00003820
 Ordinal           : 82 (0x52)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -738,8 +306,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_load
-Address           : 0x0000000180004350
-Relative Address  : 0x00004350
+Address           : 0x10003420
+Relative Address  : 0x00003420
 Ordinal           : 83 (0x53)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -747,8 +315,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_newstate
-Address           : 0x000000018001bb40
-Relative Address  : 0x0001bb40
+Address           : 0x10010420
+Relative Address  : 0x00010420
 Ordinal           : 84 (0x54)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -756,8 +324,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_newthread
-Address           : 0x000000018001b970
-Relative Address  : 0x0001b970
+Address           : 0x10010310
+Relative Address  : 0x00010310
 Ordinal           : 85 (0x55)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -765,8 +333,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_newuserdata
-Address           : 0x00000001800049b0
-Relative Address  : 0x000049b0
+Address           : 0x10003920
+Relative Address  : 0x00003920
 Ordinal           : 86 (0x56)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -774,8 +342,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_next
-Address           : 0x00000001800047c0
-Relative Address  : 0x000047c0
+Address           : 0x10003730
+Relative Address  : 0x00003730
 Ordinal           : 87 (0x57)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -783,8 +351,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_pcallk
-Address           : 0x0000000180004060
-Relative Address  : 0x00004060
+Address           : 0x100032f0
+Relative Address  : 0x000032f0
 Ordinal           : 88 (0x58)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -792,8 +360,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_pushboolean
-Address           : 0x0000000180002c60
-Relative Address  : 0x00002c60
+Address           : 0x10002480
+Relative Address  : 0x00002480
 Ordinal           : 89 (0x59)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -801,8 +369,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_pushcclosure
-Address           : 0x0000000180002b10
-Relative Address  : 0x00002b10
+Address           : 0x100023e0
+Relative Address  : 0x000023e0
 Ordinal           : 90 (0x5a)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -810,8 +378,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_pushfstring
-Address           : 0x0000000180002ad0
-Relative Address  : 0x00002ad0
+Address           : 0x100023a0
+Relative Address  : 0x000023a0
 Ordinal           : 91 (0x5b)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -819,8 +387,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_pushinteger
-Address           : 0x0000000180002940
-Relative Address  : 0x00002940
+Address           : 0x10002220
+Relative Address  : 0x00002220
 Ordinal           : 92 (0x5c)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -828,8 +396,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_pushlightuserdata
-Address           : 0x0000000180002c80
-Relative Address  : 0x00002c80
+Address           : 0x100024a0
+Relative Address  : 0x000024a0
 Ordinal           : 93 (0x5d)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -837,8 +405,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_pushlstring
-Address           : 0x0000000180002990
-Relative Address  : 0x00002990
+Address           : 0x10002290
+Relative Address  : 0x00002290
 Ordinal           : 94 (0x5e)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -846,8 +414,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_pushnil
-Address           : 0x0000000180002900
-Relative Address  : 0x00002900
+Address           : 0x100021d0
+Relative Address  : 0x000021d0
 Ordinal           : 95 (0x5f)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -855,8 +423,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_pushnumber
-Address           : 0x0000000180002920
-Relative Address  : 0x00002920
+Address           : 0x100021f0
+Relative Address  : 0x000021f0
 Ordinal           : 96 (0x60)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -864,8 +432,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_pushstring
-Address           : 0x00000001800029f0
-Relative Address  : 0x000029f0
+Address           : 0x100022e0
+Relative Address  : 0x000022e0
 Ordinal           : 97 (0x61)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -873,8 +441,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_pushthread
-Address           : 0x0000000180002ca0
-Relative Address  : 0x00002ca0
+Address           : 0x100024c0
+Relative Address  : 0x000024c0
 Ordinal           : 98 (0x62)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -882,8 +450,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_pushunsigned
-Address           : 0x0000000180002960
-Relative Address  : 0x00002960
+Address           : 0x10002240
+Relative Address  : 0x00002240
 Ordinal           : 99 (0x63)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -891,8 +459,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_pushvalue
-Address           : 0x0000000180001630
-Relative Address  : 0x00001630
+Address           : 0x10001490
+Relative Address  : 0x00001490
 Ordinal           : 100 (0x64)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -900,8 +468,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_pushvfstring
-Address           : 0x0000000180002a80
-Relative Address  : 0x00002a80
+Address           : 0x10002360
+Relative Address  : 0x00002360
 Ordinal           : 101 (0x65)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -909,8 +477,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_rawequal
-Address           : 0x0000000180001a70
-Relative Address  : 0x00001a70
+Address           : 0x100017c0
+Relative Address  : 0x000017c0
 Ordinal           : 102 (0x66)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -918,8 +486,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_rawget
-Address           : 0x0000000180002f60
-Relative Address  : 0x00002f60
+Address           : 0x100026c0
+Relative Address  : 0x000026c0
 Ordinal           : 103 (0x67)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -927,8 +495,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_rawgeti
-Address           : 0x0000000180003010
-Relative Address  : 0x00003010
+Address           : 0x10002740
+Relative Address  : 0x00002740
 Ordinal           : 104 (0x68)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -936,8 +504,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_rawgetp
-Address           : 0x0000000180003140
-Relative Address  : 0x00003140
+Address           : 0x100027c0
+Relative Address  : 0x000027c0
 Ordinal           : 105 (0x69)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -945,8 +513,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_rawlen
-Address           : 0x00000001800024f0
-Relative Address  : 0x000024f0
+Address           : 0x10001eb0
+Relative Address  : 0x00001eb0
 Ordinal           : 106 (0x6a)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -954,8 +522,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_rawset
-Address           : 0x0000000180003730
-Relative Address  : 0x00003730
+Address           : 0x10002be0
+Relative Address  : 0x00002be0
 Ordinal           : 107 (0x6b)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -963,8 +531,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_rawseti
-Address           : 0x0000000180003850
-Relative Address  : 0x00003850
+Address           : 0x10002cd0
+Relative Address  : 0x00002cd0
 Ordinal           : 108 (0x6c)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -972,8 +540,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_rawsetp
-Address           : 0x0000000180003a00
-Relative Address  : 0x00003a00
+Address           : 0x10002dd0
+Relative Address  : 0x00002dd0
 Ordinal           : 109 (0x6d)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -981,8 +549,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_remove
-Address           : 0x0000000180001270
-Relative Address  : 0x00001270
+Address           : 0x10001210
+Relative Address  : 0x00001210
 Ordinal           : 110 (0x6e)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -990,8 +558,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_replace
-Address           : 0x00000001800013d0
-Relative Address  : 0x000013d0
+Address           : 0x100013e0
+Relative Address  : 0x000013e0
 Ordinal           : 111 (0x6f)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -999,8 +567,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_resume
-Address           : 0x000000018000a2e0
-Relative Address  : 0x0000a2e0
+Address           : 0x10006f60
+Relative Address  : 0x00006f60
 Ordinal           : 112 (0x70)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1008,8 +576,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_setallocf
-Address           : 0x00000001800049a0
-Relative Address  : 0x000049a0
+Address           : 0x10003900
+Relative Address  : 0x00003900
 Ordinal           : 113 (0x71)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1017,8 +585,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_setfield
-Address           : 0x0000000180003630
-Relative Address  : 0x00003630
+Address           : 0x10002b30
+Relative Address  : 0x00002b30
 Ordinal           : 114 (0x72)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1026,8 +594,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_setglobal
-Address           : 0x0000000180003480
-Relative Address  : 0x00003480
+Address           : 0x10002a40
+Relative Address  : 0x00002a40
 Ordinal           : 115 (0x73)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1035,8 +603,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_sethook
-Address           : 0x0000000180007f30
-Relative Address  : 0x00007f30
+Address           : 0x10005700
+Relative Address  : 0x00005700
 Ordinal           : 116 (0x74)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1044,8 +612,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_setlocal
-Address           : 0x00000001800081d0
-Relative Address  : 0x000081d0
+Address           : 0x100058d0
+Relative Address  : 0x000058d0
 Ordinal           : 117 (0x75)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1053,8 +621,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_setmetatable
-Address           : 0x0000000180003b30
-Relative Address  : 0x00003b30
+Address           : 0x10002ef0
+Relative Address  : 0x00002ef0
 Ordinal           : 118 (0x76)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1062,8 +630,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_settable
-Address           : 0x0000000180003590
-Relative Address  : 0x00003590
+Address           : 0x10002ab0
+Relative Address  : 0x00002ab0
 Ordinal           : 119 (0x77)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1071,8 +639,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_settop
-Address           : 0x0000000180001210
-Relative Address  : 0x00001210
+Address           : 0x100011c0
+Relative Address  : 0x000011c0
 Ordinal           : 120 (0x78)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1080,8 +648,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_setupvalue
-Address           : 0x0000000180004bc0
-Relative Address  : 0x00004bc0
+Address           : 0x10003b20
+Relative Address  : 0x00003b20
 Ordinal           : 121 (0x79)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1089,8 +657,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_setuservalue
-Address           : 0x0000000180003d80
-Relative Address  : 0x00003d80
+Address           : 0x10003040
+Relative Address  : 0x00003040
 Ordinal           : 122 (0x7a)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1098,8 +666,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_status
-Address           : 0x00000001800045b0
-Relative Address  : 0x000045b0
+Address           : 0x10003550
+Relative Address  : 0x00003550
 Ordinal           : 123 (0x7b)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1107,8 +675,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_toboolean
-Address           : 0x00000001800022a0
-Relative Address  : 0x000022a0
+Address           : 0x10001d60
+Relative Address  : 0x00001d60
 Ordinal           : 124 (0x7c)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1116,8 +684,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_tocfunction
-Address           : 0x0000000180002630
-Relative Address  : 0x00002630
+Address           : 0x10001f60
+Relative Address  : 0x00001f60
 Ordinal           : 125 (0x7d)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1125,8 +693,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_tointegerx
-Address           : 0x0000000180001f40
-Relative Address  : 0x00001f40
+Address           : 0x10001ba0
+Relative Address  : 0x00001ba0
 Ordinal           : 126 (0x7e)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1134,8 +702,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_tolstring
-Address           : 0x0000000180002340
-Relative Address  : 0x00002340
+Address           : 0x10001de0
+Relative Address  : 0x00001de0
 Ordinal           : 127 (0x7f)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1143,8 +711,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_tonumberx
-Address           : 0x0000000180001da0
-Relative Address  : 0x00001da0
+Address           : 0x10001ad0
+Relative Address  : 0x00001ad0
 Ordinal           : 128 (0x80)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1152,8 +720,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_topointer
-Address           : 0x0000000180002800
-Relative Address  : 0x00002800
+Address           : 0x100020f0
+Relative Address  : 0x000020f0
 Ordinal           : 129 (0x81)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1161,8 +729,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_tothread
-Address           : 0x0000000180002770
-Relative Address  : 0x00002770
+Address           : 0x10002080
+Relative Address  : 0x00002080
 Ordinal           : 130 (0x82)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1170,8 +738,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_tounsignedx
-Address           : 0x00000001800020f0
-Relative Address  : 0x000020f0
+Address           : 0x10001c80
+Relative Address  : 0x00001c80
 Ordinal           : 131 (0x83)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1179,8 +747,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_touserdata
-Address           : 0x00000001800026d0
-Relative Address  : 0x000026d0
+Address           : 0x10001fe0
+Relative Address  : 0x00001fe0
 Ordinal           : 132 (0x84)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1188,8 +756,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_type
-Address           : 0x00000001800016c0
-Relative Address  : 0x000016c0
+Address           : 0x10001540
+Relative Address  : 0x00001540
 Ordinal           : 133 (0x85)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1197,8 +765,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_typename
-Address           : 0x0000000180001740
-Relative Address  : 0x00001740
+Address           : 0x100015d0
+Relative Address  : 0x000015d0
 Ordinal           : 134 (0x86)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1206,8 +774,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_upvalueid
-Address           : 0x0000000180004d50
-Relative Address  : 0x00004d50
+Address           : 0x10003c10
+Relative Address  : 0x00003c10
 Ordinal           : 135 (0x87)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1215,8 +783,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_upvaluejoin
-Address           : 0x0000000180004ec0
-Relative Address  : 0x00004ec0
+Address           : 0x10003d30
+Relative Address  : 0x00003d30
 Ordinal           : 136 (0x88)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1224,8 +792,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_version
-Address           : 0x00000001800011a0
-Relative Address  : 0x000011a0
+Address           : 0x10001150
+Relative Address  : 0x00001150
 Ordinal           : 137 (0x89)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1233,8 +801,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_xmove
-Address           : 0x0000000180001120
-Relative Address  : 0x00001120
+Address           : 0x100010e0
+Relative Address  : 0x000010e0
 Ordinal           : 138 (0x8a)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1242,17 +810,449 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : lua_yieldk
-Address           : 0x000000018000a500
-Relative Address  : 0x0000a500
+Address           : 0x10007040
+Relative Address  : 0x00007040
 Ordinal           : 139 (0x8b)
 Filename          : lua52.dll
 Type              : Exported Function
 ==================================================
 
 ==================================================
+Function Name     : luaL_addlstring
+Address           : 0x10016740
+Relative Address  : 0x00016740
+Ordinal           : 1 (0x1)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_addstring
+Address           : 0x10016770
+Relative Address  : 0x00016770
+Ordinal           : 2 (0x2)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_addvalue
+Address           : 0x10016860
+Relative Address  : 0x00016860
+Ordinal           : 3 (0x3)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_argerror
+Address           : 0x10015c80
+Relative Address  : 0x00015c80
+Ordinal           : 4 (0x4)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_buffinit
+Address           : 0x10016930
+Relative Address  : 0x00016930
+Ordinal           : 5 (0x5)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_buffinitsize
+Address           : 0x10016950
+Relative Address  : 0x00016950
+Ordinal           : 6 (0x6)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_callmeta
+Address           : 0x10017040
+Relative Address  : 0x00017040
+Ordinal           : 7 (0x7)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_checkany
+Address           : 0x10016420
+Relative Address  : 0x00016420
+Ordinal           : 8 (0x8)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_checkinteger
+Address           : 0x10016580
+Relative Address  : 0x00016580
+Ordinal           : 9 (0x9)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_checklstring
+Address           : 0x10016450
+Relative Address  : 0x00016450
+Ordinal           : 10 (0xa)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_checknumber
+Address           : 0x100164f0
+Relative Address  : 0x000164f0
+Ordinal           : 11 (0xb)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_checkoption
+Address           : 0x100162e0
+Relative Address  : 0x000162e0
+Ordinal           : 12 (0xc)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_checkstack
+Address           : 0x100163b0
+Relative Address  : 0x000163b0
+Ordinal           : 13 (0xd)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_checktype
+Address           : 0x100163f0
+Relative Address  : 0x000163f0
+Ordinal           : 14 (0xe)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_checkudata
+Address           : 0x100162b0
+Relative Address  : 0x000162b0
+Ordinal           : 15 (0xf)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_checkunsigned
+Address           : 0x100165c0
+Relative Address  : 0x000165c0
+Ordinal           : 16 (0x10)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_checkversion_
+Address           : 0x10017d00
+Relative Address  : 0x00017d00
+Ordinal           : 17 (0x11)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_error
+Address           : 0x10015e70
+Relative Address  : 0x00015e70
+Ordinal           : 18 (0x12)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_execresult
+Address           : 0x10015f80
+Relative Address  : 0x00015f80
+Ordinal           : 19 (0x13)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_fileresult
+Address           : 0x10015ee0
+Relative Address  : 0x00015ee0
+Ordinal           : 20 (0x14)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_getmetafield
+Address           : 0x10016f80
+Relative Address  : 0x00016f80
+Ordinal           : 21 (0x15)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_getsubtable
+Address           : 0x100177e0
+Relative Address  : 0x000177e0
+Ordinal           : 22 (0x16)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_gsub
+Address           : 0x10017a80
+Relative Address  : 0x00017a80
+Ordinal           : 23 (0x17)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_len
+Address           : 0x10017120
+Relative Address  : 0x00017120
+Ordinal           : 24 (0x18)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_loadbufferx
+Address           : 0x10016ef0
+Relative Address  : 0x00016ef0
+Ordinal           : 25 (0x19)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_loadfilex
+Address           : 0x10016c50
+Relative Address  : 0x00016c50
+Ordinal           : 26 (0x1a)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_loadstring
+Address           : 0x10016f30
+Relative Address  : 0x00016f30
+Ordinal           : 27 (0x1b)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_newmetatable
+Address           : 0x10016010
+Relative Address  : 0x00016010
+Ordinal           : 28 (0x1c)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_newstate
+Address           : 0x10017cd0
+Relative Address  : 0x00017cd0
+Ordinal           : 29 (0x1d)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_openlib
+Address           : 0x10017670
+Relative Address  : 0x00017670
+Ordinal           : 30 (0x1e)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_openlibs
+Address           : 0x100267f0
+Relative Address  : 0x000267f0
+Ordinal           : 31 (0x1f)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_optinteger
+Address           : 0x10016600
+Relative Address  : 0x00016600
+Ordinal           : 32 (0x20)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_optlstring
+Address           : 0x10016480
+Relative Address  : 0x00016480
+Ordinal           : 33 (0x21)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_optnumber
+Address           : 0x10016530
+Relative Address  : 0x00016530
+Ordinal           : 34 (0x22)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_optunsigned
+Address           : 0x10016650
+Relative Address  : 0x00016650
+Ordinal           : 35 (0x23)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_prepbuffsize
+Address           : 0x100166a0
+Relative Address  : 0x000166a0
+Ordinal           : 36 (0x24)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_pushmodule
+Address           : 0x10017500
+Relative Address  : 0x00017500
+Ordinal           : 37 (0x25)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_pushresult
+Address           : 0x100167b0
+Relative Address  : 0x000167b0
+Ordinal           : 38 (0x26)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_pushresultsize
+Address           : 0x10016840
+Relative Address  : 0x00016840
+Ordinal           : 39 (0x27)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_ref
+Address           : 0x10016980
+Relative Address  : 0x00016980
+Ordinal           : 40 (0x28)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_requiref
+Address           : 0x100178c0
+Relative Address  : 0x000178c0
+Ordinal           : 41 (0x29)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_setfuncs
+Address           : 0x10017710
+Relative Address  : 0x00017710
+Ordinal           : 42 (0x2a)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_setmetatable
+Address           : 0x10016140
+Relative Address  : 0x00016140
+Ordinal           : 43 (0x2b)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_testudata
+Address           : 0x100161a0
+Relative Address  : 0x000161a0
+Ordinal           : 44 (0x2c)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_tolstring
+Address           : 0x100171b0
+Relative Address  : 0x000171b0
+Ordinal           : 45 (0x2d)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_traceback
+Address           : 0x100159e0
+Relative Address  : 0x000159e0
+Ordinal           : 46 (0x2e)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_unref
+Address           : 0x10016ab0
+Relative Address  : 0x00016ab0
+Ordinal           : 47 (0x2f)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
+Function Name     : luaL_where
+Address           : 0x10015db0
+Relative Address  : 0x00015db0
+Ordinal           : 48 (0x30)
+Filename          : lua52.dll
+Type              : Exported Function
+==================================================
+
+==================================================
 Function Name     : luaopen_base
-Address           : 0x000000018002d050
-Relative Address  : 0x0002d050
+Address           : 0x1001a070
+Relative Address  : 0x0001a070
 Ordinal           : 140 (0x8c)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1260,8 +1260,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : luaopen_bit32
-Address           : 0x0000000180024840
-Relative Address  : 0x00024840
+Address           : 0x100155e0
+Relative Address  : 0x000155e0
 Ordinal           : 141 (0x8d)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1269,8 +1269,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : luaopen_coroutine
-Address           : 0x0000000180047a50
-Relative Address  : 0x00047a50
+Address           : 0x10026d80
+Relative Address  : 0x00026d80
 Ordinal           : 142 (0x8e)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1278,8 +1278,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : luaopen_debug
-Address           : 0x0000000180030260
-Relative Address  : 0x00030260
+Address           : 0x1001b770
+Relative Address  : 0x0001b770
 Ordinal           : 143 (0x8f)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1287,8 +1287,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : luaopen_io
-Address           : 0x0000000180033cf0
-Relative Address  : 0x00033cf0
+Address           : 0x1001d6b0
+Relative Address  : 0x0001d6b0
 Ordinal           : 144 (0x90)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1296,8 +1296,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : luaopen_math
-Address           : 0x00000001800377d0
-Relative Address  : 0x000377d0
+Address           : 0x1001f0c0
+Relative Address  : 0x0001f0c0
 Ordinal           : 145 (0x91)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1305,8 +1305,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : luaopen_os
-Address           : 0x0000000180039530
-Relative Address  : 0x00039530
+Address           : 0x10020250
+Relative Address  : 0x00020250
 Ordinal           : 146 (0x92)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1314,8 +1314,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : luaopen_package
-Address           : 0x0000000180045fa0
-Relative Address  : 0x00045fa0
+Address           : 0x100263a0
+Relative Address  : 0x000263a0
 Ordinal           : 147 (0x93)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1323,8 +1323,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : luaopen_string
-Address           : 0x0000000180042ed0
-Relative Address  : 0x00042ed0
+Address           : 0x10024550
+Relative Address  : 0x00024550
 Ordinal           : 148 (0x94)
 Filename          : lua52.dll
 Type              : Exported Function
@@ -1332,8 +1332,8 @@ Type              : Exported Function
 
 ==================================================
 Function Name     : luaopen_table
-Address           : 0x000000018003d860
-Relative Address  : 0x0003d860
+Address           : 0x100214f0
+Relative Address  : 0x000214f0
 Ordinal           : 149 (0x95)
 Filename          : lua52.dll
 Type              : Exported Function

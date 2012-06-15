@@ -50,9 +50,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="File.cs" />
-    <Compile Include="Cartridge.cs" />
-    <Compile Include="Objects.cs" />
+    <Compile Include="..\..\shared\cartridges\Cartridge.cs">
+      <Link>Cartridge.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\cartridges\File.cs">
+      <Link>File.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\cartridges\Objects.cs">
+      <Link>Objects.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -54,12 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DeviceConfig.cs" />
-    <Compile Include="ScreenHelper.cs" />
-    <Compile Include="Trace.cs" />
-    <Compile Include="Utils.cs" />
+    <Compile Include="..\..\shared\shared\DeviceConfig.cs">
+      <Link>DeviceConfig.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\shared\ScreenHelper.cs">
+      <Link>ScreenHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\shared\SeekFile.cs">
+      <Link>SeekFile.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\shared\Trace.cs">
+      <Link>Trace.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\shared\Utils.cs">
+      <Link>Utils.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SeekFile.cs" />
   </ItemGroup>
   <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.v1.targets" />
   <Import Condition="'$(TargetFrameworkVersion)' == 'v2.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
