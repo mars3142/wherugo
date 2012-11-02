@@ -1,0 +1,13 @@
+label_north=N
+label_east=O
+label_south=S
+label_west=W
+cartridge_name=Name
+author=Autor
+version=Version
+recommend_device=Empfohlenes Gerät
+start_location=Start Position
+player_name=Spielerame
+completion_code=Lösungscode
+encrypted=verschlüsselt
+object_count=Objektanzahl

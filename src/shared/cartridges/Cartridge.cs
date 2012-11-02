@@ -30,9 +30,9 @@ namespace org.mars3142.wherugo.cartridges
       private readonly Dictionary<short, Objects> _objects;
 
       private readonly string _author;
-      private readonly string _catridgeDesc;
-      private readonly string _catridgeGuid;
-      private readonly string _catridgeName;
+      private readonly string _cartridgeDesc;
+      private readonly string _cartridgeGuid;
+      private readonly string _cartridgeName;
       private readonly string _company;
       private readonly string _completionCode;
       private readonly double _latitude;              // N+/S-
@@ -162,9 +162,9 @@ namespace org.mars3142.wherugo.cartridges
       /// <summary>
       /// cartridgename
       /// </summary>
-      public string CatridgeName
+      public string CartridgeName
       {
-         get { return _catridgeName; }
+         get { return _cartridgeName; }
       }
 
       /// <summary>
@@ -172,7 +172,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public string CatridgeGuid
       {
-         get { return _catridgeGuid; }
+         get { return _cartridgeGuid; }
       }
 
       /// <summary>
@@ -180,7 +180,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public string CatridgeDesc
       {
-         get { return _catridgeDesc; }
+         get { return _cartridgeDesc; }
       }
 
       /// <summary>
@@ -281,9 +281,9 @@ namespace org.mars3142.wherugo.cartridges
             _unknown4 = SeekFile.GetLong(binaryReader);
             _unknown5 = SeekFile.GetLong(binaryReader);
 
-            _catridgeName = SeekFile.GetASCIIZ(binaryReader);
-            _catridgeGuid = SeekFile.GetASCIIZ(binaryReader);
-            _catridgeDesc = SeekFile.GetASCIIZ(binaryReader);
+            _cartridgeName = SeekFile.GetASCIIZ(binaryReader);
+            _cartridgeGuid = SeekFile.GetASCIIZ(binaryReader);
+            _cartridgeDesc = SeekFile.GetASCIIZ(binaryReader);
             _startLocationDesc = SeekFile.GetASCIIZ(binaryReader);
             _version = SeekFile.GetASCIIZ(binaryReader);
             _author = SeekFile.GetASCIIZ(binaryReader);

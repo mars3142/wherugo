@@ -70,6 +70,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +83,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\Main.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Main.cs</DependentUpon>
@@ -97,6 +107,10 @@
     <ProjectReference Include="..\..\cartridges\cartridges.csproj">
       <Project>{264D3B8D-D034-4B05-A80B-4664B7DF14C4}</Project>
       <Name>cartridges</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\shared\shared.csproj">
+      <Project>{D6DF7046-DD06-4778-AD7F-9117AA477129}</Project>
+      <Name>shared</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

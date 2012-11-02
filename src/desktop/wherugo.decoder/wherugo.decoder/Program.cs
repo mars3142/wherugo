@@ -18,6 +18,7 @@ using System;
 using System.Windows.Forms;
 
 using org.mars3142.wherugo.decoder.Windows;
+using org.mars3142.wherugo.shared;
 
 namespace org.mars3142.wherugo.decoder
 {

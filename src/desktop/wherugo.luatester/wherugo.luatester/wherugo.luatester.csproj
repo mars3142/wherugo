@@ -79,6 +79,10 @@
       <Project>{D6DF7046-DD06-4778-AD7F-9117AA477129}</Project>
       <Name>shared</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\wherigo\wherigo.csproj">
+      <Project>{426FD5E6-54F2-460F-85D7-2B757EF20278}</Project>
+      <Name>wherigo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

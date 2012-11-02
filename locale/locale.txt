@@ -1,0 +1,13 @@
+label_north=N
+label_east=E
+label_south=S
+label_west=W
+cartridge_name=Name
+author=Author
+version=Version
+recommend_device=Recommend Device
+start_location=Start Location
+player_name=Player Name
+completion_code=Completion Code
+encrypted=encrypted
+object_count=Object Count

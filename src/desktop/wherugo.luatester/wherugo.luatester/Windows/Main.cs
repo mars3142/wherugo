@@ -20,67 +20,34 @@ using System.Collections.Generic;
 
 using org.mars3142.wherugo.lua;
 using org.mars3142.wherugo.shared;
-using System.ComponentModel;
+using org.mars3142.wherugo.wherigo;
 
 namespace org.mars3142.wherugo.luatester.Windows
 {
    public partial class Main : Form
    {
-      private static IntPtr m_lua_State = IntPtr.Zero;
       private static List<Delegate> m_refs = new List<Delegate>();
+
+      private static ScriptEngine engine = new ScriptEngine();
+      private static Wherigo wherigo = new Wherigo(engine);
 
       public Main()
       {
          InitializeComponent();
-         m_lua_State = Lua.luaL_newstate();
+         //wherigo.InitWherigo();
 
-         txtLua.Text = "TwoPlusTwo = 2+2; print('Hello World'); MsgBox('Test'); print('TwoPlusTwo:', TwoPlusTwo); ";
+         txtLua.Text = "require 'Wherigo'; TwoPlusTwo = 2+2; print('Hello world, from', _VERSION, '!'); print('TwoPlusTwo:', TwoPlusTwo); ";
       }
 
       private void btnExecute_Click(object sender, EventArgs e)
       {
-         if (m_lua_State == IntPtr.Zero)
-         {
-            MessageBox.Show("Error");
-         }
 
-         //open the Lua libraries for table, string, math etc.
-         Lua.luaL_openlibs(m_lua_State);
-
-         string luaScriptString = txtLua.Text;
-         if (Lua.luaL_dostring(m_lua_State, luaScriptString) != 0)
-         {
-            Lua.lua_error(m_lua_State);
-         }
-
-         //clean up nicely
-         Lua.lua_close(m_lua_State);
+         engine.RunLuaScript(txtLua.Text);
       }
 
-      int Lua_MessageBox(IntPtr m_lua_State)
+      private void Main_FormClosing(object sender, FormClosingEventArgs e)
       {
-         String text = String.Empty;
-
-         if (Lua.lua_type(m_lua_State, -1) == 4)
-         {
-            text = Lua.lua_tostring(m_lua_State, -1);
-            Lua.lua_pop(m_lua_State, 1);
-            MessageBox.Show(text);
-         }
-         else
-         {
-            Lua.lua_settop(m_lua_State, 0);
-         }
-
-         return 0;
-      }
-
-      public void RegisterLuaFunction(Lua.LuaFunction func, string luaFuncName)
-      {
-         //call the lua_register API function to register a .Net function with
-         Lua.lua_register(m_lua_State, luaFuncName, func);
-
-         m_refs.Add(func);
+         engine.StopEngineAndCleanup();
       }
    }
 }

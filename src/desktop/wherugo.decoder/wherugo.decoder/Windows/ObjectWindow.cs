@@ -23,6 +23,8 @@ using System.Text;
 using System.Windows.Forms;
 
 using org.mars3142.wherugo.cartridges;
+using org.mars3142.wherugo.shared;
+using System.Resources;
 
 namespace org.mars3142.wherugo.decoder.Windows
 {
@@ -33,6 +35,7 @@ namespace org.mars3142.wherugo.decoder.Windows
       public ObjectWindow(File gwc)
       {
          InitializeComponent();
+         MessageBox.Show(Locale.GetString("label_east"));
          _gwc = gwc;
          InitializeData();
       }
@@ -42,7 +45,7 @@ namespace org.mars3142.wherugo.decoder.Windows
          lbObject.Items.Clear();
          foreach (KeyValuePair<short, Objects> pair in _gwc.cartridge.Obj())
          {
-            lbObject.Items.Add(String.Format("{0} ({1})", pair.Value.ObjectId, pair.Value.ObjectTypeString));
+            lbObject.Items.Add(String.Format("{0} ({1} - {2:0,000} Bytes)", pair.Value.ObjectId, pair.Value.ObjectTypeString, pair.Value.Data.Length));
          }
       }
 

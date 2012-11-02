@@ -14,14 +14,17 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-using org.mars3142.wherugo.lua;
+//  Original source from http://ttuxen.wordpress.com/2011/02/21/embedding-lua-in-c-net-part-iii
 
-namespace org.mars3142.wherugo.wherigo
+using System;
+
+namespace org.mars3142.wherugo.lua
 {
-   public class Engine
-   {
-   }
+    public class LuaScriptEngineException : Exception
+    {
+        public LuaScriptEngineException(string msg)
+            : base(msg)
+        {
+        }
+    }
 }

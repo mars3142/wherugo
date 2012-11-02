@@ -19,6 +19,7 @@ using System.Drawing;
 using System.Windows.Forms;
 
 using org.mars3142.wherugo.cartridges;
+using org.mars3142.wherugo.shared;
 
 namespace org.mars3142.wherugo.decoder.Windows
 {
@@ -71,14 +72,14 @@ namespace org.mars3142.wherugo.decoder.Windows
                }
             }
 
-            txContent.Text += String.Format("Name: {0}\r\n", _gwc.cartridge.CatridgeName);
-            txContent.Text += String.Format("Author: {0}\r\n", _gwc.cartridge.Author);
-            txContent.Text += String.Format("Version: {0}\r\n", _gwc.cartridge.Version);
-            txContent.Text += String.Format("Recommend Device: {0}\r\n", _gwc.cartridge.RecommendedDevice);
-            txContent.Text += String.Format("Start Location: {0}\r\n", _gwc.cartridge.StartLocationDesc);
-            txContent.Text += String.Format("Player Name: {0}\r\n", _gwc.cartridge.PlayerName);
-            txContent.Text += String.Format("Completion Code (encrypted): {0}\r\n", _gwc.cartridge.CompletionCode);
-            txContent.Text += String.Format("Object count: {0}\r\n", _gwc.cartridge.Obj().Count);
+            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("cartridge_name"), _gwc.cartridge.CartridgeName);
+            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("author"), _gwc.cartridge.Author);
+            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("version"), _gwc.cartridge.Version);
+            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("recommend_device"), _gwc.cartridge.RecommendedDevice);
+            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("start_location"), _gwc.cartridge.StartLocationDesc);
+            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("player_name"), _gwc.cartridge.PlayerName);
+            txContent.Text += String.Format("{0} ({1}): {2}\r\n", Locale.GetString("completion_code"), Locale.GetString("encrypted"), _gwc.cartridge.CompletionCode);
+            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("object_count"), _gwc.cartridge.Obj().Count);
          }
       }
 

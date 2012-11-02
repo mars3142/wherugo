@@ -28,20 +28,25 @@ namespace org.mars3142.wherugo.decoder.Windows
       /// </summary>
       private void InitializeComponent()
       {
+         this.components = new System.ComponentModel.Container();
          System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ObjectWindow));
          this.lbObject = new System.Windows.Forms.ListBox();
          this.pbImage = new System.Windows.Forms.PictureBox();
+         this.pmnItems = new System.Windows.Forms.ContextMenuStrip(this.components);
+         this.mnExportItem = new System.Windows.Forms.ToolStripMenuItem();
          ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
+         this.pmnItems.SuspendLayout();
          this.SuspendLayout();
          // 
          // lbObject
          // 
          this.lbObject.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                      | System.Windows.Forms.AnchorStyles.Left)));
+         this.lbObject.ContextMenuStrip = this.pmnItems;
          this.lbObject.FormattingEnabled = true;
          this.lbObject.Location = new System.Drawing.Point(12, 12);
          this.lbObject.Name = "lbObject";
-         this.lbObject.Size = new System.Drawing.Size(155, 355);
+         this.lbObject.Size = new System.Drawing.Size(190, 355);
          this.lbObject.TabIndex = 0;
          this.lbObject.SelectedIndexChanged += new System.EventHandler(this.lbObject_SelectedIndexChanged);
          // 
@@ -50,11 +55,24 @@ namespace org.mars3142.wherugo.decoder.Windows
          this.pbImage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                      | System.Windows.Forms.AnchorStyles.Left)
                      | System.Windows.Forms.AnchorStyles.Right)));
-         this.pbImage.Location = new System.Drawing.Point(173, 12);
+         this.pbImage.Location = new System.Drawing.Point(208, 12);
          this.pbImage.Name = "pbImage";
-         this.pbImage.Size = new System.Drawing.Size(349, 354);
+         this.pbImage.Size = new System.Drawing.Size(314, 354);
          this.pbImage.TabIndex = 1;
          this.pbImage.TabStop = false;
+         // 
+         // pmnItems
+         // 
+         this.pmnItems.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnExportItem});
+         this.pmnItems.Name = "contextMenuStrip1";
+         this.pmnItems.Size = new System.Drawing.Size(135, 26);
+         // 
+         // mnExportItem
+         // 
+         this.mnExportItem.Name = "mnExportItem";
+         this.mnExportItem.Size = new System.Drawing.Size(134, 22);
+         this.mnExportItem.Text = "Export Item";
          // 
          // ObjectWindow
          // 
@@ -67,6 +85,7 @@ namespace org.mars3142.wherugo.decoder.Windows
          this.Name = "ObjectWindow";
          this.Text = "ObjectWindow";
          ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
+         this.pmnItems.ResumeLayout(false);
          this.ResumeLayout(false);
 
       }
@@ -75,5 +94,7 @@ namespace org.mars3142.wherugo.decoder.Windows
 
       private System.Windows.Forms.ListBox lbObject;
       private System.Windows.Forms.PictureBox pbImage;
+      private System.Windows.Forms.ContextMenuStrip pmnItems;
+      private System.Windows.Forms.ToolStripMenuItem mnExportItem;
    }
 }

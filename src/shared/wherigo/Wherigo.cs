@@ -17,21 +17,72 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Forms;
+
 using org.mars3142.wherugo.lua;
 
 namespace org.mars3142.wherugo.wherigo
 {
    public class Wherigo
    {
-      public void MessageBox(String text)
+      ScriptEngine m_engine = null;
+
+      public Wherigo(ScriptEngine engine)
       {
-         //
+         m_engine = engine;
       }
 
-      int Lua_MessageBox(IntPtr m_lua_state)
+      public void InitWherigo()
       {
-         //string text = lua_tostring(m_lua_state, -1);
-         return 0;
+         if (m_engine == null)
+         {
+            return;
+         }
+
+         RegisterMethods();
+         CreateTable();
+         AssociateTableWithFunctions();
+      }
+
+      private void RegisterMethods()
+      {
+         m_engine.RegisterLuaFunction(new Lua.LuaFunction(Lua_MsgBox), "msgbox");
+      }
+
+      private void CreateTable()
+      {
+         m_engine.CreateLuaTable("Wherigo");
+      }
+
+      private void AssociateTableWithFunctions()
+      {
+         m_engine.SetTableFieldToLuaIdentifier("Wherigo", "msgbox", "msgbox");
+      }
+
+      public Boolean MsgBox(String text)
+      {
+         MessageBox.Show(text);
+         return true;
+      }
+
+      int Lua_MsgBox(IntPtr m_lua_state)
+      {
+         string text = String.Empty;
+
+         if (Lua.lua_type(m_lua_state, -1) == Lua.LUA_TSTRING)
+         {
+            text = Lua.lua_tostring(m_lua_state, -1);
+            Lua.lua_pop(m_lua_state, 1);
+            Lua.lua_pushboolean(m_lua_state, MsgBox(text));
+            return 1;
+         }
+         else
+         {
+            Lua.lua_settop(m_lua_state, 0);
+         }
+
+         Lua.lua_pushstring(m_lua_state, "invalid argument to function: msgbox(string text)");
+         return Lua.lua_error(m_lua_state);
       }
    }
 }

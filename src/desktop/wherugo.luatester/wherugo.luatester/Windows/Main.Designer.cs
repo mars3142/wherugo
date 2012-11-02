@@ -66,6 +66,7 @@ namespace org.mars3142.wherugo.luatester.Windows
          this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
          this.Name = "Main";
          this.Text = "WherUGo Lua-Tester";
+         this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
          this.ResumeLayout(false);
          this.PerformLayout();
 

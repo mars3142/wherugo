@@ -74,6 +74,8 @@ namespace org.mars3142.wherugo.decoder.Windows
          // 
          // txContent
          // 
+         this.txContent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                     | System.Windows.Forms.AnchorStyles.Right)));
          this.txContent.Location = new System.Drawing.Point(12, 41);
          this.txContent.Multiline = true;
          this.txContent.Name = "txContent";
@@ -82,6 +84,8 @@ namespace org.mars3142.wherugo.decoder.Windows
          // 
          // imSplashScreen
          // 
+         this.imSplashScreen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                     | System.Windows.Forms.AnchorStyles.Left)));
          this.imSplashScreen.Location = new System.Drawing.Point(12, 311);
          this.imSplashScreen.Name = "imSplashScreen";
          this.imSplashScreen.Size = new System.Drawing.Size(213, 257);
@@ -90,6 +94,8 @@ namespace org.mars3142.wherugo.decoder.Windows
          // 
          // imSmallIcon
          // 
+         this.imSmallIcon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                     | System.Windows.Forms.AnchorStyles.Right)));
          this.imSmallIcon.Location = new System.Drawing.Point(231, 311);
          this.imSmallIcon.Name = "imSmallIcon";
          this.imSmallIcon.Size = new System.Drawing.Size(219, 257);
@@ -98,6 +104,7 @@ namespace org.mars3142.wherugo.decoder.Windows
          // 
          // bpObjects
          // 
+         this.bpObjects.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
          this.bpObjects.Location = new System.Drawing.Point(375, 12);
          this.bpObjects.Name = "bpObjects";
          this.bpObjects.Size = new System.Drawing.Size(75, 23);
