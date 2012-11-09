@@ -16,6 +16,7 @@
 
 using System;
 using System.IO;
+using System.Reflection;
 
 namespace org.mars3142.wherugo.shared
 {
@@ -131,11 +132,14 @@ namespace org.mars3142.wherugo.shared
       /// <param name="exception"></param>
       public static void DoTrace(TraceCategories categories, TraceEventType eventType, String message, Exception exception)
       {
+         String path = String.Empty;
+
 #if WindowsCE
-         StreamWriter stream = new StreamWriter(@"\SDMMC\Wherugo\Log\trace.txt", true);
+         path = @"\SDMMC\Wherugo\Log;
 #else
-         StreamWriter stream = new StreamWriter(@".\trace.txt", true);
+         path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 #endif
+         StreamWriter stream = new StreamWriter(String.Format("{0}{1}", path , @"\trace.txt"), true);
 
          try
          {
@@ -158,6 +162,5 @@ namespace org.mars3142.wherugo.shared
             stream.Close();
          }
       }
-
    }
 }

@@ -50,7 +50,7 @@ namespace org.mars3142.wherugo.decoder.Windows
          this.txContent = new System.Windows.Forms.TextBox();
          this.imSplashScreen = new System.Windows.Forms.PictureBox();
          this.imSmallIcon = new System.Windows.Forms.PictureBox();
-         this.bpObjects = new System.Windows.Forms.Button();
+         this.pbObjects = new System.Windows.Forms.Button();
          ((System.ComponentModel.ISupportInitialize)(this.imSplashScreen)).BeginInit();
          ((System.ComponentModel.ISupportInitialize)(this.imSmallIcon)).BeginInit();
          this.SuspendLayout();
@@ -102,23 +102,23 @@ namespace org.mars3142.wherugo.decoder.Windows
          this.imSmallIcon.TabIndex = 1;
          this.imSmallIcon.TabStop = false;
          // 
-         // bpObjects
+         // pbObjects
          // 
-         this.bpObjects.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-         this.bpObjects.Location = new System.Drawing.Point(375, 12);
-         this.bpObjects.Name = "bpObjects";
-         this.bpObjects.Size = new System.Drawing.Size(75, 23);
-         this.bpObjects.TabIndex = 0;
-         this.bpObjects.Text = "Objects...";
-         this.bpObjects.UseVisualStyleBackColor = true;
-         this.bpObjects.Click += new System.EventHandler(this.bpObjects_Click);
+         this.pbObjects.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+         this.pbObjects.Location = new System.Drawing.Point(375, 12);
+         this.pbObjects.Name = "pbObjects";
+         this.pbObjects.Size = new System.Drawing.Size(75, 23);
+         this.pbObjects.TabIndex = 0;
+         this.pbObjects.Text = "Objects...";
+         this.pbObjects.UseVisualStyleBackColor = true;
+         this.pbObjects.Click += new System.EventHandler(this.pbObjects_Click);
          // 
          // Main
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.ClientSize = new System.Drawing.Size(462, 580);
-         this.Controls.Add(this.bpObjects);
+         this.Controls.Add(this.pbObjects);
          this.Controls.Add(this.imSmallIcon);
          this.Controls.Add(this.imSplashScreen);
          this.Controls.Add(this.txContent);
@@ -140,7 +140,7 @@ namespace org.mars3142.wherugo.decoder.Windows
        private System.Windows.Forms.TextBox txContent;
       private System.Windows.Forms.PictureBox imSplashScreen;
       private System.Windows.Forms.PictureBox imSmallIcon;
-      private System.Windows.Forms.Button bpObjects;
+      private System.Windows.Forms.Button pbObjects;
    }
 }
 

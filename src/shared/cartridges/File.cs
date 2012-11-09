@@ -16,6 +16,7 @@
 
 using System;
 using System.IO;
+
 using org.mars3142.wherugo.shared;
 
 namespace org.mars3142.wherugo.cartridges
@@ -33,6 +34,9 @@ namespace org.mars3142.wherugo.cartridges
 
       #endregion
 
+      /// <summary>
+      /// Data of 
+      /// </summary>
       public Cartridge cartridge = null;
 
       #endregion

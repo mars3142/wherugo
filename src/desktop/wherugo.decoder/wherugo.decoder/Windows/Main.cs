@@ -30,6 +30,10 @@ namespace org.mars3142.wherugo.decoder.Windows
       public Main()
       {
          InitializeComponent();
+         pbOpen.Text = Locale.GetString("open_gwc");
+         pbObjects.Text = Locale.GetString("objects");
+         fdGWC.Title = Locale.GetString("open_gwc_title");
+         fdGWC.Filter = Locale.GetString("open_gwc_filter");
       }
 
       ~Main()
@@ -83,7 +87,7 @@ namespace org.mars3142.wherugo.decoder.Windows
          }
       }
 
-      private void bpObjects_Click(object sender, EventArgs e)
+      private void pbObjects_Click(object sender, EventArgs e)
       {
          if (_gwc.cartridge != null)
          {

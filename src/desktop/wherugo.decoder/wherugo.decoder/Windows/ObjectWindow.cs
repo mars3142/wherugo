@@ -24,7 +24,6 @@ using System.Windows.Forms;
 
 using org.mars3142.wherugo.cartridges;
 using org.mars3142.wherugo.shared;
-using System.Resources;
 
 namespace org.mars3142.wherugo.decoder.Windows
 {
@@ -35,7 +34,7 @@ namespace org.mars3142.wherugo.decoder.Windows
       public ObjectWindow(File gwc)
       {
          InitializeComponent();
-         MessageBox.Show(Locale.GetString("label_east"));
+         Text = Locale.GetString("objectwindow");
          _gwc = gwc;
          InitializeData();
       }

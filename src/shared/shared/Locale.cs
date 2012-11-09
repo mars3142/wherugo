@@ -40,7 +40,7 @@ namespace org.mars3142.wherugo.shared
          string retValue = string.Empty;
          ResourceManager rm;
 
-         path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\locale";
+         path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\locale";
          rm = ResourceManager.CreateFileBasedResourceManager("locale", path, null);
 
          try
@@ -54,6 +54,7 @@ namespace org.mars3142.wherugo.shared
          catch (MissingManifestResourceException ex)
          {
             retValue = key;
+            Trace.DoTrace(Trace.TraceCategories.Shared, Trace.TraceEventType.Information, ex);
          }
          return retValue;
       }

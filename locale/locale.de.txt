@@ -1,4 +1,4 @@
-label_north=N
+﻿label_north=N
 label_east=O
 label_south=S
 label_west=W
@@ -11,3 +11,8 @@ player_name=Spielerame
 completion_code=Lösungscode
 encrypted=verschlüsselt
 object_count=Objektanzahl
+open_gwc=Öffne GWC...
+open_gwc_title=Öffne GWC-Datei
+open_gwc_filter=GWC-Dateien|*.gwc|Alle Dateien|*.*
+objects=Objekte...
+objectwindow=Objekte

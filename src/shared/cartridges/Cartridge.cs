@@ -17,6 +17,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+
 using org.mars3142.wherugo.shared;
 
 namespace org.mars3142.wherugo.cartridges
@@ -170,15 +171,15 @@ namespace org.mars3142.wherugo.cartridges
       /// <summary>
       /// unique guid of cartridge
       /// </summary>
-      public string CatridgeGuid
+      public string CartridgeGuid
       {
          get { return _cartridgeGuid; }
       }
 
       /// <summary>
-      /// catridgedescription
+      /// cartridge description
       /// </summary>
-      public string CatridgeDesc
+      public string CartridgeDesc
       {
          get { return _cartridgeDesc; }
       }
@@ -208,7 +209,7 @@ namespace org.mars3142.wherugo.cartridges
       }
 
       /// <summary>
-      /// recommended device for that catridge
+      /// recommended device for that cartridge
       /// </summary>
       public string RecommendedDevice
       {

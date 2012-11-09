@@ -31,6 +31,7 @@ namespace org.mars3142.wherugo.decoder
       static void Main()
       {
          AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomainUnhandledException);
+         
          Application.EnableVisualStyles();
          Application.SetCompatibleTextRenderingDefault(false);
          Application.Run(new Main());
@@ -41,7 +42,7 @@ namespace org.mars3142.wherugo.decoder
          try
          {
             Exception ex = (Exception)e.ExceptionObject;
-            // TODO: What do while unhandled exception?
+            Trace.DoTrace(Trace.TraceCategories.Unhandled, Trace.TraceEventType.Critical, ex);
          }
          finally
          {
