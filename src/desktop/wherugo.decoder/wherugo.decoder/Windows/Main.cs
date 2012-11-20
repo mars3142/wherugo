@@ -25,7 +25,7 @@ namespace org.mars3142.wherugo.decoder.Windows
 {
    public partial class Main : Form
    {
-      File _gwc = new File();
+      File gwc = new File();
 
       public Main()
       {
@@ -38,7 +38,7 @@ namespace org.mars3142.wherugo.decoder.Windows
 
       ~Main()
       {
-         _gwc = null;
+         gwc = null;
       }
 
       private void pbOpen_Click(object sender, EventArgs e)
@@ -49,11 +49,11 @@ namespace org.mars3142.wherugo.decoder.Windows
 
          if (fdGWC.ShowDialog() == DialogResult.OK)
          {
-            _gwc.Read(fdGWC.FileName);
+            gwc.Read(fdGWC.FileName);
 
-            if (_gwc.cartridge.SplashScreenId != -1)
+            if (gwc.cartridge.SplashScreenId != -1)
             {
-               byte[] data = _gwc.cartridge.GetObject(_gwc.cartridge.SplashScreenId).Data;
+               byte[] data = gwc.cartridge.GetObject(gwc.cartridge.SplashScreenId).Data;
                if (data != null)
                {
                   ImageConverter ic = new ImageConverter();
@@ -63,9 +63,9 @@ namespace org.mars3142.wherugo.decoder.Windows
                   splashImage.Dispose();
                }
             }
-            if (_gwc.cartridge.SmallIconId != -1)
+            if (gwc.cartridge.SmallIconId != -1)
             {
-               byte[] data = _gwc.cartridge.GetObject(_gwc.cartridge.SmallIconId).Data;
+               byte[] data = gwc.cartridge.GetObject(gwc.cartridge.SmallIconId).Data;
                if (data != null)
                {
                   ImageConverter ic = new ImageConverter();
@@ -76,22 +76,22 @@ namespace org.mars3142.wherugo.decoder.Windows
                }
             }
 
-            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("cartridge_name"), _gwc.cartridge.CartridgeName);
-            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("author"), _gwc.cartridge.Author);
-            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("version"), _gwc.cartridge.Version);
-            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("recommend_device"), _gwc.cartridge.RecommendedDevice);
-            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("start_location"), _gwc.cartridge.StartLocationDesc);
-            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("player_name"), _gwc.cartridge.PlayerName);
-            txContent.Text += String.Format("{0} ({1}): {2}\r\n", Locale.GetString("completion_code"), Locale.GetString("encrypted"), _gwc.cartridge.CompletionCode);
-            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("object_count"), _gwc.cartridge.Obj().Count);
+            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("cartridge_name"), gwc.cartridge.CartridgeName);
+            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("author"), gwc.cartridge.Author);
+            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("version"), gwc.cartridge.Version);
+            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("recommend_device"), gwc.cartridge.RecommendedDevice);
+            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("start_location"), gwc.cartridge.StartLocationDesc);
+            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("player_name"), gwc.cartridge.PlayerName);
+            txContent.Text += String.Format("{0} ({1}): {2}\r\n", Locale.GetString("completion_code"), Locale.GetString("encrypted"), gwc.cartridge.CompletionCode);
+            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("object_count"), gwc.cartridge.Obj().Count);
          }
       }
 
       private void pbObjects_Click(object sender, EventArgs e)
       {
-         if (_gwc.cartridge != null)
+         if (gwc.cartridge != null)
          {
-            ObjectWindow _frm = new ObjectWindow(_gwc);
+            ObjectWindow _frm = new ObjectWindow(gwc);
 
             _frm.ShowDialog();
          }

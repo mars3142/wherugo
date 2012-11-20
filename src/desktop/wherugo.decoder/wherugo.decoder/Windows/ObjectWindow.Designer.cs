@@ -31,11 +31,11 @@ namespace org.mars3142.wherugo.decoder.Windows
          this.components = new System.ComponentModel.Container();
          System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ObjectWindow));
          this.lbObject = new System.Windows.Forms.ListBox();
-         this.pbImage = new System.Windows.Forms.PictureBox();
          this.pmnItems = new System.Windows.Forms.ContextMenuStrip(this.components);
          this.mnExportItem = new System.Windows.Forms.ToolStripMenuItem();
-         ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
+         this.pbImage = new System.Windows.Forms.PictureBox();
          this.pmnItems.SuspendLayout();
+         ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
          this.SuspendLayout();
          // 
          // lbObject
@@ -50,6 +50,20 @@ namespace org.mars3142.wherugo.decoder.Windows
          this.lbObject.TabIndex = 0;
          this.lbObject.SelectedIndexChanged += new System.EventHandler(this.lbObject_SelectedIndexChanged);
          // 
+         // pmnItems
+         // 
+         this.pmnItems.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnExportItem});
+         this.pmnItems.Name = "contextMenuStrip1";
+         this.pmnItems.Size = new System.Drawing.Size(153, 48);
+         // 
+         // mnExportItem
+         // 
+         this.mnExportItem.Name = "mnExportItem";
+         this.mnExportItem.Size = new System.Drawing.Size(152, 22);
+         this.mnExportItem.Text = "Export Item";
+         this.mnExportItem.Click += new System.EventHandler(this.mnExportItem_Click);
+         // 
          // pbImage
          // 
          this.pbImage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
@@ -61,19 +75,6 @@ namespace org.mars3142.wherugo.decoder.Windows
          this.pbImage.TabIndex = 1;
          this.pbImage.TabStop = false;
          // 
-         // pmnItems
-         // 
-         this.pmnItems.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnExportItem});
-         this.pmnItems.Name = "contextMenuStrip1";
-         this.pmnItems.Size = new System.Drawing.Size(135, 26);
-         // 
-         // mnExportItem
-         // 
-         this.mnExportItem.Name = "mnExportItem";
-         this.mnExportItem.Size = new System.Drawing.Size(134, 22);
-         this.mnExportItem.Text = "Export Item";
-         // 
          // ObjectWindow
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -84,8 +85,8 @@ namespace org.mars3142.wherugo.decoder.Windows
          this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
          this.Name = "ObjectWindow";
          this.Text = "ObjectWindow";
-         ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
          this.pmnItems.ResumeLayout(false);
+         ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
          this.ResumeLayout(false);
 
       }

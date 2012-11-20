@@ -24,37 +24,34 @@ namespace org.mars3142.wherugo.cartridges
    public class Objects
    {
       #region Members
-      private readonly short _objectId;
+      private readonly short objectId;
+      private readonly long address;
+      private byte[] data;
+      private long objectType;
 
       /// <summary>
       /// the unique key of the object
       /// </summary>
       public short ObjectId
       {
-         get { return _objectId; }
+         get { return objectId; }
       }
-
-      private readonly long _address;
 
       /// <summary>
       /// the adress in the cartridge-file
       /// </summary>
       public long Address
       {
-         get { return _address; }
+         get { return address; }
       }
-
-      private byte[] _data;
 
       /// <summary>
       /// bytecode of the object
       /// </summary>
       public byte[] Data
       {
-         get { return _data; }
+         get { return data; }
       }
-
-      private long _objectType;
 
       /// <summary>
       /// objecttype of the bytecode
@@ -63,13 +60,13 @@ namespace org.mars3142.wherugo.cartridges
       {
          get 
          {
-            if (_objectId != 0 && _objectType == 0) // because of unknown data
+            if (objectId != 0 && objectType == 0) // because of unknown data
             {
                return -1;
             }
             else
             {
-               return _objectType;
+               return objectType;
             }
          }
       }
@@ -129,8 +126,8 @@ namespace org.mars3142.wherugo.cartridges
       #region Ctr
       public Objects(short objectId, long address)
       {
-         _objectId = objectId;
-         _address = address;
+         this.objectId = objectId;
+         this.address = address;
       }
       #endregion
 
@@ -144,17 +141,17 @@ namespace org.mars3142.wherugo.cartridges
       {
          bool retValue = false;
 
-         binaryReader.BaseStream.Seek(_address, SeekOrigin.Begin);
+         binaryReader.BaseStream.Seek(address, SeekOrigin.Begin);
          try
          {
             long length;
-            if (_objectId == 0)
+            if (objectId == 0)
             {
                length = SeekFile.GetLong(binaryReader);
-               _data = new byte[length];
+               data = new byte[length];
                for (int i = 0; i < length; i++)
                {
-                  _data[i] = binaryReader.ReadByte();
+                  data[i] = binaryReader.ReadByte();
                }
             }
             else
@@ -162,12 +159,12 @@ namespace org.mars3142.wherugo.cartridges
                byte validObj = SeekFile.GetByte(binaryReader);
                if (validObj != 0)
                {
-                  _objectType = SeekFile.GetLong(binaryReader);
+                  objectType = SeekFile.GetLong(binaryReader);
                   length = SeekFile.GetLong(binaryReader);
-                  _data = new byte[length];
+                  data = new byte[length];
                   for (int i = 0; i < length; i++)
                   {
-                     _data[i] = binaryReader.ReadByte();
+                     data[i] = binaryReader.ReadByte();
                   }
                }
             }

@@ -1,11 +1,55 @@
-\documentclass[10pt,a4paper,draft,twoside,titlepage]{report}
+\documentclass[10pt,a4paper]{article}
+\usepackage{helvet}
+\usepackage{graphicx} 
+\usepackage{lastpage}
+\usepackage{anysize}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[german]{babel}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\author{Peter Siegmund}
-\title{wherugo manual}
+\usepackage{aeguill}
+\usepackage{eurosym}
+\usepackage{multicol}
+
+%%% Format der Seite anpassen
+\marginsize{2.5cm}{2.5cm}{0.85cm}{4.11cm}
+\renewcommand{\labelenumii}{\theenumi.\arabic{enumii}.}
+
+%%% Header und Footer bauen
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headheight}{2.75cm}
+\renewcommand{\headsep}{0.5cm}
+\setlength{\unitlength}{1mm}
+\chead{}
+\rhead{}
+\lfoot{\small{(c) 2012 by mars3142}}
+\cfoot{\thepage\ / \pageref{LastPage}}
+\rfoot{\small{Thx to Magellan}}
+
 \begin{document}
-Test
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{6pt }
+
+%%% Dokumentenkrams nur auf der ersten Seite
+
+\vspace{3.0cm}
+
+\makebox[100.0mm][l]{\textbf{Title}}
+\makebox[20.0mm][l]{\textbf{Version}}
+\makebox[37.0mm][r]{\textbf{Date}} \\
+\makebox[100.0mm][l]{Documentation WherUGo}
+\makebox[20.5mm][l]{1.0}
+\makebox[37.0mm][r]{\today}
+
+\vspace{1cm}
+
+%%% Dokumenteninhalt
+
+\tableofcontents
+
+\include{chapter_01}
+\include{chapter_02}
+
 \end{document}

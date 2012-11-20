@@ -16,3 +16,4 @@ open_gwc_title=Öffne GWC-Datei
 open_gwc_filter=GWC-Dateien|*.gwc|Alle Dateien|*.*
 objects=Objekte...
 objectwindow=Objekte
+export_item=Eintrag exportieren

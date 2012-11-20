@@ -28,31 +28,31 @@ namespace org.mars3142.wherugo.cartridges
 
       #region Private
 
-      private readonly Dictionary<short, Objects> _objects;
+      private readonly Dictionary<short, Objects> objects;
 
-      private readonly string _author;
-      private readonly string _cartridgeDesc;
-      private readonly string _cartridgeGuid;
-      private readonly string _cartridgeName;
-      private readonly string _company;
-      private readonly string _completionCode;
-      private readonly double _latitude;              // N+/S-
-      private readonly double _longitude;             // E+/W-
-      private readonly bool _ok;
-      private readonly string _playerName;            //  name of player who downloaded this cartridge
-      private readonly string _recommendedDevice;
-      private readonly short _smallIconId;            // -1 = without
-      private readonly short _splashScreenId;         // -1 = without
-      private readonly string _startLocationDesc;
-      private readonly string _typeOfCartridge;       // "Tour guide", "Wherigo cache", etc.
-      private readonly long _unknown0;
-      private readonly long _unknown1;
-      private readonly long _unknown2;
-      private readonly long _unknown3;
-      private readonly long _unknown4;
-      private readonly long _unknown5;
-      private readonly long _unknown6;
-      private readonly string _version;
+      private readonly string author;
+      private readonly string cartridgeDesc;
+      private readonly string cartridgeGuid;
+      private readonly string cartridgeName;
+      private readonly string company;
+      private readonly string completionCode;
+      private readonly double latitude;              // N+/S-
+      private readonly double longitude;             // E+/W-
+      private readonly bool ok;
+      private readonly string playerName;            //  name of player who downloaded this cartridge
+      private readonly string recommendedDevice;
+      private readonly short smallIconId;            // -1 = without
+      private readonly short splashScreenId;         // -1 = without
+      private readonly string startLocationDesc;
+      private readonly string typeOfCartridge;       // "Tour guide", "Wherigo cache", etc.
+      private readonly long unknown0;
+      private readonly long unknown1;
+      private readonly long unknown2;
+      private readonly long unknown3;
+      private readonly long unknown4;
+      private readonly long unknown5;
+      private readonly long unknown6;
+      private readonly string version;
       
       #endregion
 
@@ -61,7 +61,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public string Author
       {
-         get { return _author; }
+         get { return author; }
       }
 
       /// <summary>
@@ -69,7 +69,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public double Latitude
       {
-         get { return _latitude; }
+         get { return latitude; }
       }
 
       /// <summary>
@@ -77,7 +77,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public double Longitude
       {
-         get { return _longitude; }
+         get { return longitude; }
       }
 
       /// <summary>
@@ -85,7 +85,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public long Unknown0
       {
-         get { return _unknown0; }
+         get { return unknown0; }
       }
 
       /// <summary>
@@ -93,7 +93,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public long Unknown1
       {
-         get { return _unknown1; }
+         get { return unknown1; }
       }
 
       /// <summary>
@@ -101,7 +101,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public long Unknown2
       {
-         get { return _unknown2; }
+         get { return unknown2; }
       }
 
       /// <summary>
@@ -109,7 +109,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public long Unknown3
       {
-         get { return _unknown3; }
+         get { return unknown3; }
       }
 
       /// <summary>
@@ -117,7 +117,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public short SplashScreenId
       {
-         get { return _splashScreenId; }
+         get { return splashScreenId; }
       }
 
       /// <summary>
@@ -125,7 +125,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public short SmallIconId
       {
-         get { return _smallIconId; }
+         get { return smallIconId; }
       }
 
       /// <summary>
@@ -133,7 +133,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public string TypeOfCartridge
       {
-         get { return _typeOfCartridge; }
+         get { return typeOfCartridge; }
       }
 
       /// <summary>
@@ -141,7 +141,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public string PlayerName
       {
-         get { return _playerName; }
+         get { return playerName; }
       }
 
       /// <summary>
@@ -149,7 +149,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public long Unknown4
       {
-         get { return _unknown4; }
+         get { return unknown4; }
       }
 
       /// <summary>
@@ -157,7 +157,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public long Unknown5
       {
-         get { return _unknown5; }
+         get { return unknown5; }
       }
 
       /// <summary>
@@ -165,7 +165,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public string CartridgeName
       {
-         get { return _cartridgeName; }
+         get { return cartridgeName; }
       }
 
       /// <summary>
@@ -173,7 +173,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public string CartridgeGuid
       {
-         get { return _cartridgeGuid; }
+         get { return cartridgeGuid; }
       }
 
       /// <summary>
@@ -181,7 +181,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public string CartridgeDesc
       {
-         get { return _cartridgeDesc; }
+         get { return cartridgeDesc; }
       }
 
       /// <summary>
@@ -189,7 +189,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public string StartLocationDesc
       {
-         get { return _startLocationDesc; }
+         get { return startLocationDesc; }
       }
 
       /// <summary>
@@ -197,7 +197,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public string Version
       {
-         get { return _version; }
+         get { return version; }
       }
 
       /// <summary>
@@ -205,7 +205,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public string Company
       {
-         get { return _company; }
+         get { return company; }
       }
 
       /// <summary>
@@ -213,7 +213,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public string RecommendedDevice
       {
-         get { return _recommendedDevice; }
+         get { return recommendedDevice; }
       }
 
       /// <summary>
@@ -221,7 +221,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public long Unknown6
       {
-         get { return _unknown6; }
+         get { return unknown6; }
       }
 
       /// <summary>
@@ -229,7 +229,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public string CompletionCode
       {
-         get { return _completionCode; }
+         get { return completionCode; }
       }
 
       /// <summary>
@@ -237,7 +237,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public bool Ok
       {
-         get { return _ok; }
+         get { return ok; }
       }
 
       #endregion
@@ -251,8 +251,8 @@ namespace org.mars3142.wherugo.cartridges
       {
          try
          {
-            _objects = new Dictionary<short, Objects>();
-            _ok = false;
+            objects = new Dictionary<short, Objects>();
+            ok = false;
 
             ushort count = SeekFile.GetUShort(binaryReader);
             for (int i = 0; i < count; i++)
@@ -260,47 +260,47 @@ namespace org.mars3142.wherugo.cartridges
                short objectId = SeekFile.GetShort(binaryReader);
                long address = SeekFile.GetLong(binaryReader);
                Objects obj = new Objects(objectId, address);
-               _objects.Add(obj.ObjectId, obj);
+               objects.Add(obj.ObjectId, obj);
             }
 
             long headerLenght = SeekFile.GetLong(binaryReader);
 
-            _latitude = SeekFile.GetDouble(binaryReader);
-            _longitude = SeekFile.GetDouble(binaryReader);
+            latitude = SeekFile.GetDouble(binaryReader);
+            longitude = SeekFile.GetDouble(binaryReader);
 
-            _unknown0 = SeekFile.GetLong(binaryReader);
-            _unknown1 = SeekFile.GetLong(binaryReader);
-            _unknown2 = SeekFile.GetLong(binaryReader);
-            _unknown3 = SeekFile.GetLong(binaryReader);
+            unknown0 = SeekFile.GetLong(binaryReader);
+            unknown1 = SeekFile.GetLong(binaryReader);
+            unknown2 = SeekFile.GetLong(binaryReader);
+            unknown3 = SeekFile.GetLong(binaryReader);
 
-            _splashScreenId = SeekFile.GetShort(binaryReader);
-            _smallIconId = SeekFile.GetShort(binaryReader);
+            splashScreenId = SeekFile.GetShort(binaryReader);
+            smallIconId = SeekFile.GetShort(binaryReader);
 
-            _typeOfCartridge = SeekFile.GetASCIIZ(binaryReader);
-            _playerName = SeekFile.GetASCIIZ(binaryReader);
+            typeOfCartridge = SeekFile.GetASCIIZ(binaryReader);
+            playerName = SeekFile.GetASCIIZ(binaryReader);
 
-            _unknown4 = SeekFile.GetLong(binaryReader);
-            _unknown5 = SeekFile.GetLong(binaryReader);
+            unknown4 = SeekFile.GetLong(binaryReader);
+            unknown5 = SeekFile.GetLong(binaryReader);
 
-            _cartridgeName = SeekFile.GetASCIIZ(binaryReader);
-            _cartridgeGuid = SeekFile.GetASCIIZ(binaryReader);
-            _cartridgeDesc = SeekFile.GetASCIIZ(binaryReader);
-            _startLocationDesc = SeekFile.GetASCIIZ(binaryReader);
-            _version = SeekFile.GetASCIIZ(binaryReader);
-            _author = SeekFile.GetASCIIZ(binaryReader);
-            _company = SeekFile.GetASCIIZ(binaryReader);
-            _recommendedDevice = SeekFile.GetASCIIZ(binaryReader);
+            cartridgeName = SeekFile.GetASCIIZ(binaryReader);
+            cartridgeGuid = SeekFile.GetASCIIZ(binaryReader);
+            cartridgeDesc = SeekFile.GetASCIIZ(binaryReader);
+            startLocationDesc = SeekFile.GetASCIIZ(binaryReader);
+            version = SeekFile.GetASCIIZ(binaryReader);
+            author = SeekFile.GetASCIIZ(binaryReader);
+            company = SeekFile.GetASCIIZ(binaryReader);
+            recommendedDevice = SeekFile.GetASCIIZ(binaryReader);
 
-            _unknown6 = SeekFile.GetLong(binaryReader);
+            unknown6 = SeekFile.GetLong(binaryReader);
 
-            _completionCode = SeekFile.GetASCIIZ(binaryReader);
+            completionCode = SeekFile.GetASCIIZ(binaryReader);
 
-            foreach (Objects obj in _objects.Values)
+            foreach (Objects obj in objects.Values)
             {
                obj.LoadObject(binaryReader);
             }
 
-            _ok = true;
+            ok = true;
          }
          catch (Exception ex)
          {
@@ -315,19 +315,19 @@ namespace org.mars3142.wherugo.cartridges
       {
          if (objectId == -1) return null;
 
-         if (objectId >= 0 && objectId <= _objects.Count - 1)
+         if (objectId >= 0 && objectId <= objects.Count - 1)
          {
-            return _objects[objectId];
+            return objects[objectId];
          }
          else
          {
-            throw new ArgumentOutOfRangeException("objectId", String.Format("Value have to be between 0 and {0}", _objects.Count - 1));
+            throw new ArgumentOutOfRangeException("objectId", String.Format("Value have to be between 0 and {0}", objects.Count - 1));
          }
       }
 
       public Dictionary<short, Objects> Obj()
       {
-         return _objects;
+         return objects;
       }
 
       #endregion

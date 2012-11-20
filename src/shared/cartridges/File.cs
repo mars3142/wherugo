@@ -27,15 +27,16 @@ namespace org.mars3142.wherugo.cartridges
 
       #region Private
       
-      private readonly byte[] _cartId = { 0x02, 0x0a, 0x43, 0x41, 0x52, 0x54, 0x00 };  // 02 0a CART 00 
+      private readonly byte[] cartId = { 0x02, 0x0a, 0x43, 0x41, 0x52, 0x54, 0x00 };  // 02 0a CART 00 
 
-      private BinaryReader _binaryReader;
-      private FileStream _fileStream;
+      private BinaryReader binaryReader;
+      private String filePath;
+      private FileStream fileStream;
 
       #endregion
 
       /// <summary>
-      /// Data of 
+      /// Data of the cartridge
       /// </summary>
       public Cartridge cartridge = null;
 
@@ -45,16 +46,20 @@ namespace org.mars3142.wherugo.cartridges
 
       #region Private
 
+      /// <summary>
+      /// Checks, if the file has the desired format
+      /// </summary>
+      /// <returns>True, if file format is correct</returns>
       private Boolean FileOk()
       {
          bool retValue = true;
 
          try
          {
-            _fileStream.Seek(0, SeekOrigin.Begin);
-            for (int i = 0; i < _cartId.Length; i++)
+            fileStream.Seek(0, SeekOrigin.Begin);
+            for (int i = 0; i < cartId.Length; i++)
             {
-               if (Convert.ToChar(_binaryReader.Read()) != _cartId[i])
+               if (Convert.ToChar(binaryReader.Read()) != cartId[i])
                {
                   retValue = false;
                }
@@ -71,20 +76,24 @@ namespace org.mars3142.wherugo.cartridges
       #endregion
 
       /// <summary>
-      /// 
+      /// Read the file and generate a cartridge, if the format is correct
       /// </summary>
       /// <param name="fileName">filename of cartridge</param>
-      /// <returns></returns>
+      /// <returns>True, if cartridge is opened</returns>
       public Boolean Read(String fileName)
       {
-         _fileStream = new FileStream(fileName, FileMode.Open);
+         Boolean retValue = false;
+
+         filePath = Path.GetDirectoryName(fileName);
+         fileStream = new FileStream(fileName, FileMode.Open);
          try
          {  
-            _binaryReader = new BinaryReader(_fileStream);
+            binaryReader = new BinaryReader(fileStream);
 
             if (FileOk())
             {
-               cartridge = new Cartridge(_binaryReader);
+               cartridge = new Cartridge(binaryReader);
+               retValue = true;
             }
          }
 
@@ -94,9 +103,9 @@ namespace org.mars3142.wherugo.cartridges
          }
          finally
          {
-            _fileStream.Close();
+            fileStream.Close();
          }
-         return true;
+         return retValue;
       }
 
       #endregion

@@ -29,22 +29,38 @@ namespace org.mars3142.wherugo.decoder.Windows
 {
    public partial class ObjectWindow : Form
    {
-      File _gwc = null;
+      File gwc = null;
 
       public ObjectWindow(File gwc)
       {
          InitializeComponent();
-         Text = Locale.GetString("objectwindow");
-         _gwc = gwc;
+         this.Text = Locale.GetString("objectwindow");
+         this.pmnItems.Items["mnExportItem"].Text = Locale.GetString("export_item");
+         this.gwc = gwc;
          InitializeData();
       }
 
       private void InitializeData()
       {
          lbObject.Items.Clear();
-         foreach (KeyValuePair<short, Objects> pair in _gwc.cartridge.Obj())
+
+         try
          {
-            lbObject.Items.Add(String.Format("{0} ({1} - {2:0,000} Bytes)", pair.Value.ObjectId, pair.Value.ObjectTypeString, pair.Value.Data.Length));
+            foreach (KeyValuePair<short, Objects> pair in gwc.cartridge.Obj())
+            {
+               if (pair.Value.Data != null)
+               {
+                  lbObject.Items.Add(String.Format("{0} ({1} - {2:#,###} Bytes)", pair.Value.ObjectId, pair.Value.ObjectTypeString, pair.Value.Data.Length));
+               }
+               else
+               {
+                  lbObject.Items.Add(String.Format("{0} ({1})", pair.Value.ObjectId, pair.Value.ObjectTypeString));
+               }
+            }
+         }
+         catch (Exception ex)
+         {
+            Trace.DoTrace(Trace.TraceCategories.WherugoApp, ex);
          }
       }
 
@@ -53,19 +69,29 @@ namespace org.mars3142.wherugo.decoder.Windows
          short Id;
          Objects obj;
 
-         Id = Convert.ToInt16(lbObject.SelectedItem.ToString().Split(' ')[0]);
-         obj = _gwc.cartridge.GetObject(Id);
-         if (obj.ObjectType >= 1 && obj.ObjectType <= 4)
+         pbImage.Image = null;
+
+         try
          {
-            ImageConverter ic = new ImageConverter();
-            Image objImage = (Image)ic.ConvertFrom(obj.Data);
-            Bitmap objBitmap = new Bitmap(objImage);
-            pbImage.Image = objBitmap;
+            Id = Convert.ToInt16(lbObject.SelectedItem.ToString().Split(' ')[0]);
+            obj = gwc.cartridge.GetObject(Id);
+            if (obj.ObjectType >= 1 && obj.ObjectType <= 4)
+            {
+               ImageConverter ic = new ImageConverter();
+               Image objImage = (Image)ic.ConvertFrom(obj.Data);
+               Bitmap objBitmap = new Bitmap(objImage);
+               pbImage.Image = objBitmap;
+            }
          }
-         else
+         catch (Exception ex)
          {
-            pbImage.Image = null;
+            Trace.DoTrace(Trace.TraceCategories.WherugoApp, ex);
          }
+      }
+
+      private void mnExportItem_Click(object sender, EventArgs e)
+      {
+         //
       }
    }
 }
