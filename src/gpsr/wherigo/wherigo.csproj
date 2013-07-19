@@ -50,9 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\shared\wherigo\Engine.cs">
-      <Link>Engine.cs</Link>
-    </Compile>
     <Compile Include="..\..\shared\wherigo\Wherigo.cs">
       <Link>Wherigo.cs</Link>
     </Compile>

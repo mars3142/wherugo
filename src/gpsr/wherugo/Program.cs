@@ -1,5 +1,5 @@
 //  wherugo - WherUGo for Magellan eXplorist x10
-//  Copyright (C) 2011-2012 Peter Siegmund <developer@mars3142.org>
+//  Copyright (C) 2011-2013 Peter Siegmund <developer@mars3142.org>
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -17,6 +17,7 @@
 using System;
 using System.Windows.Forms;
 
+using org.mars3142.wherugo.lua;
 using org.mars3142.wherugo.shared;
 
 namespace org.mars3142.wherugo
@@ -30,8 +31,8 @@ namespace org.mars3142.wherugo
          Trace.DoTrace(Trace.TraceCategories.WherugoApp, Trace.TraceEventType.Start);
 
          IntPtr m_lua_state = IntPtr.Zero;
-         m_lua_state = lua.Lua.luaL_newstate();
-         lua.Lua.luaL_openlibs(m_lua_state);
+         m_lua_state = Lua.luaL_newstate();
+         Lua.luaL_openlibs(m_lua_state);
 
          Windows.Start startForm = new Windows.Start();
          Application.Run(startForm);
