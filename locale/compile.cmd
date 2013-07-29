@@ -1,3 +1,3 @@
 for /f %%a IN ('dir /b *.txt') do (
-"c:\Program Files\Microsoft.NET\SDK\v2.0 64bit\Bin\ResGen.exe" %%a
+"c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\ResGen.exe" %%a
 )

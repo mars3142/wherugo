@@ -46,7 +46,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\shared\lua\Lua.cs">
@@ -59,6 +58,12 @@
       <Link>ScriptEngine.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\kopilua\kopilua.csproj">
+      <Project>{23F7E1DC-87B4-42DC-94E5-64CCCC784EA1}</Project>
+      <Name>kopilua</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

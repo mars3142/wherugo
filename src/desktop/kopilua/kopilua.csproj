@@ -1,0 +1,150 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{23F7E1DC-87B4-42DC-94E5-64CCCC784EA1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KopiLua</RootNamespace>
+    <AssemblyName>kopilua</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;LUA_CORE;LUA_COMPAT_VARARG;LUA_COMPAT_M</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;LUA_CORE;LUA_COMPAT_VARARG;LUA_COMPAT_M</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\shared\kopilua\lapi.cs">
+      <Link>lapi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\lauxlib.cs">
+      <Link>lauxlib.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\lbaselib.cs">
+      <Link>lbaselib.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\lcode.cs">
+      <Link>lcode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\ldblib.cs">
+      <Link>ldblib.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\ldebug.cs">
+      <Link>ldebug.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\ldo.cs">
+      <Link>ldo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\ldump.cs">
+      <Link>ldump.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\lfunc.cs">
+      <Link>lfunc.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\lgc.cs">
+      <Link>lgc.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\linit.cs">
+      <Link>linit.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\liolib.cs">
+      <Link>liolib.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\llex.cs">
+      <Link>llex.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\llimits.cs">
+      <Link>llimits.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\lmathlib.cs">
+      <Link>lmathlib.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\lmem.cs">
+      <Link>lmem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\loadlib.cs">
+      <Link>loadlib.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\lobject.cs">
+      <Link>lobject.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\lopcodes.cs">
+      <Link>lopcodes.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\loslib.cs">
+      <Link>loslib.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\lparser.cs">
+      <Link>lparser.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\lstate.cs">
+      <Link>lstate.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\lstring.cs">
+      <Link>lstring.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\lstrlib.cs">
+      <Link>lstrlib.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\ltable.cs">
+      <Link>ltable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\ltablib.cs">
+      <Link>ltablib.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\ltm.cs">
+      <Link>ltm.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\lua.cs">
+      <Link>lua.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\luaconf.cs">
+      <Link>luaconf.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\lualib.cs">
+      <Link>lualib.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\lundump.cs">
+      <Link>lundump.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\lvm.cs">
+      <Link>lvm.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\lzio.cs">
+      <Link>lzio.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\print.cs">
+      <Link>print.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\kopilua\printf\Tools.cs">
+      <Link>printf\Tools.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

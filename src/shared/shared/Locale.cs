@@ -25,6 +25,9 @@ namespace org.mars3142.wherugo.shared
 {
    public static class Locale
    {
+      static string path = string.Empty;
+      static ResourceManager rm;
+
       public static string GetString(string key)
       {
          string retValue = string.Empty;
@@ -36,12 +39,13 @@ namespace org.mars3142.wherugo.shared
 
       public static string GetString(string key, string culture)
       {
-         string path = string.Empty;
          string retValue = string.Empty;
-         ResourceManager rm;
 
-         path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\locale";
-         rm = ResourceManager.CreateFileBasedResourceManager("locale", path, null);
+         if (rm == null)
+         {
+            path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\locale";
+            rm = ResourceManager.CreateFileBasedResourceManager("locale", path, null);
+         }
 
          try
          {

@@ -135,11 +135,11 @@ namespace org.mars3142.wherugo.shared
          String path = String.Empty;
 
 #if WindowsCE
-         path = @"\SDMMC\Wherugo\Log;
+         path = @"\SDMMC\Wherugo\Log\";
 #else
-         path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+         path = String.Format("{0}\\", Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
 #endif
-         StreamWriter stream = new StreamWriter(String.Format("{0}{1}", path , @"\trace.txt"), true);
+         StreamWriter stream = new StreamWriter(String.Format("{0}{1}", path , "trace.txt"), true);
 
          try
          {

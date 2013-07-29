@@ -81,9 +81,13 @@ namespace org.mars3142.wherugo.decoder.Windows
             txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("version"), gwc.cartridge.Version);
             txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("recommend_device"), gwc.cartridge.RecommendedDevice);
             txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("start_location"), gwc.cartridge.StartLocationDesc);
+            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("latitude"), gwc.cartridge.LatitudeHuman);
+            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("longitude"), gwc.cartridge.LongitudeHuman);
+            txContent.Text += string.Format("{0}: {1}\r\n", Locale.GetString("altitude"), gwc.cartridge.Altitude);
             txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("player_name"), gwc.cartridge.PlayerName);
             txContent.Text += String.Format("{0} ({1}): {2}\r\n", Locale.GetString("completion_code"), Locale.GetString("encrypted"), gwc.cartridge.CompletionCode);
             txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("object_count"), gwc.cartridge.Obj().Count);
+            pbObjects.Enabled = true;
          }
       }
 

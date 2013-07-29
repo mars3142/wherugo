@@ -26,7 +26,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("mars3142.org")]
 [assembly: AssemblyProduct("WherUGo Lua")]
-[assembly: AssemblyCopyright("Copyright © 2011-2012 Peter Siegmund")]
+[assembly: AssemblyCopyright("Copyright © 2011-2013 Peter Siegmund")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

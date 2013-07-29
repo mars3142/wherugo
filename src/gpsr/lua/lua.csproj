@@ -53,6 +53,12 @@
     <Compile Include="..\..\shared\lua\Lua.cs">
       <Link>Lua.cs</Link>
     </Compile>
+    <Compile Include="..\..\shared\lua\LuaScriptEngineException.cs">
+      <Link>LuaScriptEngineException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\lua\ScriptEngine.cs">
+      <Link>ScriptEngine.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.v1.targets" />

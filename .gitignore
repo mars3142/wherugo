@@ -1,6 +1,8 @@
 
 /src/desktop/cartridges/bin
 /src/desktop/cartridges/obj
+/src/desktop/kopilua/bin
+/src/desktop/kopilua/obj
 /src/desktop/lua/obj
 /src/desktop/lua/bin
 /src/desktop/shared/bin
@@ -13,6 +15,8 @@
 /src/desktop/wherugo.decoder/wherugo.decoder/obj
 /src/gpsr/cartridges/bin
 /src/gpsr/cartridges/obj
+/src/gpsr/kopilua/bin
+/src/gpsr/kopilua/obj
 /src/gpsr/communication/bin
 /src/gpsr/communication/obj
 /src/gpsr/controls/bin

@@ -24,6 +24,7 @@ using System.Windows.Forms;
 
 using org.mars3142.wherugo.cartridges;
 using org.mars3142.wherugo.shared;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace org.mars3142.wherugo.decoder.Windows
 {
@@ -91,7 +92,24 @@ namespace org.mars3142.wherugo.decoder.Windows
 
       private void mnExportItem_Click(object sender, EventArgs e)
       {
-         //
+         Objects obj;
+         System.IO.FileStream file;
+         short Id;
+
+         try
+         {
+            Id = Convert.ToInt16(lbObject.SelectedItem.ToString().Split(' ')[0]);
+            obj = gwc.cartridge.GetObject(Id);
+            file = new System.IO.FileStream(String.Format("{0}\\obj_{1:000}.{2}", gwc.cartridge.FilePath, Id, obj.ObjectTypeString), System.IO.FileMode.Create);
+            System.IO.BinaryWriter writer = new System.IO.BinaryWriter(file);
+            writer.Write(obj.Data);
+            writer.Flush();
+            writer.Close();
+         }
+         catch (Exception ex)
+         {
+            Trace.DoTrace(Trace.TraceCategories.WherugoApp, ex);
+         }
       }
    }
 }

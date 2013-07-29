@@ -87,7 +87,7 @@ namespace org.mars3142.wherugo.cartridges
                   break;
 
                case 0:
-                  type = "Lua bytecode";
+                  type = "LUAC";
                   break;
 
                case 1:

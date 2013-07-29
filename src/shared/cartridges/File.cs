@@ -93,6 +93,7 @@ namespace org.mars3142.wherugo.cartridges
             if (FileOk())
             {
                cartridge = new Cartridge(binaryReader);
+               cartridge.FilePath = filePath;
                retValue = true;
             }
          }

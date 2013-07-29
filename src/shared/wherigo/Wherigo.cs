@@ -25,7 +25,7 @@ namespace org.mars3142.wherugo.wherigo
 {
    public class Wherigo
    {
-      ScriptEngine m_engine = null;
+     ScriptEngine m_engine = null;
 
       public Wherigo(ScriptEngine engine)
       {

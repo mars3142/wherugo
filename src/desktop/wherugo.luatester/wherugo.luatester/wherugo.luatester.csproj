@@ -71,6 +71,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\kopilua\kopilua.csproj">
+      <Project>{23F7E1DC-87B4-42DC-94E5-64CCCC784EA1}</Project>
+      <Name>kopilua</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\lua\lua.csproj">
       <Project>{05A8831E-F33B-4326-9BBB-961A2CC262B7}</Project>
       <Name>lua</Name>

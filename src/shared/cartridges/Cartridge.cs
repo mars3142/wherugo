@@ -15,6 +15,7 @@
 //  along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 using System;
+using System.Data;
 using System.Collections.Generic;
 using System.IO;
 
@@ -30,12 +31,14 @@ namespace org.mars3142.wherugo.cartridges
 
       private readonly Dictionary<short, Objects> objects;
 
+      private readonly double altitude;
       private readonly string author;
       private readonly string cartridgeDesc;
       private readonly string cartridgeGuid;
       private readonly string cartridgeName;
       private readonly string company;
       private readonly string completionCode;
+      private string filepath;
       private readonly double latitude;              // N+/S-
       private readonly double longitude;             // E+/W-
       private readonly bool ok;
@@ -50,14 +53,29 @@ namespace org.mars3142.wherugo.cartridges
       private readonly long unknown2;
       private readonly long unknown3;
       private readonly long unknown4;
-      private readonly long unknown5;
-      private readonly long unknown6;
       private readonly string version;
       
       #endregion
 
       /// <summary>
-      /// authorname
+      /// filename
+      /// </summary>
+      public string FilePath
+      {
+         get { return filepath; }
+         set { filepath = value; }
+      }
+
+      /// <summary>
+      /// altitude
+      /// </summary>
+      public double Altitude
+      {
+         get { return altitude; }
+      }
+
+      /// <summary>
+      /// author name
       /// </summary>
       public string Author
       {
@@ -65,11 +83,19 @@ namespace org.mars3142.wherugo.cartridges
       }
 
       /// <summary>
-      /// latitude of the startposition
+      /// latitude of the start position
       /// </summary>
       public double Latitude
       {
          get { return latitude; }
+      }
+
+      /// <summary>
+      /// human readable latitude of start position
+      /// </summary>
+      public String LatitudeHuman
+      {
+         get { return String.Format("{0}{1:00}° {2:00}.{3:00}", "N", "32", "11", "111" ); }
       }
 
       /// <summary>
@@ -78,6 +104,14 @@ namespace org.mars3142.wherugo.cartridges
       public double Longitude
       {
          get { return longitude; }
+      }
+
+      /// <summary>
+      /// human readable longitude of start position
+      /// </summary>
+      public String LongitudeHuman
+      {
+         get { return String.Format("{0}{1:00}° {2:00}.{3:00}", "N", "32", "11", "111"); }
       }
 
       /// <summary>
@@ -153,14 +187,6 @@ namespace org.mars3142.wherugo.cartridges
       }
 
       /// <summary>
-      /// unknown value
-      /// </summary>
-      public long Unknown5
-      {
-         get { return unknown5; }
-      }
-
-      /// <summary>
       /// cartridgename
       /// </summary>
       public string CartridgeName
@@ -217,14 +243,6 @@ namespace org.mars3142.wherugo.cartridges
       }
 
       /// <summary>
-      /// unknown value
-      /// </summary>
-      public long Unknown6
-      {
-         get { return unknown6; }
-      }
-
-      /// <summary>
       /// encrypted completioncode
       /// </summary>
       public string CompletionCode
@@ -267,11 +285,10 @@ namespace org.mars3142.wherugo.cartridges
 
             latitude = SeekFile.GetDouble(binaryReader);
             longitude = SeekFile.GetDouble(binaryReader);
-
+            altitude = SeekFile.GetDouble(binaryReader);
+            
             unknown0 = SeekFile.GetLong(binaryReader);
             unknown1 = SeekFile.GetLong(binaryReader);
-            unknown2 = SeekFile.GetLong(binaryReader);
-            unknown3 = SeekFile.GetLong(binaryReader);
 
             splashScreenId = SeekFile.GetShort(binaryReader);
             smallIconId = SeekFile.GetShort(binaryReader);
@@ -279,8 +296,8 @@ namespace org.mars3142.wherugo.cartridges
             typeOfCartridge = SeekFile.GetASCIIZ(binaryReader);
             playerName = SeekFile.GetASCIIZ(binaryReader);
 
-            unknown4 = SeekFile.GetLong(binaryReader);
-            unknown5 = SeekFile.GetLong(binaryReader);
+            unknown2 = SeekFile.GetLong(binaryReader);
+            unknown3 = SeekFile.GetLong(binaryReader);
 
             cartridgeName = SeekFile.GetASCIIZ(binaryReader);
             cartridgeGuid = SeekFile.GetASCIIZ(binaryReader);
@@ -291,7 +308,7 @@ namespace org.mars3142.wherugo.cartridges
             company = SeekFile.GetASCIIZ(binaryReader);
             recommendedDevice = SeekFile.GetASCIIZ(binaryReader);
 
-            unknown6 = SeekFile.GetLong(binaryReader);
+            unknown4 = SeekFile.GetLong(binaryReader);
 
             completionCode = SeekFile.GetASCIIZ(binaryReader);
 

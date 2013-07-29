@@ -18,9 +18,10 @@ using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
 
-using org.mars3142.wherugo.lua;
+//using org.mars3142.wherugo.lua;
 using org.mars3142.wherugo.shared;
 using org.mars3142.wherugo.wherigo;
+using KopiLua;
 
 namespace org.mars3142.wherugo.luatester.Windows
 {
@@ -28,26 +29,33 @@ namespace org.mars3142.wherugo.luatester.Windows
    {
       private static List<Delegate> m_refs = new List<Delegate>();
 
-      private static ScriptEngine engine = new ScriptEngine();
-      private static Wherigo wherigo = new Wherigo(engine);
+      //private static ScriptEngine engine = new ScriptEngine();
+      //private static Wherigo wherigo = new Wherigo(engine);
+      private static Lua lua = new Lua();
+      private Lua.lua_State lState;
 
       public Main()
       {
          InitializeComponent();
          //wherigo.InitWherigo();
 
-         txtLua.Text = "require 'Wherigo'; TwoPlusTwo = 2+2; print('Hello world, from', _VERSION, '!'); print('TwoPlusTwo:', TwoPlusTwo); ";
+         txtLua.Text = "TwoPlusTwo = 2+2; print('Hello world, from', _VERSION, '!'); print('TwoPlusTwo:', TwoPlusTwo); ";
       }
 
       private void btnExecute_Click(object sender, EventArgs e)
       {
+         lState = Lua.luaL_newstate();
+         Lua.luaL_openlibs(lState);
+         Lua.luaL_loadstring(lState, txtLua.Text);
+         Lua.lua_pcall(lState, 0, -1, 0);
 
-         engine.RunLuaScript(txtLua.Text);
+         //engine.RunLuaScript(txtLua.Text);
       }
 
       private void Main_FormClosing(object sender, FormClosingEventArgs e)
       {
-         engine.StopEngineAndCleanup();
+         Lua.lua_close(lState);
+         //engine.StopEngineAndCleanup();
       }
    }
 }

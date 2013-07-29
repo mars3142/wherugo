@@ -44,92 +44,93 @@ namespace org.mars3142.wherugo.decoder.Windows
       /// </summary>
       private void InitializeComponent()
       {
-         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-         this.fdGWC = new System.Windows.Forms.OpenFileDialog();
-         this.pbOpen = new System.Windows.Forms.Button();
-         this.txContent = new System.Windows.Forms.TextBox();
-         this.imSplashScreen = new System.Windows.Forms.PictureBox();
-         this.imSmallIcon = new System.Windows.Forms.PictureBox();
-         this.pbObjects = new System.Windows.Forms.Button();
-         ((System.ComponentModel.ISupportInitialize)(this.imSplashScreen)).BeginInit();
-         ((System.ComponentModel.ISupportInitialize)(this.imSmallIcon)).BeginInit();
-         this.SuspendLayout();
-         // 
-         // fdGWC
-         // 
-         this.fdGWC.Filter = "GWC-Files|*.gwc|All files|*.*";
-         this.fdGWC.ShowReadOnly = true;
-         this.fdGWC.SupportMultiDottedExtensions = true;
-         this.fdGWC.Title = "Open GWC-File";
-         // 
-         // pbOpen
-         // 
-         this.pbOpen.Location = new System.Drawing.Point(12, 12);
-         this.pbOpen.Name = "pbOpen";
-         this.pbOpen.Size = new System.Drawing.Size(114, 23);
-         this.pbOpen.TabIndex = 4;
-         this.pbOpen.Text = "Open GWC...";
-         this.pbOpen.UseVisualStyleBackColor = true;
-         this.pbOpen.Click += new System.EventHandler(this.pbOpen_Click);
-         // 
-         // txContent
-         // 
-         this.txContent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                     | System.Windows.Forms.AnchorStyles.Right)));
-         this.txContent.Location = new System.Drawing.Point(12, 41);
-         this.txContent.Multiline = true;
-         this.txContent.Name = "txContent";
-         this.txContent.Size = new System.Drawing.Size(438, 264);
-         this.txContent.TabIndex = 3;
-         // 
-         // imSplashScreen
-         // 
-         this.imSplashScreen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                     | System.Windows.Forms.AnchorStyles.Left)));
-         this.imSplashScreen.Location = new System.Drawing.Point(12, 311);
-         this.imSplashScreen.Name = "imSplashScreen";
-         this.imSplashScreen.Size = new System.Drawing.Size(213, 257);
-         this.imSplashScreen.TabIndex = 2;
-         this.imSplashScreen.TabStop = false;
-         // 
-         // imSmallIcon
-         // 
-         this.imSmallIcon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                     | System.Windows.Forms.AnchorStyles.Right)));
-         this.imSmallIcon.Location = new System.Drawing.Point(231, 311);
-         this.imSmallIcon.Name = "imSmallIcon";
-         this.imSmallIcon.Size = new System.Drawing.Size(219, 257);
-         this.imSmallIcon.TabIndex = 1;
-         this.imSmallIcon.TabStop = false;
-         // 
-         // pbObjects
-         // 
-         this.pbObjects.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-         this.pbObjects.Location = new System.Drawing.Point(375, 12);
-         this.pbObjects.Name = "pbObjects";
-         this.pbObjects.Size = new System.Drawing.Size(75, 23);
-         this.pbObjects.TabIndex = 0;
-         this.pbObjects.Text = "Objects...";
-         this.pbObjects.UseVisualStyleBackColor = true;
-         this.pbObjects.Click += new System.EventHandler(this.pbObjects_Click);
-         // 
-         // Main
-         // 
-         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         this.ClientSize = new System.Drawing.Size(462, 580);
-         this.Controls.Add(this.pbObjects);
-         this.Controls.Add(this.imSmallIcon);
-         this.Controls.Add(this.imSplashScreen);
-         this.Controls.Add(this.txContent);
-         this.Controls.Add(this.pbOpen);
-         this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-         this.Name = "Main";
-         this.Text = "GWC-Viewer";
-         ((System.ComponentModel.ISupportInitialize)(this.imSplashScreen)).EndInit();
-         ((System.ComponentModel.ISupportInitialize)(this.imSmallIcon)).EndInit();
-         this.ResumeLayout(false);
-         this.PerformLayout();
+          System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+          this.fdGWC = new System.Windows.Forms.OpenFileDialog();
+          this.pbOpen = new System.Windows.Forms.Button();
+          this.txContent = new System.Windows.Forms.TextBox();
+          this.imSplashScreen = new System.Windows.Forms.PictureBox();
+          this.imSmallIcon = new System.Windows.Forms.PictureBox();
+          this.pbObjects = new System.Windows.Forms.Button();
+          ((System.ComponentModel.ISupportInitialize)(this.imSplashScreen)).BeginInit();
+          ((System.ComponentModel.ISupportInitialize)(this.imSmallIcon)).BeginInit();
+          this.SuspendLayout();
+          // 
+          // fdGWC
+          // 
+          this.fdGWC.Filter = "GWC-Files|*.gwc|All files|*.*";
+          this.fdGWC.ShowReadOnly = true;
+          this.fdGWC.SupportMultiDottedExtensions = true;
+          this.fdGWC.Title = "Open GWC-File";
+          // 
+          // pbOpen
+          // 
+          this.pbOpen.Location = new System.Drawing.Point(12, 12);
+          this.pbOpen.Name = "pbOpen";
+          this.pbOpen.Size = new System.Drawing.Size(114, 23);
+          this.pbOpen.TabIndex = 4;
+          this.pbOpen.Text = "Open GWC...";
+          this.pbOpen.UseVisualStyleBackColor = true;
+          this.pbOpen.Click += new System.EventHandler(this.pbOpen_Click);
+          // 
+          // txContent
+          // 
+          this.txContent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                      | System.Windows.Forms.AnchorStyles.Right)));
+          this.txContent.Location = new System.Drawing.Point(12, 41);
+          this.txContent.Multiline = true;
+          this.txContent.Name = "txContent";
+          this.txContent.Size = new System.Drawing.Size(438, 264);
+          this.txContent.TabIndex = 3;
+          // 
+          // imSplashScreen
+          // 
+          this.imSplashScreen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                      | System.Windows.Forms.AnchorStyles.Left)));
+          this.imSplashScreen.Location = new System.Drawing.Point(12, 311);
+          this.imSplashScreen.Name = "imSplashScreen";
+          this.imSplashScreen.Size = new System.Drawing.Size(213, 257);
+          this.imSplashScreen.TabIndex = 2;
+          this.imSplashScreen.TabStop = false;
+          // 
+          // imSmallIcon
+          // 
+          this.imSmallIcon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                      | System.Windows.Forms.AnchorStyles.Right)));
+          this.imSmallIcon.Location = new System.Drawing.Point(231, 311);
+          this.imSmallIcon.Name = "imSmallIcon";
+          this.imSmallIcon.Size = new System.Drawing.Size(219, 257);
+          this.imSmallIcon.TabIndex = 1;
+          this.imSmallIcon.TabStop = false;
+          // 
+          // pbObjects
+          // 
+          this.pbObjects.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+          this.pbObjects.Enabled = false;
+          this.pbObjects.Location = new System.Drawing.Point(375, 12);
+          this.pbObjects.Name = "pbObjects";
+          this.pbObjects.Size = new System.Drawing.Size(75, 23);
+          this.pbObjects.TabIndex = 0;
+          this.pbObjects.Text = "Objects...";
+          this.pbObjects.UseVisualStyleBackColor = true;
+          this.pbObjects.Click += new System.EventHandler(this.pbObjects_Click);
+          // 
+          // Main
+          // 
+          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+          this.ClientSize = new System.Drawing.Size(462, 580);
+          this.Controls.Add(this.pbObjects);
+          this.Controls.Add(this.imSmallIcon);
+          this.Controls.Add(this.imSplashScreen);
+          this.Controls.Add(this.txContent);
+          this.Controls.Add(this.pbOpen);
+          this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+          this.Name = "Main";
+          this.Text = "GWC-Viewer";
+          ((System.ComponentModel.ISupportInitialize)(this.imSplashScreen)).EndInit();
+          ((System.ComponentModel.ISupportInitialize)(this.imSmallIcon)).EndInit();
+          this.ResumeLayout(false);
+          this.PerformLayout();
 
       }
 
