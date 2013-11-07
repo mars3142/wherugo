@@ -95,7 +95,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public String LatitudeHuman
       {
-         get { return String.Format("{0}{1:00}° {2:00}.{3:00}", "N", "32", "11", "111" ); }
+         get { return Geo.FromDouble(latitude).ToString("NS"); }
       }
 
       /// <summary>
@@ -111,7 +111,7 @@ namespace org.mars3142.wherugo.cartridges
       /// </summary>
       public String LongitudeHuman
       {
-         get { return String.Format("{0}{1:00}° {2:00}.{3:00}", "N", "32", "11", "111"); }
+         get { return Geo.FromDouble(longitude).ToString("WE"); }
       }
 
       /// <summary>

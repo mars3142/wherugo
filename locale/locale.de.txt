@@ -17,6 +17,5 @@ open_gwc_filter=GWC-Dateien|*.gwc|Alle Dateien|*.*
 objects=Objekte...
 objectwindow=Objekte
 export_item=Eintrag exportieren
-latitude=Latitude
-longitude=Longitude
+start_coordinates=Start Koordinate
 altitude=Altitude

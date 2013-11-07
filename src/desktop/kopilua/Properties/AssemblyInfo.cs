@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("kopilua")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Kopi Lua")]
+[assembly: AssemblyDescription("Kopi Lua was originally a C# port of the Lua v.5.1.4 virtual machine, parser, libraries and command-line utilities.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("kopilua")]
-[assembly: AssemblyCopyright("Copyright ©  2013")]
+[assembly: AssemblyProduct("Kopi Lua")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

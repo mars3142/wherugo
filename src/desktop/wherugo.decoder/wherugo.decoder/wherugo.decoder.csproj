@@ -107,6 +107,14 @@
       <Project>{264D3B8D-D034-4B05-A80B-4664B7DF14C4}</Project>
       <Name>cartridges</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\kopilua\kopilua.csproj">
+      <Project>{23F7E1DC-87B4-42DC-94E5-64CCCC784EA1}</Project>
+      <Name>kopilua</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\lua\lua.csproj">
+      <Project>{05A8831E-F33B-4326-9BBB-961A2CC262B7}</Project>
+      <Name>lua</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\shared\shared.csproj">
       <Project>{D6DF7046-DD06-4778-AD7F-9117AA477129}</Project>
       <Name>shared</Name>
