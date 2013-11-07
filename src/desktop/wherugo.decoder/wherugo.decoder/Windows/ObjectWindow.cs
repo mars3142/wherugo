@@ -37,6 +37,7 @@ namespace org.mars3142.wherugo.decoder.Windows
          InitializeComponent();
          this.Text = Locale.GetString("objectwindow");
          this.pmnItems.Items["mnExportItem"].Text = Locale.GetString("export_item");
+         this.pmnItems.Items["mnExportItems"].Text = Locale.GetString("export_items");
          this.gwc = gwc;
          InitializeData();
       }
@@ -67,15 +68,15 @@ namespace org.mars3142.wherugo.decoder.Windows
 
       private void lbObject_SelectedIndexChanged(object sender, EventArgs e)
       {
-         short Id;
+         short id;
          Objects obj;
 
          pbImage.Image = null;
 
          try
          {
-            Id = Convert.ToInt16(lbObject.SelectedItem.ToString().Split(' ')[0]);
-            obj = gwc.cartridge.GetObject(Id);
+            id = Convert.ToInt16(lbObject.SelectedItem.ToString().Split(' ')[0]);
+            obj = gwc.cartridge.GetObject(id);
             if (obj.ObjectType >= 1 && obj.ObjectType <= 4)
             {
                ImageConverter ic = new ImageConverter();
@@ -92,15 +93,49 @@ namespace org.mars3142.wherugo.decoder.Windows
 
       private void mnExportItem_Click(object sender, EventArgs e)
       {
+         try
+         {
+            short id = Convert.ToInt16(lbObject.SelectedItem.ToString().Split(' ')[0]);
+            ExportItem(id);
+         }
+         catch (Exception ex)
+         {
+            Trace.DoTrace(Trace.TraceCategories.WherugoApp, ex);
+         }
+         finally
+         {
+            MessageBox.Show(Locale.GetString("export_finished"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+         }
+      }
+
+      private void mnExportItems_Click(object sender, EventArgs e)
+      {
+         try
+         {
+            for (short id = 0; id < gwc.cartridge.Obj().Count; id++)
+            {
+               ExportItem(id);
+            }
+         }
+         catch (Exception ex)
+         {
+            Trace.DoTrace(Trace.TraceCategories.WherugoApp, ex);
+         }
+         finally
+         {
+            MessageBox.Show(Locale.GetString("export_finished"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+         }
+      }
+
+      private void ExportItem(short id)
+      {
          Objects obj;
          System.IO.FileStream file;
-         short Id;
 
          try
          {
-            Id = Convert.ToInt16(lbObject.SelectedItem.ToString().Split(' ')[0]);
-            obj = gwc.cartridge.GetObject(Id);
-            file = new System.IO.FileStream(String.Format("{0}\\obj_{1:000}.{2}", gwc.cartridge.FilePath, Id, obj.ObjectTypeString), System.IO.FileMode.Create);
+            obj = gwc.cartridge.GetObject(id);
+            file = new System.IO.FileStream(String.Format("{0}\\obj_{1:000}.{2}", gwc.cartridge.FilePath, id, obj.ObjectTypeString), System.IO.FileMode.Create);
             System.IO.BinaryWriter writer = new System.IO.BinaryWriter(file);
             writer.Write(obj.Data);
             writer.Flush();

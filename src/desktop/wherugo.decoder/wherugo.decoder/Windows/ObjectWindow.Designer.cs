@@ -34,6 +34,7 @@ namespace org.mars3142.wherugo.decoder.Windows
          this.pmnItems = new System.Windows.Forms.ContextMenuStrip(this.components);
          this.mnExportItem = new System.Windows.Forms.ToolStripMenuItem();
          this.pbImage = new System.Windows.Forms.PictureBox();
+         this.mnExportItems = new System.Windows.Forms.ToolStripMenuItem();
          this.pmnItems.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
          this.SuspendLayout();
@@ -53,15 +54,16 @@ namespace org.mars3142.wherugo.decoder.Windows
          // pmnItems
          // 
          this.pmnItems.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnExportItem});
+            this.mnExportItem,
+            this.mnExportItems});
          this.pmnItems.Name = "contextMenuStrip1";
-         this.pmnItems.Size = new System.Drawing.Size(153, 48);
+         this.pmnItems.Size = new System.Drawing.Size(166, 70);
          // 
          // mnExportItem
          // 
          this.mnExportItem.Name = "mnExportItem";
-         this.mnExportItem.Size = new System.Drawing.Size(152, 22);
-         this.mnExportItem.Text = "Export Item";
+         this.mnExportItem.Size = new System.Drawing.Size(165, 22);
+         this.mnExportItem.Text = "Export this object";
          this.mnExportItem.Click += new System.EventHandler(this.mnExportItem_Click);
          // 
          // pbImage
@@ -74,6 +76,13 @@ namespace org.mars3142.wherugo.decoder.Windows
          this.pbImage.Size = new System.Drawing.Size(314, 354);
          this.pbImage.TabIndex = 1;
          this.pbImage.TabStop = false;
+         // 
+         // mnExportItems
+         // 
+         this.mnExportItems.Name = "mnExportItems";
+         this.mnExportItems.Size = new System.Drawing.Size(165, 22);
+         this.mnExportItems.Text = "Export all objects";
+         this.mnExportItems.Click += new System.EventHandler(this.mnExportItems_Click);
          // 
          // ObjectWindow
          // 
@@ -97,5 +106,6 @@ namespace org.mars3142.wherugo.decoder.Windows
       private System.Windows.Forms.PictureBox pbImage;
       private System.Windows.Forms.ContextMenuStrip pmnItems;
       private System.Windows.Forms.ToolStripMenuItem mnExportItem;
+      private System.Windows.Forms.ToolStripMenuItem mnExportItems;
    }
 }
