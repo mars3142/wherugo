@@ -43,7 +43,16 @@ namespace org.mars3142.wherugo.shared
 
          if (rm == null)
          {
-            path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\locale";
+#if !WindowsCE
+            path = System.Reflection.Assembly.GetExecutingAssembly().Location;
+#else
+		      path = System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase;
+		      if (path.StartsWith("file:///")) 
+            {
+			      path = path.Substring("file:///".Length);
+            }
+#endif
+            path = String.Format(@"{0}\locale", System.IO.Path.GetDirectoryName(path));
             rm = ResourceManager.CreateFileBasedResourceManager("locale", path, null);
          }
 

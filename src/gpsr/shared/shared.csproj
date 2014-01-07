@@ -57,6 +57,12 @@
     <Compile Include="..\..\shared\shared\DeviceConfig.cs">
       <Link>DeviceConfig.cs</Link>
     </Compile>
+    <Compile Include="..\..\shared\shared\Geo.cs">
+      <Link>Geo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\shared\shared\Locale.cs">
+      <Link>Locale.cs</Link>
+    </Compile>
     <Compile Include="..\..\shared\shared\ScreenHelper.cs">
       <Link>ScreenHelper.cs</Link>
     </Compile>

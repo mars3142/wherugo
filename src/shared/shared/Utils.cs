@@ -37,7 +37,7 @@ namespace org.mars3142.wherugo.shared
          }
          catch (Exception ex)
          {
-            Trace.DoTrace(Trace.TraceCategories.Shared, Trace.TraceEventType.Error, ex);
+            Trace.DoTrace(Trace.TraceCategories.Shared, ex);
          }
          return bitmap;
       }
@@ -50,7 +50,7 @@ namespace org.mars3142.wherugo.shared
          }
          catch (Exception ex)
          {
-            Trace.DoTrace(Trace.TraceCategories.Shared, Trace.TraceEventType.Error, ex);
+            Trace.DoTrace(Trace.TraceCategories.Shared, ex);
          }
       }
    }

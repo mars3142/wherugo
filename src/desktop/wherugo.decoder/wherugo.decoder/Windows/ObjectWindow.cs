@@ -19,12 +19,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Windows.Forms;
 
 using org.mars3142.wherugo.cartridges;
 using org.mars3142.wherugo.shared;
-using System.Runtime.Serialization.Formatters.Binary;
 
 namespace org.mars3142.wherugo.decoder.Windows
 {
@@ -35,10 +35,12 @@ namespace org.mars3142.wherugo.decoder.Windows
       public ObjectWindow(File gwc)
       {
          InitializeComponent();
+
          this.Text = Locale.GetString("objectwindow");
          this.pmnItems.Items["mnExportItem"].Text = Locale.GetString("export_item");
          this.pmnItems.Items["mnExportItems"].Text = Locale.GetString("export_items");
          this.gwc = gwc;
+
          InitializeData();
       }
 

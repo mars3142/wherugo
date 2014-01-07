@@ -37,12 +37,12 @@ namespace org.mars3142.wherugo.cartridges
       private readonly string cartridgeGuid;
       private readonly string cartridgeName;
       private readonly string company;
-      private readonly string completionCode;
+      private readonly string completionCode;        // only the first 15 chars are needed
       private string filepath;
       private readonly double latitude;              // N+/S-
       private readonly double longitude;             // E+/W-
       private readonly bool ok;
-      private readonly string playerName;            //  name of player who downloaded this cartridge
+      private readonly string playerName;            // name of player who downloaded this cartridge
       private readonly string recommendedDevice;
       private readonly short smallIconId;            // -1 = without
       private readonly short splashScreenId;         // -1 = without
@@ -321,7 +321,7 @@ namespace org.mars3142.wherugo.cartridges
          }
          catch (Exception ex)
          {
-            Trace.DoTrace(Trace.TraceCategories.Cartridge, Trace.TraceEventType.Error, ex);
+            Trace.DoTrace(Trace.TraceCategories.Cartridge, ex);
          }
       }
       #endregion

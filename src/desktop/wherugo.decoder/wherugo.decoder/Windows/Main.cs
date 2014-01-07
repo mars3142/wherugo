@@ -30,6 +30,7 @@ namespace org.mars3142.wherugo.decoder.Windows
       public Main()
       {
          InitializeComponent();
+
          pbOpen.Text = Locale.GetString("open_gwc");
          pbObjects.Text = Locale.GetString("objects");
          fdGWC.Title = Locale.GetString("open_gwc_title");
@@ -46,6 +47,7 @@ namespace org.mars3142.wherugo.decoder.Windows
          txContent.Text = String.Empty;
          imSplashScreen.Image = null;
          imSmallIcon.Image = null;
+         pbObjects.Enabled = false;
 
          if (fdGWC.ShowDialog() == DialogResult.OK)
          {
@@ -79,12 +81,17 @@ namespace org.mars3142.wherugo.decoder.Windows
             txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("cartridge_name"), gwc.cartridge.CartridgeName);
             txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("author"), gwc.cartridge.Author);
             txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("version"), gwc.cartridge.Version);
-            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("recommend_device"), gwc.cartridge.RecommendedDevice);
+            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("recommended_device"), gwc.cartridge.RecommendedDevice);
             txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("start_location"), gwc.cartridge.StartLocationDesc);
             txContent.Text += String.Format("{0}: {1} {2}\r\n", Locale.GetString("start_coordinates"), gwc.cartridge.LatitudeHuman, gwc.cartridge.LongitudeHuman);
             txContent.Text += string.Format("{0}: {1}\r\n", Locale.GetString("altitude"), gwc.cartridge.Altitude);
             txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("player_name"), gwc.cartridge.PlayerName);
-            txContent.Text += String.Format("{0} ({1}): {2}\r\n", Locale.GetString("completion_code"), Locale.GetString("encrypted"), gwc.cartridge.CompletionCode);
+            String completionCode = gwc.cartridge.CompletionCode;
+            if (completionCode.Length > 15)
+            {
+               completionCode = completionCode.Substring(0, 15);
+            }
+            txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("completion_code"), completionCode);
             txContent.Text += String.Format("{0}: {1}\r\n", Locale.GetString("object_count"), gwc.cartridge.Obj().Count);
             pbObjects.Enabled = true;
          }
@@ -94,9 +101,8 @@ namespace org.mars3142.wherugo.decoder.Windows
       {
          if (gwc.cartridge != null)
          {
-            ObjectWindow _frm = new ObjectWindow(gwc);
-
-            _frm.ShowDialog();
+            ObjectWindow window = new ObjectWindow(gwc);
+            window.ShowDialog();
          }
       }
    }

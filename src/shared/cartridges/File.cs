@@ -67,7 +67,7 @@ namespace org.mars3142.wherugo.cartridges
          }
          catch(Exception ex)
          {
-            Trace.DoTrace(Trace.TraceCategories.Cartridge, Trace.TraceEventType.Error, ex);
+            Trace.DoTrace(Trace.TraceCategories.Cartridge, ex);
          }
 
          return retValue;
@@ -86,6 +86,7 @@ namespace org.mars3142.wherugo.cartridges
 
          filePath = Path.GetDirectoryName(fileName);
          fileStream = new FileStream(fileName, FileMode.Open);
+
          try
          {  
             binaryReader = new BinaryReader(fileStream);
@@ -97,10 +98,9 @@ namespace org.mars3142.wherugo.cartridges
                retValue = true;
             }
          }
-
          catch (Exception ex)
          {
-            Trace.DoTrace(Trace.TraceCategories.Cartridge, Trace.TraceEventType.Error, ex);
+            Trace.DoTrace(Trace.TraceCategories.Cartridge, ex);
          }
          finally
          {

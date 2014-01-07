@@ -22,6 +22,8 @@ using org.mars3142.wherugo.communication;
 using org.mars3142.wherugo.controls;
 using org.mars3142.wherugo.shared;
 
+using KopiLua;
+
 namespace org.mars3142.wherugo.Windows
 {
    public partial class Start : Form
@@ -30,6 +32,7 @@ namespace org.mars3142.wherugo.Windows
       private Button m_btnExit = new Button();
       private Button m_btnStart = new Button();
       private Button m_btnStop = new Button();
+      private Button m_btnExecute = new Button();
       private TextBox m_txt = new TextBox();
 
       public Start()
@@ -52,6 +55,12 @@ namespace org.mars3142.wherugo.Windows
             m_btnStop.Left = m_btnStart.Width + 5;
             m_btnStop.Click += new EventHandler(btnStop_Click);
             Controls.Add(m_btnStop);
+
+            m_btnExecute.Text = "LuaMsgbox";
+            m_btnExecute.Top = m_btnStart.Top;
+            m_btnExecute.Left = m_btnStop.Left + m_btnStop.Width + 5;
+            m_btnExecute.Click += new EventHandler(btnExecute_Click);
+            Controls.Add(m_btnExecute);
 
             m_txt.Top = 40;
             m_txt.Multiline = true;
@@ -89,6 +98,45 @@ namespace org.mars3142.wherugo.Windows
       {
          Trace.DoTrace(Trace.TraceCategories.WherugoApp, "btnStop_Click");
          m_gps.StopGPS();
+      }
+
+      private void btnExecute_Click(object sender, System.EventArgs e)
+      {
+         Trace.DoTrace(Trace.TraceCategories.WherugoApp, "btnExecute_Click");
+
+         Lua.lua_State lState = Lua.luaL_newstate();
+         Lua.luaL_openlibs(lState);
+         Lua.lua_register(lState, "msgbox", Lua_MsgBox);
+
+         Lua.luaL_loadstring(lState, "msgbox('Called with Lua. It works!')");
+         Lua.lua_pcall(lState, 0, -1, 0);
+         Lua.lua_close(lState);
+      }
+
+      public int Lua_MsgBox(Lua.lua_State m_lua_state)
+      {
+         string text = String.Empty;
+
+         if (Lua.lua_type(m_lua_state, -1) == Lua.LUA_TSTRING)
+         {
+            text = Lua.lua_tostring(m_lua_state, -1).ToString();
+            Lua.lua_pop(m_lua_state, 1);
+            Lua.lua_pushboolean(m_lua_state, MsgBox(text));
+            return 1;
+         }
+         else
+         {
+            Lua.lua_settop(m_lua_state, 0);
+         }
+
+         Lua.lua_pushstring(m_lua_state, "invalid argument to function: msgbox(string text)");
+         return Lua.lua_error(m_lua_state);
+      }
+
+      private int MsgBox(String text)
+      {
+         MessageBox.Show(text);
+         return 0;
       }
    }
 }

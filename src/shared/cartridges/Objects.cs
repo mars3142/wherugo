@@ -173,7 +173,7 @@ namespace org.mars3142.wherugo.cartridges
          }
          catch (Exception ex)
          {
-            Trace.DoTrace(Trace.TraceCategories.Cartridge, Trace.TraceEventType.Error, ex);
+            Trace.DoTrace(Trace.TraceCategories.Cartridge, ex);
          }
 
          return retValue;

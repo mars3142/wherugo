@@ -11,9 +11,10 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
-using System.Text;
-using System.Runtime.InteropServices;
 using System.Diagnostics;
+using System.Text;
+using System.Reflection;
+using System.Runtime.InteropServices;
 
 namespace KopiLua
 {
@@ -41,8 +42,19 @@ namespace KopiLua
 
 		public static void setprogdir(lua_State L)
 		{
-			CharPtr buff = Directory.GetCurrentDirectory();
-			luaL_gsub(L, lua_tostring(L, -1), LUA_EXECDIR, buff);
+         CharPtr buff;
+         String path;
+#if !WindowsCE
+         path = System.Reflection.Assembly.GetExecutingAssembly().Location;
+#else
+         path = System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase;
+         if (path.StartsWith("file:///"))
+         {
+            path = path.Substring("file:///".Length);
+         }
+#endif
+         buff = path;
+         luaL_gsub(L, lua_tostring(L, -1), LUA_EXECDIR, buff);
 			lua_remove(L, -2);  /* remove original string */
 		}
 

@@ -44,11 +44,19 @@ namespace org.mars3142.wherugo.luatester.Windows
 
       private void btnExecute_Click(object sender, EventArgs e)
       {
-         lState = Lua.luaL_newstate();
-         Lua.luaL_openlibs(lState);
-         Lua.luaL_loadstring(lState, txtLua.Text);
-         Lua.lua_pcall(lState, 0, -1, 0);
+         try
+         {
+            lState = Lua.luaL_newstate();
+            Lua.luaL_openlibs(lState);
+            Lua.lua_register(lState, "msgbox", Lua_MsgBox);
 
+            Lua.luaL_loadstring(lState, txtLua.Text);
+            Lua.lua_pcall(lState, 0, -1, 0);
+         }
+         catch (Exception ex)
+         {
+            MsgBox(ex.Message);
+         }
          //engine.RunLuaScript(txtLua.Text);
       }
 
@@ -56,6 +64,32 @@ namespace org.mars3142.wherugo.luatester.Windows
       {
          Lua.lua_close(lState);
          //engine.StopEngineAndCleanup();
+      }
+
+      public int Lua_MsgBox(Lua.lua_State m_lua_state)
+      {
+         string text = String.Empty;
+
+         if (Lua.lua_type(m_lua_state, -1) == Lua.LUA_TSTRING)
+         {
+            text = Lua.lua_tostring(m_lua_state, -1).ToString();
+            Lua.lua_pop(m_lua_state, 1);
+            Lua.lua_pushboolean(m_lua_state, MsgBox(text));
+            return 1;
+         }
+         else
+         {
+            Lua.lua_settop(m_lua_state, 0);
+         }
+
+         Lua.lua_pushstring(m_lua_state, "invalid argument to function: msgbox(string text)");
+         return Lua.lua_error(m_lua_state);
+      }
+
+      private int MsgBox(String text)
+      {
+         MessageBox.Show(text);
+         return 0;
       }
    }
 }

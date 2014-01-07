@@ -58,10 +58,14 @@ public class Geo
    {
       //ensure the value will fall within the primary range [-180.0..+180.0]
       while (angleInDegrees < -180.0)
+      {
          angleInDegrees += 360.0;
+      }
 
       while (angleInDegrees > 180.0)
+      {
          angleInDegrees -= 360.0;
+      }
 
       Geo result = new Geo();
 
@@ -85,44 +89,22 @@ public class Geo
       return result;
    }
 
-
-
    public override string ToString()
    {
-      int degrees = this.IsNegative
-          ? -this.Degrees
-          : this.Degrees;
+      int degrees = this.IsNegative ? -this.Degrees : this.Degrees;
 
-      return string.Format(
-          "{0}° {1:00}' {2:00}\"",
-          degrees,
-          this.Minutes,
-          this.Seconds);
+      return string.Format("{0}° {1:00}' {2:00}\"", degrees, this.Minutes, this.Seconds);
    }
-
-
 
    public string ToString(string format)
    {
       switch (format)
       {
          case "NS":
-            return string.Format(
-                "{0}° {1:00}' {2:00}\".{3:000} {4}",
-                this.Degrees,
-                this.Minutes,
-                this.Seconds,
-                this.Milliseconds,
-                this.IsNegative ? 'S' : 'N');
+            return string.Format("{0}° {1:00}' {2:00}\".{3:000} {4}", this.Degrees, this.Minutes, this.Seconds, this.Milliseconds, this.IsNegative ? 'S' : 'N');
 
          case "WE":
-            return string.Format(
-                "{0}° {1:00}' {2:00}\".{3:000} {4}",
-                this.Degrees,
-                this.Minutes,
-                this.Seconds,
-                this.Milliseconds,
-                this.IsNegative ? 'W' : 'E');
+            return string.Format("{0}° {1:00}' {2:00}\".{3:000} {4}", this.Degrees, this.Minutes, this.Seconds, this.Milliseconds, this.IsNegative ? 'W' : 'E');
 
          default:
             throw new NotImplementedException();
