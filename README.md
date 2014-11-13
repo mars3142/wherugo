@@ -1,3 +1,5 @@
+[![Stories in Ready](https://badge.waffle.io/mars3142/wherugo.svg?label=ready&title=Ready)](http://waffle.io/mars3142/wherugo)
+
 # Description
 A Wherigo-client for Magellan eXplorist 510, 610 and 710.
 
@@ -9,8 +11,8 @@ A Wherigo-client for Magellan eXplorist 510, 610 and 710.
 The project source codes are released under GNU GPL v3.
 
 ## External Sources
- * http://www.magellanboard.de/viewtopic.php?t=4237 - eXplorist X10 MOD
- * http://ati.land.cz/gps/wherigo/gwc.htm decoded GWC structure (page down) - https://github.com/mars3142/wherugo/wiki/GWC - local copy
- * http://openwig.googlecode.com - OpenWIG
- * http://lua-wince.googlecode.com - Lua for WinCE
- * http://ttuxen.wordpress.com/2009/11/03/embedding-lua-in-dotnet/ - Embedding Lua in C# .Net
+ * [eXplorist X10 MOD](http://www.magellanboard.de/viewtopic.php?t=4237)
+ * [decoded GWC structure (page down)](http://ati.land.cz/gps/wherigo/gwc.htm)  - [local copy](https://github.com/mars3142/wherugo/wiki/GWC)
+ * [OpenWIG](http://openwig.googlecode.com)
+ * [Lua for WinCE](http://lua-wince.googlecode.com)
+ * [Embedding Lua in C# .Net](http://ttuxen.wordpress.com/2009/11/03/embedding-lua-in-dotnet/)
